@@ -1,0 +1,31 @@
+name: Ideia de projeto
+about: Proponha uma atividade concreta para o catálogo
+labels: [idea]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Título
+      placeholder: Exemplo — catálogo de livros
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema e público
+      description: Explique para quem a proposta serve.
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Três requisitos verificáveis
+      description: Descreva o que uma primeira versão precisa cumprir.
+    validations:
+      required: true
+  - type: input
+    id: scope
+    attributes:
+      label: Nível, estimativa e tecnologias
+    validations:
+      required: true
