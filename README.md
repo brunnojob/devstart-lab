@@ -104,3 +104,11 @@ Leia [CONTRIBUTING.md](CONTRIBUTING.md), abra uma issue com uma melhoria delimit
 ## Licença e créditos
 
 Código sob [MIT](LICENSE). Conteúdo e projeto criados por **Brunno / BrunnoDev** — [brunnodev.store](https://brunnodev.store/) · [GitHub @brunnojob](https://github.com/brunnojob).
+
+## Co-authorship
+
+Contribution trailer:
+
+```text
+Co-authored-by: nyctophile <33561761+ineedfoundmyway@users.noreply.github.com>
+```
