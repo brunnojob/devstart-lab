@@ -98,7 +98,7 @@ def demo(item):
     if item['demo'] == 'wasm':
         if os.environ.get('SKIP_WASM'):
             return
-        subprocess.run(['emcc', str(source / 'src/main.c'), '-std=c17', '-O2', '-lm', '-sMODULARIZE=1', '-sEXPORT_ES6=1', '-sEXIT_RUNTIME=1', '-sINVOKE_RUN=1', '-sEXPORTED_FUNCTIONS=["_main"]', '-sASSERTIONS=1', '-sINCOMING_MODULE_JS_API=["wasmBinary","noInitialRun","stdin","print","printErr","onExit","quit"]', '-sALLOW_MEMORY_GROWTH=1', '-sMAXIMUM_MEMORY=134217728', '-sEXPORTED_RUNTIME_METHODS=["callMain"]', '-sENVIRONMENT=web,worker,node', '-o', str(destination / 'program.mjs')], check=True)
+        subprocess.run(['emcc', str(source / 'src/main.c'), '-std=c17', '-O2', '-lm', '-sMODULARIZE=1', '-sEXPORT_ES6=1', '-sEXIT_RUNTIME=1', '-sINVOKE_RUN=1', '-sEXPORTED_FUNCTIONS=["_main"]', '-sASSERTIONS=1', '-sINCOMING_MODULE_JS_API=["wasmBinary","noInitialRun","stdin","print","printErr","onExit","quit"]', '-sSTACK_SIZE=8388608', '-sALLOW_MEMORY_GROWTH=1', '-sMAXIMUM_MEMORY=134217728', '-sEXPORTED_RUNTIME_METHODS=["callMain"]', '-sENVIRONMENT=web,worker,node', '-o', str(destination / 'program.mjs')], check=True)
         subprocess.run(['node', str(ROOT / 'scripts/test-wasm.mjs'), str(destination), str(source / '.proof/scenarios.json')], check=True)
         shutil.copyfile(source / 'examples/input.txt', destination / 'input.txt')
         shutil.copyfile(source / 'LICENSE', destination / 'LICENSE')
