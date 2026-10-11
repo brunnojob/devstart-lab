@@ -14,7 +14,8 @@ for (const test of [{ name: 'Original C self-test', argv: ['./app', '--self-test
   let cursor = 0;
   let exit = 0;
   const lines = [];
-  const instance = await createProgram({ wasmBinary, noInitialRun: true, quit: (status, error) => { throw error; }, stdin: () => cursor < bytes.length ? bytes[cursor++] : null, print: value => lines.push(value), printErr: value => lines.push(value), onExit: value => { exit = value; } });
+  let instance;
+  try { instance = await createProgram({ wasmBinary, noInitialRun: true, quit: (status, error) => { throw error; }, stdin: () => cursor < bytes.length ? bytes[cursor++] : null, print: value => lines.push(value), printErr: value => lines.push(value), onExit: value => { exit = value; } }); } catch (error) { console.error(JSON.stringify({ stage: "initialize", message: error.message, output: lines })); process.exit(1); }
   try { instance.callMain(test.argv.slice(1)); } catch (error) { if (Number.isInteger(error.status)) exit = error.status; else throw error; }
   assert.equal(exit, test.exit ?? 0, test.name);
   for (const expected of test.contains ?? []) assert.ok(lines.join('\n').includes(expected), `${test.name}: ${expected}`);
