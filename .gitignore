@@ -12,3 +12,5 @@ scripts/__pycache__/
 .qa/
 
 public/proofs/index.html
+
+.emsdk/

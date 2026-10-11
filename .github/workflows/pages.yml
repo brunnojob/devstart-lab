@@ -23,9 +23,15 @@ jobs:
       - run: npm ci
       - run: npm run test
       - name: Install WebAssembly compiler
-        run: sudo apt-get update -qq && sudo apt-get install -y emscripten
+        run: |
+          git clone --depth 1 https://github.com/emscripten-core/emsdk.git .emsdk
+          .emsdk/emsdk install 6.0.12
+          .emsdk/emsdk activate 6.0.12
       - name: Build verified project pages and executable demos
-        run: python scripts/build-proofs.py
+        run: |
+          source .emsdk/emsdk_env.sh
+          emcc --version
+          python scripts/build-proofs.py
       - run: npm run build
       - name: Validate generated links
         run: python scripts/check-proof-pages.py
