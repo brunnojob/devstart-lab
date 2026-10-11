@@ -18,7 +18,7 @@ try {
   await page.goto('http://127.0.0.1:4917/proofs/');
   assert.equal(await page.locator('.card').count(), catalog.length);
   await page.locator('#search').fill('modbus');
-  assert.equal(await page.locator('.card:visible').count(), 2);
+  assert.equal(await page.locator('.card:visible').count(), 3);
   await page.locator('#search').fill('');
   await page.screenshot({ path: 'dist/proofs/catalog-browser.png', fullPage: true });
   for (const item of catalog.filter(item => item.demo === 'wasm')) {
