@@ -5,7 +5,7 @@ self.onmessage = async ({ data }) => {
   const lines = [];
   let exit = 0;
   try {
-    const instance = await createProgram({ noInitialRun: true, stdin: () => cursor < bytes.length ? bytes[cursor++] : null, print: value => lines.push(value), printErr: value => lines.push(value), onExit: value => { exit = value; } });
+    const instance = await createProgram({ noInitialRun: true, quit: (status, error) => { throw error; }, stdin: () => cursor < bytes.length ? bytes[cursor++] : null, print: value => lines.push(value), printErr: value => lines.push(value), onExit: value => { exit = value; } });
     instance.callMain(data.args ?? []);
   } catch (error) {
     if (Number.isInteger(error.status)) exit = error.status;
