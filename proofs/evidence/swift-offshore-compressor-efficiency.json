@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "repository": "brunnojob/swift-offshore-compressor-efficiency",
+  "source_commit": "5601548af7a1920075d4723f5645b3b3ccf1a7cf",
+  "generated_at": "2026-10-10T05:29:47.644034+00:00",
+  "run_url": "https://github.com/brunnojob/swift-offshore-compressor-efficiency/actions/runs/38027638069",
+  "inputs_sha256": {
+    ".proof/scenarios.json": "71908030c7ea95d2b96c67f0f9f62bfd9653abe79bb9cea803293736b3b9bed6",
+    "examples/input.txt": "9c7ac65f74759c94b000eecc98483999ba8b6a387768829f370b6d3a69f9be5e"
+  },
+  "cases": [
+    {
+      "display": false,
+      "name": "swiftc Sources/main.swift -o app && ./app --self-test && ./app < examples/input.txt",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "swiftc Sources/main.swift -o app && ./app --self-test && ./app < examples/input.txt"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 6.082,
+      "output": "Tests passed\n{\"degraded\":false,\"isentropicEfficiency\":0.7289914337054222,\"pressureRatio\":4,\"shaftPowerKw\":160.79999999999998,\"tag\":\"air-A\"}\n{\"degraded\":true,\"isentropicEfficiency\":0.5831931469643378,\"pressureRatio\":4,\"shaftPowerKw\":200.99999999999997,\"tag\":\"air-B\"}\n",
+      "output_sha256": "2bb2fde8462aefc19e187f964e7fcf9cf74ad8a6e06e8393b51995df3a859f58"
+    },
+    {
+      "display": true,
+      "name": "Application demonstration with checked output",
+      "argv": [
+        "./app"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.081,
+      "output": "{\"degraded\":false,\"isentropicEfficiency\":0.7289914337054222,\"pressureRatio\":4,\"shaftPowerKw\":160.79999999999998,\"tag\":\"air-A\"}\n{\"degraded\":true,\"isentropicEfficiency\":0.5831931469643378,\"pressureRatio\":4,\"shaftPowerKw\":200.99999999999997,\"tag\":\"air-B\"}\n",
+      "output_sha256": "38d543c8339805f3a73cd743bdfc7f0be1dcb1bd0aed8a713495a2a2bf057bec"
+    },
+    {
+      "display": true,
+      "name": "Reject an empty capture",
+      "argv": [
+        "./app"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "passed": true,
+      "seconds": 0.195,
+      "output": "Missing input\n",
+      "output_sha256": "59dde097c155045b6510b44b5d0ee86176974b3476c8b96718ac676f66134e97"
+    },
+    {
+      "display": true,
+      "name": "Reject malformed input",
+      "argv": [
+        "./app"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "passed": true,
+      "seconds": 0.122,
+      "output": "Invalid CSV row\n",
+      "output_sha256": "64aaf8a3f81772044320e6481a9fe33ac80bfdb41f6deb590512cd62c2cd30b7"
+    },
+    {
+      "display": true,
+      "name": "Reject unsupported invocation",
+      "argv": [
+        "./app",
+        "--unsupported"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "passed": true,
+      "seconds": 0.082,
+      "output": "Unsupported command arguments\n",
+      "output_sha256": "a7217611e9bf4e2fd5cbbd1b8b97c5898f154b14da948e9e35008b59b8158bcd"
+    },
+    {
+      "display": true,
+      "name": "Reject an oversized input record",
+      "argv": [
+        "./app"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "passed": true,
+      "seconds": 0.146,
+      "output": "Input record too large\n",
+      "output_sha256": "45eb187fdae97f09b79c4bcd5c03d9b942872125e5fb5b6a83011b36f8d62333"
+    }
+  ],
+  "passed": true
+}

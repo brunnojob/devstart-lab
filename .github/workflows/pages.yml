@@ -22,7 +22,19 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run test
+      - name: Install WebAssembly compiler
+        run: sudo apt-get update -qq && sudo apt-get install -y emscripten
+      - name: Build verified project pages and executable demos
+        run: python scripts/build-proofs.py
       - run: npm run build
+      - name: Validate generated links
+        run: python scripts/check-proof-pages.py
+      - name: Install browser verification tools
+        run: |
+          npm install --prefix .qa --no-save --no-audit --no-fund playwright@1.64.0
+          node .qa/node_modules/playwright/cli.js install --with-deps chromium
+      - name: Verify executable demos in Chromium
+        run: node scripts/test-proof-browser.mjs
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:

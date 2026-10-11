@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "repository": "brunnojob/java-medication-schedule",
+  "source_commit": "c71a20d62cf21a2f2f89993f34b40010f01b6560",
+  "generated_at": "2026-10-10T05:30:15.969528+00:00",
+  "run_url": "https://github.com/brunnojob/java-medication-schedule/actions/runs/38027634145",
+  "inputs_sha256": {
+    ".proof/scenarios.json": "5015c2d87eab9c922e98c845e5ba0a015750796f7901f6f3c07ec6598be0aff3",
+    ".proof/demo.py": "0322897f680ffe67d62597330640e7c14235872ab6b04b16ea72bbf4e4c6eb71"
+  },
+  "cases": [
+    {
+      "display": false,
+      "name": "javac -Xlint:all -Werror MedicationSchedule.java",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "javac -Xlint:all -Werror MedicationSchedule.java"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 4.165,
+      "output": "",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "display": true,
+      "name": "python -m unittest discover -v -s tests",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "python -m unittest discover -v -s tests"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 1.104,
+      "output": "test_persistent_workflow (test_workflow.WorkflowTests.test_persistent_workflow) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.852s\n\nOK\n",
+      "output_sha256": "755187c373915ef0df5cd1d9d3e0b4c6f1343794c62eec581b31137199140503"
+    },
+    {
+      "display": true,
+      "name": "Resolve a persisted schedule across a daylight-saving gap",
+      "argv": [
+        "python",
+        ".proof/demo.py"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.251,
+      "output": "{\"nonexistent_dst_time\": {\"date\": \"2026-03-08\", \"doses\": [], \"zone\": \"America/New_York\"}, \"regular_day\": {\"date\": \"2026-03-09\", \"doses\": [{\"scheduled\": \"2026-03-09T06:30:00Z\", \"status\": \"unrecorded\"}], \"zone\": \"America/New_York\"}}\n",
+      "output_sha256": "902a312ddc6e0492f81c2d24739ed30efc501133702f84ac435db27cd53557ac"
+    }
+  ],
+  "passed": true
+}

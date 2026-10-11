@@ -4,3 +4,11 @@ coverage/
 .env
 *.local
 .DS_Store
+
+.sources/
+public/proofs/*/
+scripts/__pycache__/
+
+.qa/
+
+public/proofs/index.html

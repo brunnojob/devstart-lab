@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "repository": "brunnojob/octometrics-engine",
+  "source_commit": "733b0bbcfed35d1b1b642969c27f692993bb40a4",
+  "generated_at": "2026-10-11T00:51:00.651238+00:00",
+  "run_url": "https://github.com/brunnojob/octometrics-engine/actions/runs/38099809172",
+  "inputs_sha256": {
+    ".proof/scenarios.json": "38710e9b0a12e5b2c7d12eec28857d2f44b6531ebe85b3606b7ee95f64d05cec",
+    ".proof/demo.mjs": "af5795e2f586c285233fb128a7f25049291ccae67b49362fb9fe207800bf83da"
+  },
+  "cases": [
+    {
+      "display": false,
+      "name": "Build the real TypeScript application",
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 2.314,
+      "output": "\n> octometrics-engine@1.0.0 build\n> tsc -p tsconfig.json\n\n",
+      "output_sha256": "57e864612bdcc8b07bf5b8e8810d5d89754efeb2d4d360d59f406d861944795f"
+    },
+    {
+      "display": true,
+      "name": "Real HTTP webhook requests and metrics processing",
+      "argv": [
+        "node",
+        ".proof/demo.mjs"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.251,
+      "output": "{\"timestamp\":\"2026-10-11T00:51:03.110Z\",\"event\":\"github.webhook\",\"delivery\":\"proof-merged\",\"outcome\":\"merged\",\"repository\":\"brunnojob/octometrics-engine\",\"pullNumber\":1}\n{\"test\":\"merged\",\"status\":200,\"response\":{\"outcome\":\"merged\"}}\n{\"timestamp\":\"2026-10-11T00:51:03.125Z\",\"event\":\"github.webhook\",\"delivery\":\"proof-closed\",\"outcome\":\"closed\",\"repository\":\"brunnojob/octometrics-engine\",\"pullNumber\":1}\n{\"test\":\"closed\",\"status\":200,\"response\":{\"outcome\":\"closed\"}}\n{\"test\":\"unsigned\",\"status\":401,\"response\":{\"error\":\"Invalid webhook signature\"}}\n{\"test\":\"signed-invalid-json\",\"status\":400,\"response\":{\"error\":\"Invalid JSON payload\"}}\n{\"test\":\"signed-invalid-payload\",\"status\":400,\"response\":{\"error\":\"Invalid pull_request payload\"}}\n{\"timestamp\":\"2026-10-11T00:51:03.138Z\",\"event\":\"github.webhook\",\"delivery\":\"proof-ignored-event\",\"outcome\":\"ignored\",\"githubEvent\":\"push\"}\n{\"test\":\"ignored-event\",\"status\":202,\"response\":{\"outcome\":\"ignored\"}}\n{\"test\":\"wrong-content-type\",\"status\":415,\"response\":{\"error\":\"Expected an application/json payload\"}}\n{\"test\":\"tampered-signature\",\"status\":401}\n{\"test\":\"metrics-processor-with-explicit-fixture\",\"languages\":[{\"name\":\"Java\",\"repositories\":1,\"commits\":6},{\"name\":\"C\",\"repositories\":1,\"commits\":3}],\"total\":12}\n",
+      "output_sha256": "32c2158ad809257a08b0146327a94811f01b052ab2f03328cc60e5fbbdeffa9e"
+    }
+  ],
+  "passed": true
+}

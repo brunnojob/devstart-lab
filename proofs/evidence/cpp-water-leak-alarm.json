@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "repository": "brunnojob/cpp-water-leak-alarm",
+  "source_commit": "5fe11cf75196f1e9de8745045947bb4e011bb5e9",
+  "generated_at": "2026-10-10T05:28:29.158945+00:00",
+  "run_url": "https://github.com/brunnojob/cpp-water-leak-alarm/actions/runs/38027615448",
+  "inputs_sha256": {
+    ".proof/scenarios.json": "16db0da483c4fa9dd2f1e0d9ef958c1a9a24901beaf54aaf006a7ade78e120f4",
+    ".proof/demo.cpp": "92ef77e2fe75c18dd59712c0f25c2632a2e3e744cacac5a77f86298a766ed1e2"
+  },
+  "cases": [
+    {
+      "display": false,
+      "name": "cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.402,
+      "output": "-- The CXX compiler identification is GNU 13.3.0\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: /usr/bin/c++ - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Configuring done (0.3s)\n-- Generating done (0.0s)\n-- Build files have been written to: /home/runner/work/cpp-water-leak-alarm/cpp-water-leak-alarm/build\n",
+      "output_sha256": "f6210472119c21b75c49ea36c7b34558bb7a4bba84a7a31cb40c8d74141403f1"
+    },
+    {
+      "display": false,
+      "name": "cmake --build build --parallel 2",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "cmake --build build --parallel 2"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 1.505,
+      "output": "[ 25%] Building CXX object CMakeFiles/leak_monitor.dir/src/main.cpp.o\n[ 50%] Building CXX object CMakeFiles/leak_tests.dir/tests/leak_test.cpp.o\n[ 75%] Linking CXX executable leak_tests\n[ 75%] Built target leak_tests\n[100%] Linking CXX executable leak_monitor\n[100%] Built target leak_monitor\n",
+      "output_sha256": "10c46a0cbbdb67cab43bd45f4ee6b1a47d3576de8906dd9321b02f5bee0c2542"
+    },
+    {
+      "display": true,
+      "name": "ctest --test-dir build --output-on-failure",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "ctest --test-dir build --output-on-failure"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.552,
+      "output": "Internal ctest changing into directory: /home/runner/work/cpp-water-leak-alarm/cpp-water-leak-alarm/build\nTest project /home/runner/work/cpp-water-leak-alarm/cpp-water-leak-alarm/build\n    Start 1: leak\n1/1 Test #1: leak .............................   Passed    0.00 sec\n\n100% tests passed, 0 tests failed out of 1\n\nTotal Test time (real) =   0.07 sec\n",
+      "output_sha256": "222f6c9ce2e1b10097c08d02af34ccfd99a7a18bfe8e3ea145eab67ff482cf30"
+    },
+    {
+      "display": true,
+      "name": "Compile leak-monitor demonstration",
+      "argv": [
+        "g++",
+        "-std=c++20",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-Iinclude",
+        ".proof/demo.cpp",
+        "-o",
+        "build/proof-demo"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.452,
+      "output": "",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "display": true,
+      "name": "Demonstrate sustained leak and stale-sensor alarm",
+      "argv": [
+        "build/proof-demo"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "{\"sustained_leak_confirmed\":true,\"stale_sensor_alarm\":true,\"sequence\":3}\n",
+      "output_sha256": "b1fd31f8554c17b29ab27f1b9a277eb1a1ffa8e197dbd4597753444fe2cc87ed"
+    }
+  ],
+  "passed": true
+}

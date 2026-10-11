@@ -1,0 +1,103 @@
+{
+  "schema": 1,
+  "repository": "brunnojob/java-offshore-historian-quality-audit",
+  "source_commit": "cd03eed10ad7be5a2c6af957a4dd38ec347916dd",
+  "generated_at": "2026-10-10T05:29:56.973835+00:00",
+  "run_url": "https://github.com/brunnojob/java-offshore-historian-quality-audit/actions/runs/38027624954",
+  "inputs_sha256": {
+    ".proof/scenarios.json": "3f7e65f9b8afb79f88d185d14df7a6d22e60bd60618caf2eeffffedb94c28e7a",
+    "examples/input.txt": "68b954853174751b696786242c993e3d39c53949170c99ffd822d23044bfa30e"
+  },
+  "cases": [
+    {
+      "display": false,
+      "name": "javac Main.java && java Main --self-test && java Main < examples/input.txt",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "javac Main.java && java Main --self-test && java Main < examples/input.txt"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 8.718,
+      "output": "tests passed\nPT101,5.000,OUTLIER,99.000000\nPT101,10.000,GAP,5.000000\nPT101,10.000,BAD_QUALITY,0.000000\n",
+      "output_sha256": "0a6838b214b3d2fe838b533a56cab39a528aee2c9ec009bb97e4ce3658b7fa4f"
+    },
+    {
+      "display": true,
+      "name": "Application demonstration with checked output",
+      "argv": [
+        "java",
+        "Main"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "PT101,5.000,OUTLIER,99.000000\nPT101,10.000,GAP,5.000000\nPT101,10.000,BAD_QUALITY,0.000000\n",
+      "output_sha256": "8e4c3fa7462daf89ddbcb66c79c2c4442aa42853f5ac731994445d26ce136212"
+    },
+    {
+      "display": true,
+      "name": "Reject an empty capture",
+      "argv": [
+        "java",
+        "Main"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "missing input\n",
+      "output_sha256": "e108e9abb244623e01f96efedd4006bbb9cdf4b61840b948d6bf644ffe78bede"
+    },
+    {
+      "display": true,
+      "name": "Reject malformed input",
+      "argv": [
+        "java",
+        "Main"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "invalid CSV row\n",
+      "output_sha256": "902887621d4e2b50e9a1d45937529644e6685110db02e63076a49a6f646fbe0c"
+    },
+    {
+      "display": true,
+      "name": "Reject unsupported invocation",
+      "argv": [
+        "java",
+        "Main",
+        "--unsupported"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "unsupported command arguments\n",
+      "output_sha256": "8671e08a3718f115decd7eb1e7970691e3a2180c5a869d0e9ccd54e6d4fa8a80"
+    },
+    {
+      "display": true,
+      "name": "Reject an oversized input record",
+      "argv": [
+        "java",
+        "Main"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "input record too large\n",
+      "output_sha256": "d0f1bb9ab1c99d914df3de66c3268650fd8fcb942b2d0f116490dc6c41e6f800"
+    }
+  ],
+  "passed": true
+}

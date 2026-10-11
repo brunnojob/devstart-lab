@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "repository": "brunnojob/zero-trust-auth-gateway",
+  "source_commit": "7d7388a7a766b0ec7b4f3e898f1e01c8cfdbdd8d",
+  "generated_at": "2026-10-10T05:28:39.890571+00:00",
+  "run_url": "https://github.com/brunnojob/zero-trust-auth-gateway/actions/runs/38027602153",
+  "inputs_sha256": {
+    ".proof/scenarios.json": "79393c52469849d373f1a40b29b0b7b53353a15192c2ab3837303a14b8bdfe6e",
+    ".proof/demo.ts": "e918c6ceb18fb77bcc5b16dd269b90becf3338f38789aa98c0c04dbef668e93e"
+  },
+  "cases": [
+    {
+      "display": false,
+      "name": "npm ci",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm ci"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 1.104,
+      "output": "\nadded 3 packages, and audited 4 packages in 974ms\n\nfound 0 vulnerabilities\n",
+      "output_sha256": "0279bfe9c6fea6e95562995a85a38c445bbd9704f6a8f86f884d15b0b07a3f3b"
+    },
+    {
+      "display": true,
+      "name": "npm test",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm test"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.402,
+      "output": "\n> zero-trust-auth-gateway@1.0.0 test\n> node --experimental-transform-types --test test/*.test.ts\n\n(node:2341) ExperimentalWarning: Transform Types is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n✔ short lived scoped token grants matching route (6.967494ms)\n✔ insufficient scope is denied and audited (4.174213ms)\n✔ nonce replay and stale requests are rejected (1.004287ms)\n✔ rate limit rejects request bursts (0.759069ms)\n✔ audit snapshots cannot mutate the signed chain (0.410988ms)\n(node:2342) ExperimentalWarning: Transform Types is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n✔ principal and nonce boundaries are unambiguous (1.173113ms)\n✔ invalid clocks cannot extend or clear replay entries (0.416889ms)\nℹ tests 7\nℹ suites 0\nℹ pass 7\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 204.365787\n",
+      "output_sha256": "e9d78866da6d5506ee324b3af83310e60955c8afa2d19e49e5a60d0f3b670712"
+    },
+    {
+      "display": true,
+      "name": "npm run check",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm run check"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 1.104,
+      "output": "\n> zero-trust-auth-gateway@1.0.0 check\n> tsc --noEmit\n\n",
+      "output_sha256": "82092fdbda7aa8ee07b8dc733a51efb7a63f23cfe3210568e66355d9a608a589"
+    },
+    {
+      "display": true,
+      "name": "Authorize scoped token, reject replay and verify signed audit",
+      "argv": [
+        "node",
+        "--experimental-transform-types",
+        ".proof/demo.ts"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.155,
+      "output": "(node:2377) ExperimentalWarning: Transform Types is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n{\"authorized\":\"operator-1\",\"replay_denied\":true,\"scope_denied\":true,\"audit_chain_valid\":true,\"decisions\":[\"allow\",\"deny\",\"deny\"]}\n",
+      "output_sha256": "af252cdb2a2d5bbb411d9708a4886d8e93747435262fcbd3363097dc5704c7e0"
+    }
+  ],
+  "passed": true
+}

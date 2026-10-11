@@ -1,0 +1,103 @@
+{
+  "schema": 1,
+  "repository": "brunnojob/java-offshore-fault-evidence-ranker",
+  "source_commit": "46d153157c4b7cfbc09c3df2e14b028f31ef4d10",
+  "generated_at": "2026-10-10T05:29:54.472751+00:00",
+  "run_url": "https://github.com/brunnojob/java-offshore-fault-evidence-ranker/actions/runs/38027622970",
+  "inputs_sha256": {
+    ".proof/scenarios.json": "01a169a30d4af2e3f158ca16fb73cd6efd2634f5019149572e3c5e2e8cd12923",
+    "examples/input.txt": "fe05344d100ba7588c3ac3fcc5b00113ab26b9ba1fe95a26ea2b7ee261893efa"
+  },
+  "cases": [
+    {
+      "display": false,
+      "name": "javac Main.java && java Main --self-test && java Main < examples/input.txt",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "javac Main.java && java Main --self-test && java Main < examples/input.txt"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 1.158,
+      "output": "tests passed\nbearing,0.68085106\nmisalignment,0.30260047\nsensor,0.01654846\n",
+      "output_sha256": "cd0f86a041a57dffadb52a828f94ef54e11c7a96d2a0695613620f65f0fb6174"
+    },
+    {
+      "display": true,
+      "name": "Application demonstration with checked output",
+      "argv": [
+        "java",
+        "Main"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.101,
+      "output": "bearing,0.68085106\nmisalignment,0.30260047\nsensor,0.01654846\n",
+      "output_sha256": "f783467f325679afc7c92ab9cd79064f64ff9d84f15dd5657abba8b5d3f75e3b"
+    },
+    {
+      "display": true,
+      "name": "Reject an empty capture",
+      "argv": [
+        "java",
+        "Main"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "missing input\n",
+      "output_sha256": "e108e9abb244623e01f96efedd4006bbb9cdf4b61840b948d6bf644ffe78bede"
+    },
+    {
+      "display": true,
+      "name": "Reject malformed input",
+      "argv": [
+        "java",
+        "Main"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "invalid CSV row\n",
+      "output_sha256": "902887621d4e2b50e9a1d45937529644e6685110db02e63076a49a6f646fbe0c"
+    },
+    {
+      "display": true,
+      "name": "Reject unsupported invocation",
+      "argv": [
+        "java",
+        "Main",
+        "--unsupported"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "unsupported command arguments\n",
+      "output_sha256": "8671e08a3718f115decd7eb1e7970691e3a2180c5a869d0e9ccd54e6d4fa8a80"
+    },
+    {
+      "display": true,
+      "name": "Reject an oversized input record",
+      "argv": [
+        "java",
+        "Main"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "input record too large\n",
+      "output_sha256": "d0f1bb9ab1c99d914df3de66c3268650fd8fcb942b2d0f116490dc6c41e6f800"
+    }
+  ],
+  "passed": true
+}

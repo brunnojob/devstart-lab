@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "repository": "brunnojob/java-neighborhood-repair-log",
+  "source_commit": "6d93611c16e22941e2a090c2392aa5ec4767528f",
+  "generated_at": "2026-10-10T05:29:43.825844+00:00",
+  "run_url": "https://github.com/brunnojob/java-neighborhood-repair-log/actions/runs/38027618510",
+  "inputs_sha256": {
+    ".proof/scenarios.json": "95c043102084fb45930c700127e6e3921695cd1307d1e4d88edaecf84f6b48f2",
+    ".proof/demo.py": "aa32aa7c88c4ba4f35993431a3926154f100af9ce90aa1041909e71f413641b5"
+  },
+  "cases": [
+    {
+      "display": false,
+      "name": "javac -Xlint:all -Werror RepairLog.java",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "javac -Xlint:all -Werror RepairLog.java"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 4.213,
+      "output": "",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "display": true,
+      "name": "python -m unittest discover -v -s tests",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "python -m unittest discover -v -s tests"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 1.709,
+      "output": "test_persistent_workflow (test_workflow.WorkflowTests.test_persistent_workflow) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 1.587s\n\nOK\n",
+      "output_sha256": "ac6d8866b59c2fb0f19a3f8d6071723bf2ecb2fa71eb8b6f00ab97e01db0e9b5"
+    },
+    {
+      "display": true,
+      "name": "Persist a maintenance ticket with optimistic revision checks",
+      "argv": [
+        "python",
+        ".proof/demo.py"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.502,
+      "output": "{\"report\": {\"active\": 1, \"events\": 3, \"tickets\": [{\"area\": \"zone\", \"assignee\": \"operator\", \"description\": \"repair\", \"id\": \"6a2c9c96-0f0a-4420-a519-1ee913bd2ef4\", \"priority\": 3, \"revision\": 3, \"state\": \"IN_PROGRESS\", \"updated\": \"2026-10-10T05:29:50.165903023Z\"}], \"unassigned\": 0}, \"stale_revision_rejected\": true}\n",
+      "output_sha256": "c1e7355d079f724459498928c83f5405e2cc8d4fc95f1a58a36cd571ae46c5f2"
+    }
+  ],
+  "passed": true
+}

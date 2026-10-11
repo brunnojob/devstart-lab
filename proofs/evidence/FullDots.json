@@ -1,0 +1,121 @@
+{
+  "schema": 1,
+  "repository": "brunnojob/FullDots",
+  "source_commit": "ff7c2c9bef9a84a2dddd4bdfb71b1fbd9a9440e5",
+  "generated_at": "2026-10-10T05:27:59.965578+00:00",
+  "run_url": "https://github.com/brunnojob/FullDots/actions/runs/38027586072",
+  "inputs_sha256": {
+    ".proof/scenarios.json": "cdc5117b719bb856695998bd607a20d986c6c33adfb8c179f3ea88596d38628f"
+  },
+  "cases": [
+    {
+      "display": false,
+      "name": "npm ci",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm ci"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 26.106,
+      "output": "npm warn deprecated hast@1.0.0: Renamed to rehype\nnpm warn deprecated lodash.get@4.4.2: This package is deprecated. Use the optional chaining (?.) operator instead.\nnpm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead\n\nadded 994 packages, and audited 995 packages in 26s\n\n322 packages are looking for funding\n  run `npm fund` for details\n\n13 vulnerabilities (7 low, 4 high, 2 critical)\n\nTo address issues that do not require attention, run:\n  npm audit fix\n\nTo address all issues (including breaking changes), run:\n  npm audit fix --force\n\nRun `npm audit` for details.\nnpm warn install-scripts 2 packages have install scripts not yet covered by allowScripts:\nnpm warn install-scripts   @scarf/scarf@1.4.0 (postinstall: node ./report.js)\nnpm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)\nnpm warn install-scripts\nnpm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.\n",
+      "output_sha256": "a8413fb3a9320a840b9022d28356dd933c70c3673bd66fc61a9842400c763753"
+    },
+    {
+      "display": true,
+      "name": "npm run check-format",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm run check-format"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 6.219,
+      "output": "\n> fulldots@0.1.0 check-format\n> prettier --check src tests *.json *.ts *.js index.html public .github Dockerfile \"compose*.yml\" deployment README.md docs .env.example --ignore-unknown\n\nChecking formatting...\nAll matched files use Prettier code style!\n",
+      "output_sha256": "82f2004c26902489d437b09da33454f9ef9940bb0ea58e6d5074d393fb5510da"
+    },
+    {
+      "display": true,
+      "name": "npm run lint",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm run lint"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 4.92,
+      "output": "\n> fulldots@0.1.0 lint\n> eslint src tests vite.config.ts\n\n",
+      "output_sha256": "635a94530b237f4072facbf080c306fd21e4449c19fc1b6db5fb0a651d690aa9"
+    },
+    {
+      "display": true,
+      "name": "npm run typecheck",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm run typecheck"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 9.589,
+      "output": "\n> fulldots@0.1.0 typecheck\n> tsc --noEmit\n\n",
+      "output_sha256": "d28bb18d84ed5bae0b0e05867e8f3a0c18686693a321c68911c8a6ddbd44e1e2"
+    },
+    {
+      "display": true,
+      "name": "npm test",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm test"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 19.436,
+      "output": "\n> fulldots@0.1.0 test\n> vitest run\n\n\n\u001b[1m\u001b[30m\u001b[46m RUN \u001b[49m\u001b[39m\u001b[22m \u001b[36mv4.1.11 \u001b[39m\u001b[90m/home/runner/work/FullDots/FullDots\u001b[39m\n\n \u001b[32m✓\u001b[39m tests/mcp-connectors.test.ts \u001b[2m(\u001b[22m\u001b[2m41 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 575\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m✓\u001b[39m tests/model-providers-ui.test.tsx \u001b[2m(\u001b[22m\u001b[2m67 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 472\u001b[2mms\u001b[22m\u001b[39m\n\u001b[90mstdout\u001b[2m | tests/approvals.test.ts\u001b[2m > \u001b[22m\u001b[2mapproval gate inside a DotAgent turn\u001b[2m > \u001b[22m\u001b[2mkeeps a summary-only request_approval advisory: the next gated call still asks\n\u001b[22m\u001b[39m{ tool: \u001b[32m'request_approval'\u001b[39m }\n\n\u001b[90mstderr\u001b[2m | tests/approvals.test.ts\u001b[2m > \u001b[22m\u001b[2mapproval gate inside a DotAgent turn\u001b[2m > \u001b[22m\u001b[2mkeeps a summary-only request_approval advisory: the next gated call still asks\n\u001b[22m\u001b[39m⚠️ [tanstack-ai:warn] ⚠️ tool \"request_approval\" sent with strict: false: schema has an open object (for example z.record())\n\n\u001b[90mstderr\u001b[2m | tests/approvals.test.ts\u001b[2m > \u001b[22m\u001b[2mapproval gate inside a DotAgent turn\u001b[2m > \u001b[22m\u001b[2mkeeps a summary-only request_approval advisory: the next gated call still asks\n\u001b[22m\u001b[39m⚠️ [tanstack-ai:warn] ⚠️ tool \"request_approval\" sent with strict: false: schema has an open object (for example z.record())\n\n\u001b[90mstdout\u001b[2m | tests/approvals.test.ts\u001b[2m > \u001b[22m\u001b[2mapproval gate inside a DotAgent turn\u001b[2m > \u001b[22m\u001b[2mkeeps a summary-only request_approval advisory: the next gated call still asks\n\u001b[22m\u001b[39m{ tool: \u001b[32m'request_approval'\u001b[39m }\n\n\u001b[90mstdout\u001b[2m | tests/approvals.test.ts\u001b[2m > \u001b[22m\u001b[2mapproval gate inside a DotAgent turn\u001b[2m > \u001b[22m\u001b[2mcovers an exec intent given to request_approval and runs the command once afterwards\n\u001b[22m\u001b[39m{ tool: \u001b[32m'request_approval'\u001b[39m }\n\n\u001b[90mstderr\u001b[2m | tests/approvals.test.ts\u001b[2m > \u001b[22m\u001b[2mapproval gate inside a DotAgent turn\u001b[2m > \u001b[22m\u001b[2mcovers an exec intent given to request_approval and runs the command once afterwards\n\u001b[22m\u001b[39m⚠️ [tanstack-ai:warn] ⚠️ tool \"request_approval\" sent with strict: false: schema has an open object (for example z.record())\n\n \u001b[32m✓\u001b[39m tests/model-providers.test.ts \u001b[2m(\u001b[22m\u001b[2m44 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 154\u001b[2mms\u001b[22m\u001b[39m\n\u001b[90mstdout\u001b[2m | tests/approvals.test.ts\u001b[2m > \u001b[22m\u001b[2mapproval gate inside a DotAgent turn\u001b[2m > \u001b[22m\u001b[2mcovers an exec intent given to request_approval and runs the command once afterwards\n\u001b[22m\u001b[39m{ tool: \u001b[32m'request_approval'\u001b[39m }\n\n\u001b[90mstderr\u001b[2m | tests/approvals.test.ts\u001b[2m > \u001b[22m\u001b[2mapproval gate inside a DotAgent turn\u001b[2m > \u001b[22m\u001b[2mcovers an exec intent given to request_approval and runs the command once afterwards\n\u001b[22m\u001b[39m⚠️ [tanstack-ai:warn] ⚠️ tool \"request_approval\" sent with strict: false: schema has an open object (for example z.record())\n\n\u001b[90mstdout\u001b[2m | tests/approvals.test.ts\u001b[2m > \u001b[22m\u001b[2mapproval gate inside a DotAgent turn\u001b[2m > \u001b[22m\u001b[2mcovers an exec intent given to request_approval and runs the command once afterwards\n\u001b[22m\u001b[39m{ tool: \u001b[32m'request_approval'\u001b[39m }\n\n\u001b[90mstderr\u001b[2m | tests/approvals.test.ts\u001b[2m > \u001b[22m\u001b[2mapproval gate inside a DotAgent turn\u001b[2m > \u001b[22m\u001b[2mcovers an exec intent given to request_approval and runs the command once afterwards\n\u001b[22m\u001b[39m⚠️ [tanstack-ai:warn] ⚠️ tool \"request_approval\" sent with strict: false: schema has an open object (for example z.record())\n\n\u001b[90mstdout\u001b[2m | tests/approvals.test.ts\u001b[2m > \u001b[22m\u001b[2mapproval gate inside a DotAgent turn\u001b[2m > \u001b[22m\u001b[2manswers a request_approval for an unknown computer ref with a tool error and keeps goi\nFull transcript in the execution-proof artifact.",
+      "output_sha256": "9a3389fa15bbc159b1ab6a7032bfff6cc5cb6c29940e390a5a55042be8a229d2"
+    },
+    {
+      "display": true,
+      "name": "npm run build",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm run build"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 7.644,
+      "output": "\n> fulldots@0.1.0 build\n> vite build && tsc -p tsconfig.server.json\n\n\u001b[36mvite v8.3.1 \u001b[32mbuilding client environment for production...\u001b[36m\u001b[39m\ntransforming...\n✓ 11021 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/client/index.html                                           0.89 kB │ gzip:   0.45 kB\ndist/client/assets/KaTeX_Size3-Regular-CTq5MqoE.woff             4.42 kB\ndist/client/assets/KaTeX_Size4-Regular-Dl5lxZxV.woff2            4.92 kB\ndist/client/assets/KaTeX_Size2-Regular-Dy4dx90m.woff2            5.20 kB\ndist/client/assets/KaTeX_Size1-Regular-mCD8mA8B.woff2            5.46 kB\ndist/client/assets/KaTeX_Size4-Regular-BF-4gkZK.woff             5.98 kB\ndist/client/assets/KaTeX_Size2-Regular-oD1tc_U0.woff             6.18 kB\ndist/client/assets/KaTeX_Size1-Regular-C195tn64.woff             6.49 kB\ndist/client/assets/KaTeX_Caligraphic-Regular-Di6jR-x-.woff2      6.90 kB\ndist/client/assets/KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2         6.91 kB\ndist/client/assets/KaTeX_Size3-Regular-DgpXs0kz.ttf              7.58 kB\ndist/client/assets/KaTeX_Caligraphic-Regular-CTRA-rTL.woff       7.65 kB\ndist/client/assets/KaTeX_Caligraphic-Bold-BEiXGLvX.woff          7.71 kB\ndist/client/assets/KaTeX_Script-Regular-D3wIWfF6.woff2           9.64 kB\ndist/client/assets/KaTeX_SansSerif-Regular-DDBCnlJ7.woff2       10.34 kB\ndist/client/assets/KaTeX_Size4-Regular-DWFBv043.ttf             10.36 kB\ndist/client/assets/KaTeX_Script-Regular-D5yQViql.woff           10.58 kB\ndist/client/assets/KaTeX_Fraktur-Regular-CTYiF6lA.woff2         11.31 kB\ndist/client/assets/KaTeX_Fraktur-Bold-CL6g_b3V.woff2            11.34 kB\ndist/client/assets/KaTeX_Size2-Regular-B7gKUWhC.ttf             11.50 kB\ndist/client/assets/KaTeX_SansSerif-Italic-C3H0VqGB.woff2        12.02 kB\ndist/client/assets/KaTeX_SansSerif-Bold-D1sUS0GD.woff2          12.21 kB\ndist/client/assets/KaTeX_Size1-Regular-Dbsnue_I.ttf             12.22 kB\ndist/client/assets/KaTeX_SansSerif-Regular-CS6fqUqJ.woff        12.31 kB\ndist/client/assets/KaTeX_Caligraphic-Regular-wX97UBjC.ttf       12.34 kB\ndist/client/assets/KaTeX_Caligraphic-Bold-ATXxdsX0.ttf          12.36 kB\ndist/client/assets/KaTeX_Fraktur-Regular-Dxdc4cR9.woff          13.20 kB\ndist/client/assets/KaTeX_Fraktur-Bold-BsDP51OF.woff             13.29 kB\ndist/client/assets/KaTeX_Typewriter-Regular-CO6r4hn1.woff2      13.56 kB\ndist/client/assets/KaTeX_SansSerif-Italic-DN2j7dab.woff         14.11 kB\ndist/client/assets/KaTeX_SansSerif-Bold-DbIhKOiC.woff           14.40 kB\ndist/client/assets/KaTeX_Typewriter-Regular-C0xS9mPB.woff       16.02 kB\ndist/client/assets/KaTeX_Math-BoldItalic-CZnvNsCZ.woff2         16.40 kB\ndist/client/assets/KaTeX_Math-Italic-t53AETM-.woff2             16.44 kB\ndist/client/assets/KaTeX_Script-Regular-C5JkGWo-.ttf            16.64 kB\ndist/client/assets/KaTeX_Main-BoldItalic-DxDJ3AOS.woff2         16.78 kB\ndist/client/assets/KaTeX_Main-Italic-NWA7e6Wa.woff2             16.98 kB\ndist/client/assets/KaTeX_Math-BoldItalic-iY-2wyZ7.woff          18.66 kB\ndist/client/assets/KaTeX_Math-Italic-DA0__PXp.woff              18.74 kB\ndist/client/assets/KaTeX_Main-BoldItalic-SpSLRI95.woff          19.41 kB\ndist/client/assets/KaTeX_SansSerif-Regular-BNo7hRIc.ttf         19.43 kB\ndist/client/assets/KaTeX_Fraktur-Regular-CB_wures.ttf           19.57 kB\ndist/client/assets/KaTeX_Fraktur-Bold-BdnERNNW.ttf              19.58 kB\ndist/client/assets/KaTeX_Main-Italic-BMLOBm91.woff              19.67 kB\ndist/client/assets/KaTeX_SansSerif-\nFull transcript in the execution-proof artifact.",
+      "output_sha256": "22f702c5b856f2dfd03ee2ed1dc5388cb22938b58f7d8ab01ab1659067105c40"
+    }
+  ],
+  "passed": true
+}

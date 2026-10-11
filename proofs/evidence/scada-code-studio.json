@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "repository": "brunnojob/scada-code-studio",
+  "source_commit": "0f31d7beb74a28cab50005d9edcaaaea18ef9b41",
+  "generated_at": "2026-10-10T05:28:26.242110+00:00",
+  "run_url": "https://github.com/brunnojob/scada-code-studio/actions/runs/38027607871",
+  "inputs_sha256": {
+    ".proof/scenarios.json": "11fad3f80f3bb27cacc02211fbd1900ef7a5cf4303016c397591251440b6354d",
+    ".proof/browser-demo.mjs": "01c204fb97f50d57f0ec9d486d7d8e0b1b175c0dbb1f5e8f3e2157f68ac5779d",
+    ".proof/browser/package.json": "4cf1d5d736c0721afd3d5db8e62df9a227b3bce839ea4c6a91da6238515c53bd",
+    ".proof/browser/package-lock.json": "06f1b83ef9eace2d48c96891b9bd453bb9ce4a845e9ecd6bb4faafe696eb4741"
+  },
+  "cases": [
+    {
+      "display": false,
+      "name": "npm ci",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm ci"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 22.772,
+      "output": "npm warn deprecated tsconfck@3.1.6: unmaintained\nnpm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead\nnpm warn deprecated recharts@2.15.4: 1.x and 2.x branches are no longer active. Bump to Recharts v3 to receive latest features and bugfixes. See https://github.com/recharts/recharts/wiki/3.0-migration-guide\nnpm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.\n\nadded 1204 packages, and audited 1206 packages in 23s\n\n371 packages are looking for funding\n  run `npm fund` for details\n\n20 vulnerabilities (7 low, 13 high)\n\nSome issues need review, and may require choosing\na different dependency.\n\nRun `npm audit` for details.\nnpm warn install-scripts 2 packages have install scripts not yet covered by allowScripts:\nnpm warn install-scripts   esbuild@0.28.1 (postinstall: node install.js)\nnpm warn install-scripts   sharp@0.34.5 (install: node install/check.js || npm run build)\nnpm warn install-scripts\nnpm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.\n",
+      "output_sha256": "16f8662c2ce3eff9724a59c10c29ffb0a076efa6a11d3f1c1b7561b105e8075e"
+    },
+    {
+      "display": true,
+      "name": "npm run build",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm run build"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 4.37,
+      "output": "\n> build\n> vite build\n\n[info] [nitro:vercel] Using `nodejs24.x` runtime.\n[info] [nitro:vercel] Using `web` entry format.\n\u001b[36mvite v8.3.4 \u001b[32mbuilding client environment for production...\u001b[36m\u001b[39m\ntransforming...\n✓ 1909 modules transformed.\nrendering chunks...\ncomputing gzip size...\n.vercel/output/static/assets/styles-Badzhjq-.css  101.74 kB │ gzip:  16.60 kB\n.vercel/output/static/assets/routes-DG533vX8.js    82.51 kB │ gzip:  25.99 kB\n.vercel/output/static/assets/index-BACqn5NB.js    370.20 kB │ gzip: 117.91 kB\n\n\u001b[32m✓ built in 832ms\u001b[39m\n\u001b[36mvite v8.3.4 \u001b[32mbuilding ssr environment for production...\u001b[36m\u001b[39m\ntransforming...\n✓ 73 modules transformed.\nrendering chunks...\ncomputing gzip size...\nnode_modules/.nitro/vite/services/ssr/assets/styles-Badzhjq-.css                     101.74 kB │ gzip: 16.60 kB\nnode_modules/.nitro/vite/services/ssr/assets/empty-plugin-adapters-D9UWiqvJ.js         0.22 kB │ gzip:  0.16 kB\nnode_modules/.nitro/vite/services/ssr/assets/rolldown-runtime-D7D4PA-g.js              0.36 kB │ gzip:  0.25 kB\nnode_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-TjghkEgY.js    0.56 kB │ gzip:  0.31 kB\nnode_modules/.nitro/vite/services/ssr/assets/start-ZGCRs25t.js                         1.42 kB │ gzip:  0.66 kB\nnode_modules/.nitro/vite/services/ssr/index.js                                         3.29 kB │ gzip:  1.42 kB\nnode_modules/.nitro/vite/services/ssr/assets/router-BK-j4Mgy.js                        8.85 kB │ gzip:  2.97 kB\nnode_modules/.nitro/vite/services/ssr/assets/server-B1YBbHGB.js                       69.66 kB │ gzip: 17.78 kB\nnode_modules/.nitro/vite/services/ssr/assets/routes-DzMt31Jk.js                       79.98 kB │ gzip: 18.44 kB\n\n\u001b[32m✓ built in 231ms\u001b[39m\n[start] [nitro] Building [\u001b[35mNitro\u001b[39m] \u001b[2m(preset: `vercel`, compatibility: `2026-10-10`)\u001b[22m\n[success] [nitro] Generated public \u001b[36m.vercel/output/static\u001b[39m\n\u001b[36mvite v8.3.4 \u001b[32mbuilding nitro environment for production...\u001b[36m\u001b[39m\n\u001b[33m`output.codeSplitting.groups[0].name` is a function. Set `output.codeSplitting.groups[0].debugName` so the bundler timing report can identify this group.\u001b[39m\ntransforming...\n✓ 1942 modules transformed.\nrendering chunks...\ncomputing gzip size...\n.vercel/output/functions/__server.func/_ssr/empty-plugin-adapters-D9UWiqvJ.mjs    0.23 kB │ gzip:   0.16 kB\n.vercel/output/functions/__server.func/_libs/clsx.mjs                             0.55 kB │ gzip:   0.31 kB\n.vercel/output/functions/__server.func/_chunks/ssr-renderer.mjs                   0.60 kB │ gzip:   0.36 kB\n.vercel/output/functions/__server.func/_tanstack-start-manifest_v-TjghkEgY.mjs    0.61 kB │ gzip:   0.34 kB\n.vercel/output/functions/__server.func/_ssr/start-ZGCRs25t.mjs                    1.38 kB │ gzip:   0.65 kB\n.vercel/output/functions/__server.func/_ssr/rolldown-runtime-D7D4PA-g.mjs         1.72 kB │ gzip:   0.81 kB\n.vercel/output/functions/__server.func/_ssr/ssr.mjs                               3.22 kB │ gzip:   1.42 kB\n.vercel/output/functions/__server.func/index.mjs                                  7.25 kB │ gzip:   2.59 kB\n.vercel/output/functions/__server.func/_libs/lucide-react.mjs                     8.02 kB │ gzip:   1.97 kB\n.vercel/output/functions/__server.func/_ssr/router-BK-j4Mgy.mjs                   9.63 kB │ gzip:   3.05 kB\n.vercel/output/functions/__server.func/_libs/tanstack__history.mjs               12.50 kB │ gzip:   3.70 kB\n.vercel/output/functions/__server.func/_libs/h3-v2+rou3+srvx.mjs         \nFull transcript in the execution-proof artifact.",
+      "output_sha256": "022be673bde7d6e6ff8420de952a6aa6b90f6c34dab4fedcb226cd0b6496e199"
+    },
+    {
+      "display": false,
+      "name": "Install isolated browser testing dependency",
+      "argv": [
+        "npm",
+        "ci",
+        "--prefix",
+        ".proof/browser",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.653,
+      "output": "\nadded 2 packages in 579ms\n",
+      "output_sha256": "c2835eef00ceb1ed0d41b2490eb5d264d5258c57eae67bd235cec6550ef833f7"
+    },
+    {
+      "display": false,
+      "name": "Install Chromium for UI proof",
+      "argv": [
+        "node",
+        ".proof/browser/node_modules/playwright/cli.js",
+        "install",
+        "--with-deps",
+        "chromium"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 19.205,
+      "output": "Installing dependencies...\nSwitching to root user to install dependencies...\nGet:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]\nHit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease\nGet:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]\nGet:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]\nGet:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]\nGet:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]\nGet:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1375 kB]\nGet:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [306 kB]\nGet:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1702 kB]\nGet:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [342 kB]\nGet:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1761 kB]\nGet:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [401 kB]\nGet:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [55.0 kB]\nGet:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.3 kB]\nGet:15 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [492 kB]\nGet:16 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.3 kB]\nGet:17 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [548 kB]\nGet:18 https://packages.microsoft.com/ubuntu/24.04/prod noble/main all Packages [640 B]\nGet:19 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1121 kB]\nGet:20 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [228 kB]\nGet:21 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1220 kB]\nGet:22 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [245 kB]\nGet:23 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1669 kB]\nGet:24 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [383 kB]\nGet:25 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [49.8 kB]\nGet:26 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse Translation-en [12.4 kB]\nFetched 12.3 MB in 1s (10.2 MB/s)\nReading package lists...\nReading package lists...\nBuilding dependency tree...\nReading state information...\nlibasound2t64 is already the newest version (1.2.11-1ubuntu0.3).\nlibasound2t64 set to manually installed.\nlibatk-bridge2.0-0t64 is already the newest version (2.52.0-1build1).\nlibatk-bridge2.0-0t64 set to manually installed.\nlibatk1.0-0t64 is already the newest version (2.52.0-1build1).\nlibatk1.0-0t64 set to manually installed.\nlibatspi2.0-0t64 is already the newest version (2.52.0-1build1).\nlibatspi2.0-0t64 set to manually installed.\nlibcairo2 is already the newest version (1.18.0-3build1).\nlibcairo2 set to manually installed.\nlibcups2t64 is already the newest version (2.4.7-1.2ubuntu7.14).\nlibcups2t64 set to manually installed.\nlibdbus-1-3 is already the newest version (1.14.10-4ubuntu4.1).\nlibdbus-1-3 set to manually installed.\nlibdrm2 is already the newest version (2.4.125-1ubuntu0.1~24.04.2).\nlibdrm2 set to manually installed.\nlibgbm1 is already the newest version (25.2.8-0ubuntu0.24.04.4).\nlibgbm1 set to manually installed.\nlibglib2.0-0t64 is already the newest ve\nFull transcript in the execution-proof artifact.",
+      "output_sha256": "cd6196ef9fc6e7a9cd2ee02b8fa50802e314574c4d3debdcace68ad72dab4ae6"
+    },
+    {
+      "display": true,
+      "name": "Operate actual HMI and export captured control actions",
+      "argv": [
+        "node",
+        ".proof/browser-demo.mjs"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 7.19,
+      "output": "{\"motor_started\":true,\"thermal_trip_stopped_motor\":true,\"reset_left_motor_stopped\":true,\"exported_actions\":4,\"browser_errors\":[]}\n",
+      "output_sha256": "fc36fcf1a55bc9c078754d67b9b7b148b0b663c3ff17c910f77e0be8d6a73da4"
+    }
+  ],
+  "passed": true
+}

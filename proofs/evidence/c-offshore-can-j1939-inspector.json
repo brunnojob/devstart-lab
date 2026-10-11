@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "repository": "brunnojob/c-offshore-can-j1939-inspector",
+  "source_commit": "93aa2118dcc7f7e3a7d9e45e2a966db0993baaf0",
+  "generated_at": "2026-10-10T05:30:07.027718+00:00",
+  "run_url": "https://github.com/brunnojob/c-offshore-can-j1939-inspector/actions/runs/38027630918",
+  "inputs_sha256": {
+    ".proof/scenarios.json": "8f5ef93e9fb62e0bd2eb08801b23fd79c6020cd716aaad87bdd77091771a33f7",
+    "examples/input.txt": "d7850c5427c2856b37117dfe4d84e73bf549b7c5188058fdda98dd7a5d2929f8"
+  },
+  "cases": [
+    {
+      "display": false,
+      "name": "make test && ./app < examples/input.txt",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "make test && ./app < examples/input.txt"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 1.704,
+      "output": "cc -std=c17 -Wall -Wextra -Werror -pedantic -O2 src/main.c -lm -o app\n./app --self-test\nPGN and wrap tests passed\ntime=0.000 source=1 pgn=61444 priority=6 gap=0\ntime=1.000 source=1 pgn=61444 priority=6 gap=0\ntime=2.000 source=1 pgn=61444 priority=6 gap=1\n",
+      "output_sha256": "f1298c4125ff43b1c3682b7b3e51c354fd8c6de5c13aa874ca47beeb8ed20625"
+    },
+    {
+      "display": true,
+      "name": "Application demonstration with checked output",
+      "argv": [
+        "./app"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "time=0.000 source=1 pgn=61444 priority=6 gap=0\ntime=1.000 source=1 pgn=61444 priority=6 gap=0\ntime=2.000 source=1 pgn=61444 priority=6 gap=1\n",
+      "output_sha256": "ca23d5ffe9ed80203befec8ff281d247f3ea5a72f37fca477ee624609bdfdf7e"
+    },
+    {
+      "display": true,
+      "name": "Reject an empty capture",
+      "argv": [
+        "./app"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "missing input\n",
+      "output_sha256": "e108e9abb244623e01f96efedd4006bbb9cdf4b61840b948d6bf644ffe78bede"
+    },
+    {
+      "display": true,
+      "name": "Reject malformed input",
+      "argv": [
+        "./app"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "expected time,id,sequence,payload\n",
+      "output_sha256": "ae0afae5e5cf5036b58ad61d9e32c45157b415cfd6a8caa10fb1c83c784aa6fa"
+    },
+    {
+      "display": true,
+      "name": "Reject unsupported invocation",
+      "argv": [
+        "./app",
+        "--unsupported"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "unsupported command arguments\n",
+      "output_sha256": "8671e08a3718f115decd7eb1e7970691e3a2180c5a869d0e9ccd54e6d4fa8a80"
+    },
+    {
+      "display": true,
+      "name": "Reject an oversized input record",
+      "argv": [
+        "./app"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "input record too large\n",
+      "output_sha256": "d0f1bb9ab1c99d914df3de66c3268650fd8fcb942b2d0f116490dc6c41e6f800"
+    }
+  ],
+  "passed": true
+}
