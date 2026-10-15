@@ -115,6 +115,6 @@ Co-authored-by: nyctophile <33561761+ineedfoundmyway@users.noreply.github.com>
 
 ## Projetos em execução
 
-[Explorar as evidências públicas](https://brunnojob.github.io/devstart-lab/proofs/). O catálogo reúne 60 projetos existentes, 59 relatórios extraídos dos logs do GitHub Actions e demos que executam o código original no navegador. Cada relatório identifica a versão, os comandos, as saídas e os limites da verificação. O perfil `brunnojob` e o repositório `bet-admin-dashboard` ficam fora desse catálogo.
+[Explorar as evidências públicas](https://brunnojob.github.io/devstart-lab/proofs/). O catálogo reúne 60 projetos existentes, 59 relatórios extraídos dos logs do GitHub Actions e demos que executam o código original no navegador. 
 
 `python scripts/build-proofs.py` compila seis programas em C para WebAssembly e reproduz seus cenários de entrada. As demos JavaScript usam os arquivos originais em commits fixados. O build falha se a versão baixada, o relatório ou os cenários não corresponderem ao registro. O catálogo contém snapshots; o botão de consulta usa a API pública do GitHub para mostrar a execução mais recente, sem confundi-la com a versão registrada.
