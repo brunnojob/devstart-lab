@@ -1,6 +1,14 @@
 # DevStart Lab
 
-**Um ponto de partida em português para aprender GitHub, construir projetos e fazer a primeira contribuição open source.**
+**Um ponto de partida em português e inglês para aprender lógica de programação, praticar GitHub e fazer a primeira contribuição open source.**
+
+[Português](https://brunnojob.github.io/devstart-lab/?lang=pt) · [English](https://brunnojob.github.io/devstart-lab/?lang=en)
+
+A interface tem seleção de idioma e temas claro/escuro, com preferências salvas no navegador. As oito primeiras etapas ensinam lógica com exercícios e exemplos em Python; as 12 etapas originais de GitHub continuam em seguida. O progresso anterior e as ideias salvas são preservados. O catálogo de evidências e seus logs originais continuam disponíveis em “Projetos em execução”.
+
+## English overview
+
+DevStart Lab is a free, open learning path with Portuguese and English interface options, light and dark themes, and browser-local progress. Start with eight programming logic steps featuring Python examples and practical exercises, then follow the original 12-step GitHub path. The 25 project ideas, command generator, progress import/export, achievements guidance and execution evidence catalog are retained. Use `?lang=en` to share the English interface. Recorded evidence and original logs remain in their source languages.
 
 [Explorar a aplicação](https://brunnojob.github.io/devstart-lab/) · [Começar pelo roadmap](#roadmap) · [Ideias de projetos](#ideias-de-projetos) · [Fazer o primeiro PR](#seu-primeiro-pull-request) · [Contribuir](CONTRIBUTING.md)
 
@@ -10,7 +18,7 @@
 
 | Área | O que você consegue fazer |
 | --- | --- |
-| Roadmap | Percorrer 12 etapas com entregas verificáveis, referências oficiais e progresso salvo no navegador |
+| Roadmap | Percorrer 20 etapas com entregas verificáveis, referências oficiais e progresso salvo no navegador |
 | Projetos | Filtrar 25 ideias por área, nível e busca; conferir requisitos, estimativa e extensão; salvar favoritas |
 | Primeiro PR | Entender branch, fork, revisão e gerar comandos Git a partir do seu usuário e repositório |
 | Conquistas | Conhecer caminhos legítimos para Pull Shark, Pair Extraordinaire, Galaxy Brain e Starstruck |
@@ -26,6 +34,8 @@
 O objetivo é criar valor para outras pessoas. Estrelas e conquistas podem vir como consequência, mas não são garantidas.
 
 ## Roadmap
+
+A nova fase **Comece aqui: lógica de programação** cobre decomposição, variáveis e operadores, condições, repetições, funções, coleções, testes e um primeiro programa. Cada etapa tem exemplo, exercício e entrega. Python é uma linguagem de exemplo; a trilha não exige conta ou instalação de ferramentas do GitHub para começar.
 
 | Fase | Etapas | Entrega esperada |
 | --- | --- | --- |

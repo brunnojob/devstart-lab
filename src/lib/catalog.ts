@@ -1,3 +1,4 @@
+import { translate } from './i18n';
 import type { Difficulty, Project } from '../data/projects';
 
 export type ProjectFilter = { search: string; category: string; difficulty: string };
@@ -9,7 +10,8 @@ function normalize(value: string): string {
 export function filterProjects(items: readonly Project[], filter: ProjectFilter): Project[] {
   const query = normalize(filter.search.trim());
   return items.filter((project) => {
-    const searchable = normalize([project.title, project.summary, project.category, ...project.stack].join(' '));
+    const fields = [project.title, project.summary, project.category, ...project.stack];
+    const searchable = normalize([...fields, ...fields.map(value => translate(value, 'en'))].join(' '));
     return (!query || searchable.includes(query)) && (!filter.category || project.category === filter.category) && (!filter.difficulty || project.difficulty === filter.difficulty);
   });
 }
