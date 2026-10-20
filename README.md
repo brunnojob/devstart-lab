@@ -4,6 +4,12 @@ An open learning path from programming logic to a first open source contribution
 
 [Try in English](https://brunnojob.github.io/devstart-lab/?lang=en) · [Português](https://brunnojob.github.io/devstart-lab/?lang=pt) · [Execution evidence and demos](https://brunnojob.github.io/devstart-lab/proofs/)
 
+## Video walkthrough
+
+[Watch the 55-second demonstration](https://brunnojob.github.io/devstart-lab/media/devstartlab.mp4)
+
+See the learning path, project catalog and interface in action. [View the video file on GitHub](https://github.com/brunnojob/devstart-lab/blob/main/public/media/devstartlab.mp4).
+
 ## What you can do
 
 | Feature | Behavior |
@@ -95,3 +101,4 @@ Existing coauthorship credit:
 ```text
 Co-authored-by: nyctophile <33561761+ineedfoundmyway@users.noreply.github.com>
 ```
+
