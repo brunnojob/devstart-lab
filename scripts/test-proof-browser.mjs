@@ -15,6 +15,10 @@ try {
   const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));
+  await page.exposeFunction('reportPolicyViolation', directive => errors.push(`CSP: ${directive}`));
+  await page.addInitScript(() => {
+    document.addEventListener('securitypolicyviolation', event => window.reportPolicyViolation(event.violatedDirective));
+  });
   await page.goto('http://127.0.0.1:4917/proofs/');
   assert.equal(await page.locator('.card').count(), catalog.length);
   await page.locator('#search').fill('modbus');

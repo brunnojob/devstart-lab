@@ -18,6 +18,20 @@ auditor = load('check-build')
 
 
 class SecurityTests(unittest.TestCase):
+    def test_inline_css_exception_does_not_allow_inline_javascript(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            folder = root / 'proofs/casino-simulator-brunnodev/demo'
+            folder.mkdir(parents=True)
+            document = folder / 'index.html'
+            document.write_text('<html><head><meta charset="utf-8"></head><body></body></html>')
+            security.secure_document(document)
+            self.assertIn("style-src-attr &#x27;unsafe-inline&#x27;", document.read_text())
+            auditor.check_build(root)
+            document.write_text(document.read_text().replace('</body>', '<script>alert(1)</script></body>'))
+            with self.assertRaises(ValueError):
+                auditor.check_build(root)
+
     def test_catalog_rejects_path_traversal_and_active_urls(self):
         builder.validate_catalog(builder.CATALOG)
         for field, value in [('name', '../escape'), ('name', 'x" onclick="alert(1)'), ('run_url', 'javascript:alert(1)'), ('sha', 'main'), ('workflow', '../secret'), ('branch', 'main" autofocus'), ('parent', '../escape')]:

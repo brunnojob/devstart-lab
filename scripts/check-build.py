@@ -37,8 +37,11 @@ def check_build(root):
         for directive in ("default-src 'none'", "object-src 'none'", "base-uri 'none'", "form-action 'none'"):
             if directive not in policy:
                 raise ValueError(f'Missing {directive}: {document}')
-        if "'unsafe-eval'" in policy or "'unsafe-inline'" in policy:
+        script_policy = next(part.strip() for part in policy.split(';') if part.strip().startswith('script-src '))
+        if "'unsafe-eval'" in script_policy or "'unsafe-inline'" in script_policy:
             raise ValueError(f'Unsafe CSP: {document}')
+        if "'unsafe-inline'" in policy and not (document.parent.name == 'demo' and document.parent.parent.name == 'casino-simulator-brunnodev'):
+            raise ValueError(f'Unexpected inline style exception: {document}')
     if list(root.rglob('*.map')):
         raise ValueError('Production source maps must not be published')
     total = sum(path.stat().st_size for path in root.rglob('*') if path.is_file())

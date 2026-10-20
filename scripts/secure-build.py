@@ -9,6 +9,7 @@ def secure_document(document):
     scripts = "'self' 'wasm-unsafe-eval'" if wasm else "'self'"
     connect = "'self' https://api.github.com" if document.parent.parent.name == 'proofs' else "'self'"
     workers = "'self'" if wasm else "'none'"
+    legacy_game = document.parent.name == 'demo' and document.parent.parent.name == 'casino-simulator-brunnodev'
     policy = '; '.join([
         "default-src 'none'", f'script-src {scripts}',
         "style-src 'self' https://fonts.googleapis.com",
@@ -16,6 +17,8 @@ def secure_document(document):
         f'connect-src {connect}', f'worker-src {workers}',
         "base-uri 'none'", "object-src 'none'", "form-action 'none'"
     ])
+    if legacy_game:
+        policy += "; style-src-attr 'unsafe-inline'"
     if re.search(r'<meta\s+http-equiv=["\']Content-Security-Policy', source, re.I):
         raise ValueError(f'Duplicate security policy: {document}')
     meta = f'<meta http-equiv="Content-Security-Policy" content="{escape(policy, quote=True)}"><meta name="referrer" content="strict-origin-when-cross-origin">'
