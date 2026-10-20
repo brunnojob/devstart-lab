@@ -5,26 +5,31 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
 concurrency:
   group: devstart-lab-pages
   cancel-in-progress: false
   queue: max
 jobs:
   build:
+    timeout-minutes: 20
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
           node-version: '24'
           cache: npm
-      - run: npm ci
+      - run: npm ci --ignore-scripts
+      - run: npm audit --audit-level=high
+      - run: npm run test:security
       - run: npm run test
       - name: Install WebAssembly compiler
         run: |
-          git clone --depth 1 https://github.com/emscripten-core/emsdk.git .emsdk
+          git init .emsdk
+          git -C .emsdk fetch --depth 1 https://github.com/emscripten-core/emsdk.git d7b4130688bfa348392b921ab04015aa15c4f154
+          git -C .emsdk checkout --detach FETCH_HEAD
           .emsdk/emsdk install 6.0.12
           .emsdk/emsdk activate 6.0.12
       - name: Build verified project pages and executable demos
@@ -39,13 +44,19 @@ jobs:
         run: |
           npm install --prefix .qa --no-save --no-audit --no-fund playwright@1.64.0
           node .qa/node_modules/playwright/cli.js install --with-deps chromium
+      - name: Verify main application in Chromium
+        run: node scripts/test-app-browser.mjs
       - name: Verify executable demos in Chromium
         run: node scripts/test-proof-browser.mjs
-      - uses: actions/configure-pages@v6
-      - uses: actions/upload-pages-artifact@v5
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9
         with:
           path: dist
   deploy:
+    permissions:
+      pages: write
+      id-token: write
+    timeout-minutes: 10
     needs: build
     runs-on: ubuntu-24.04
     environment:
@@ -53,4 +64,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346
