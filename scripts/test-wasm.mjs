@@ -23,6 +23,4 @@ for (const test of [{ name: 'Original C self-test', argv: ['./app', '--self-test
   console.log(`PASS WebAssembly: ${test.name}`);
 }
 
-// Emscripten sets the host exitCode during intentional rejection cases.
-// Assertions above verify every expected program exit independently.
 process.exitCode = 0;

@@ -2,6 +2,8 @@ node_modules/
 dist/
 coverage/
 .env
+.env.*
+!.env.example
 *.local
 .DS_Store
 
@@ -14,3 +16,5 @@ scripts/__pycache__/
 public/proofs/index.html
 
 .emsdk/
+
+**/__pycache__/

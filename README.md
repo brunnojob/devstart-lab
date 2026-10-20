@@ -1,130 +1,97 @@
 # DevStart Lab
 
-**Um ponto de partida em português e inglês para aprender lógica de programação, praticar GitHub e fazer a primeira contribuição open source.**
+An open learning path from programming logic to a first open source contribution. Available in English and Portuguese, with light and dark themes and progress stored in your browser.
 
-[Português](https://brunnojob.github.io/devstart-lab/?lang=pt) · [English](https://brunnojob.github.io/devstart-lab/?lang=en)
+[Try in English](https://brunnojob.github.io/devstart-lab/?lang=en) · [Português](https://brunnojob.github.io/devstart-lab/?lang=pt) · [Execution evidence and demos](https://brunnojob.github.io/devstart-lab/proofs/)
 
-A interface tem seleção de idioma e temas claro/escuro, com preferências salvas no navegador. As oito primeiras etapas ensinam lógica com exercícios e exemplos em Python; as 12 etapas originais de GitHub continuam em seguida. O progresso anterior e as ideias salvas são preservados. O catálogo de evidências e seus logs originais continuam disponíveis em “Projetos em execução”.
+## What you can do
 
-## English overview
-
-DevStart Lab is a free, open learning path with Portuguese and English interface options, light and dark themes, and browser-local progress. Start with eight programming logic steps featuring Python examples and practical exercises, then follow the original 12-step GitHub path. The 25 project ideas, command generator, progress import/export, achievements guidance and execution evidence catalog are retained. Use `?lang=en` to share the English interface. Recorded evidence and original logs remain in their source languages.
-
-[Explorar a aplicação](https://brunnojob.github.io/devstart-lab/) · [Começar pelo roadmap](#roadmap) · [Ideias de projetos](#ideias-de-projetos) · [Fazer o primeiro PR](#seu-primeiro-pull-request) · [Contribuir](CONTRIBUTING.md)
-
-> Seu primeiro passo vira projeto. O guia é gratuito, aberto e funciona no navegador sem conta adicional, token ou servidor.
-
-## O que existe aqui
-
-| Área | O que você consegue fazer |
+| Feature | Behavior |
 | --- | --- |
-| Roadmap | Percorrer 20 etapas com entregas verificáveis, referências oficiais e progresso salvo no navegador |
-| Projetos | Filtrar 25 ideias por área, nível e busca; conferir requisitos, estimativa e extensão; salvar favoritas |
-| Primeiro PR | Entender branch, fork, revisão e gerar comandos Git a partir do seu usuário e repositório |
-| Conquistas | Conhecer caminhos legítimos para Pull Shark, Pair Extraordinaire, Galaxy Brain e Starstruck |
-| Portabilidade | Exportar e importar o progresso em JSON, sem enviar dados pessoais a um servidor |
+| Learning path | Complete 20 steps: eight programming foundations with Python examples, followed by 12 GitHub and collaboration steps |
+| Project ideas | Filter 25 scoped ideas by area, difficulty and search; review requirements and save favorites |
+| Git command generator | Generate a local repository or fork workflow with validated account, repository and branch names |
+| Progress | Track steps locally and import or export a validated JSON backup |
+| Preferences | Switch language and theme without an account |
+| Execution catalog | Inspect 60 existing repositories, recorded test results and runnable browser demonstrations |
 
-## Comece em 15 minutos
+No sign-up, API token, database or application server is required. The main learning application makes no GitHub API requests. The evidence pages query the public GitHub API only when you press the status button, with a timeout and a short per-page cache.
 
-1. Abra a [aplicação](https://brunnojob.github.io/devstart-lab/) e marque a primeira etapa do roadmap depois de executá-la.
-2. Filtre o catálogo por **Iniciante** e escolha uma ideia cujo escopo caiba na sua semana.
-3. Crie um repositório com README, licença e uma primeira versão utilizável.
-4. Escolha uma melhoria pequena em um projeto aberto e siga o [guia de pull request](docs/primeiro-pr.md).
+## Start learning
 
-O objetivo é criar valor para outras pessoas. Estrelas e conquistas podem vir como consequência, mas não são garantidas.
+1. Open the [English application](https://brunnojob.github.io/devstart-lab/?lang=en).
+2. Start with programming logic, or jump to the GitHub steps if you already write code.
+3. Choose a beginner project with a manageable scope and complete its requirements.
+4. Read the target project's contribution guide before opening a focused pull request.
 
-## Roadmap
+Time estimates assume basic familiarity with the language. Python is used to explain concepts; the learning path does not require GitHub tooling for the first eight steps. The [detailed first-PR guide](docs/primeiro-pr.md) and [achievement guide](docs/conquistas.md) are currently in Portuguese. Evidence logs retain their original languages.
 
-A nova fase **Comece aqui: lógica de programação** cobre decomposição, variáveis e operadores, condições, repetições, funções, coleções, testes e um primeiro programa. Cada etapa tem exemplo, exercício e entrega. Python é uma linguagem de exemplo; a trilha não exige conta ou instalação de ferramentas do GitHub para começar.
+## Run locally
 
-| Fase | Etapas | Entrega esperada |
-| --- | --- | --- |
-| Fundamentos | Perfil, repositório, Git local | Perfil seguro e histórico de commits compreensível |
-| Construção | Branches, README, projeto | Projeto funcional e documentado |
-| Colaboração | Issues, fork, pull request, revisão | Contribuição pequena, revisável e útil |
-| Próximos passos | Automação, comunidade | Testes no CI e ajuda a outra pessoa |
-
-A aplicação apresenta cada etapa com uma fonte do GitHub Docs e um entregável concreto. O progresso fica em `localStorage`; exporte um JSON se quiser mudar de navegador.
-
-## Ideias de projetos
-
-As 25 propostas cobrem frontend, backend, dados, automação, documentação, API e full stack. Cada uma traz dificuldade, tempo estimado, requisitos mínimos e um desafio extra. Algumas opções para começar:
-
-- **Lista de tarefas acessível:** armazenamento local e navegação por teclado.
-- **Conversor de unidades:** validação e testes de fórmulas.
-- **Modelo de CI:** verificação automática de testes e build em pull requests.
-- **Glossário Git:** 20 termos com fontes e exemplos práticos.
-- **API de biblioteca:** rotas CRUD, validação e testes.
-
-Abra uma [sugestão de nova ideia](https://github.com/brunnojob/devstart-lab/issues/new/choose) com problema, público, requisitos e critérios de aceite.
-
-## Seu primeiro pull request
-
-Se você tem permissão de escrita no projeto, crie uma branch no repositório. Caso contrário, faça um fork e crie uma branch nele. Leia o `CONTRIBUTING.md` do projeto antes de alterar arquivos. Execute testes, envie a branch e use a interface do GitHub para abrir um PR com contexto e evidências. O [tutorial completo](docs/primeiro-pr.md) inclui os dois fluxos e erros frequentes.
-
-Encontre tarefas pequenas em [issues marcadas como `good first issue`](https://github.com/topics/good-first-issue) e confirme que ninguém já está trabalhando nelas. Documentação, tradução, testes e correções pequenas também são contribuições valiosas.
-
-## Conquistas do GitHub
-
-O [guia de conquistas](docs/conquistas.md) mostra ações úteis associadas a quatro Achievements e aponta para fontes oficiais. As regras exatas de elegibilidade não são uma promessa deste projeto: o GitHub informa que a funcionalidade está em **prévia pública** e pode mudar. Passe o cursor ou clique em uma conquista no seu perfil para ver as dicas e os eventos relacionados.
-
-Evite criar PRs vazios, coautorias fictícias ou discussões artificiais. Faça o trabalho que vale a pena mesmo sem badge.
-
-## Executar localmente
-
-### Pré-requisitos
-
-- Node.js 22.12 ou superior
-- npm compatível com a sua versão do Node.js
+Requirements: Node.js 22.12 or newer, npm and Python 3. GitHub Actions uses Node.js 24.
 
 ```bash
 git clone https://github.com/brunnojob/devstart-lab.git
 cd devstart-lab
-npm ci
+npm ci --ignore-scripts
 npm run dev
 ```
 
-Abra o endereço local informado pelo Vite. Para verificar alterações:
+Open the URL printed by Vite. Production builds use the `/devstart-lab/` base path.
 
 ```bash
 npm run typecheck
-npm run test
+npm test
+npm run test:security
+npm audit --audit-level=high
 npm run build
 npm run preview
 ```
 
-O projeto usa TypeScript estrito, Vite e Vitest. O build está configurado para o caminho `/devstart-lab/` do GitHub Pages. O site é estático; nenhuma variável de ambiente ou token é exigido.
+The application uses strict TypeScript, Vite and Vitest, without production package dependencies. `npm run build` adds a Content Security Policy to every generated HTML page and rejects unsafe executable markup, source maps and oversized assets. The main application assets have a 150 KiB gzip budget; the complete site has a 50 MiB budget.
 
-## Estrutura
+## Execution evidence
+
+The [catalog](https://brunnojob.github.io/devstart-lab/proofs/) contains snapshots for 60 repositories and 59 execution reports. Each report links to its source commit and original GitHub Actions run. Reports demonstrate the recorded scenarios, not every possible input or physical hardware operation.
+
+The full Pages workflow runs `python3 scripts/build-proofs.py`, compiles six original C programs to WebAssembly and checks their scenarios. JavaScript demonstrations use source files from recorded commits. It then verifies generated links, runs Chromium tests for the application and demos, and deploys only after the checks pass. A plain local `npm run build` builds the learning application; it does not fetch or compile all external demo sources.
+
+WebAssembly demos run in a worker with a parent-controlled eight-second timeout, a 128 MiB linear-memory cap, a 64 KiB input limit and a 128 KiB captured-output limit. These limits do not describe total browser memory. Demos do not connect to industrial equipment. The game demonstration uses fictional credits only.
+
+## Security and privacy
+
+Source code is public under the MIT license. Browser JavaScript and WebAssembly are downloadable; minification is an optimization, not encryption. Progress and exported JSON are unencrypted and must not contain sensitive information. HTTPS protects transport on the published site.
+
+The published HTML allows local scripts and the resources needed by each page. WebAssembly compilation is enabled only on WebAssembly demo pages; JavaScript string evaluation and inline scripts remain blocked. Google Fonts requests go to Google. An explicit evidence-status lookup goes to GitHub. Read [SECURITY.md](SECURITY.md) for scope, limitations and vulnerability reporting.
+
+GitHub Pages is a static host with usage limits. This architecture avoids a per-visitor backend and database bottleneck, but it does not promise unlimited traffic, zero vulnerabilities or guaranteed availability.
+
+## Repository layout
 
 ```text
-src/data/             Roadmap, ideias e conquistas
-src/lib/              Busca, progresso e comandos Git
-src/main.ts           Interface e interações
-src/styles.css        Layout responsivo
- tests/               Testes das regras de negócio
- docs/                Guias aprofundados
- .github/             CI, publicação e modelos de contribuição
+src/data/             Learning steps, project ideas and translations
+src/lib/              Filtering, progress validation and Git commands
+src/main.ts           Application interface and interactions
+src/styles.css        Responsive light and dark themes
+public/proofs/        Browser demo adapters and evidence-page assets
+proofs/               Recorded catalog and execution evidence
+scripts/              Demo build, security checks and browser verification
+tests/                Unit and security regression tests
+.github/              CI, Pages deployment and contribution templates
 ```
 
-## Contribua
+## Contribute
 
-Leia [CONTRIBUTING.md](CONTRIBUTING.md), abra uma issue com uma melhoria delimitada e envie um PR. Sugestões de conteúdo devem ter fontes confiáveis e exemplos reproduzíveis. Correções de acessibilidade, testes e explicações mais claras são bem-vindas.
+Read [CONTRIBUTING.md](CONTRIBUTING.md). Open an issue with a concrete problem, expected behavior and acceptance criteria. Accessibility fixes, translations, tests and clearer learning examples are welcome. Use reliable sources and reproducible examples for content changes.
 
-## Licença e créditos
+Achievements are incidental outcomes of useful work. Do not create empty pull requests, fictitious coauthorship or artificial discussions. GitHub controls badge eligibility and may change its rules.
 
-Código sob [MIT](LICENSE). Conteúdo e projeto criados por **Brunno / BrunnoDev** — [brunnodev.store](https://brunnodev.store/) · [GitHub @brunnojob](https://github.com/brunnojob).
+## License and credits
 
-## Co-authorship
+[MIT](LICENSE). Created by **Brunno / BrunnoDev** — [brunnodev.store](https://brunnodev.store/) · [GitHub @brunnojob](https://github.com/brunnojob).
 
-Contribution trailer:
+Existing coauthorship credit:
 
 ```text
 Co-authored-by: nyctophile <33561761+ineedfoundmyway@users.noreply.github.com>
 ```
-
-## Projetos em execução
-
-[Explorar as evidências públicas](https://brunnojob.github.io/devstart-lab/proofs/). O catálogo reúne 60 projetos existentes, 59 relatórios extraídos dos logs do GitHub Actions e demos que executam o código original no navegador. 
-
-`python scripts/build-proofs.py` compila seis programas em C para WebAssembly e reproduz seus cenários de entrada. As demos JavaScript usam os arquivos originais em commits fixados. O build falha se a versão baixada, o relatório ou os cenários não corresponderem ao registro. O catálogo contém snapshots; o botão de consulta usa a API pública do GitHub para mostrar a execução mais recente, sem confundi-la com a versão registrada.

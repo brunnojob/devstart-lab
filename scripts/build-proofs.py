@@ -1,6 +1,7 @@
 import html
 import json
 import os
+import re
 import shutil
 import subprocess
 from concurrent.futures import ThreadPoolExecutor
@@ -9,6 +10,28 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 TARGET = ROOT / 'public/proofs'
 CATALOG = json.loads((ROOT / 'proofs/catalog.json').read_text())
+
+
+def validate_catalog(catalog):
+    names = set()
+    for item in catalog:
+        name = item['name']
+        if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]{0,99}', name) or '..' in name or name in names:
+            raise ValueError('Invalid or duplicate repository name')
+        names.add(name)
+        if not re.fullmatch(r'[a-f0-9]{40}', item['sha']):
+            raise ValueError('Invalid source commit')
+        if not re.fullmatch(r'[A-Za-z0-9_-]+\.ya?ml', item['workflow']):
+            raise ValueError('Invalid workflow filename')
+        if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9/_.-]{0,199}', item['branch']):
+            raise ValueError('Invalid branch')
+        if not re.fullmatch(r'https://github\.com/brunnojob/' + re.escape(name) + r'/actions/runs/[0-9]+', item['run_url']):
+            raise ValueError('Invalid workflow run URL')
+        if item.get('demo') not in (None, 'wasm', 'casino', 'circuit'):
+            raise ValueError('Unknown demo type')
+        parent = item.get('parent')
+        if parent and not re.fullmatch(r'[A-Za-z0-9-]+/[A-Za-z0-9_.-]+', parent):
+            raise ValueError('Invalid parent repository')
 
 
 def escape(value):
@@ -109,6 +132,7 @@ def demo(item):
 
 
 def main():
+    validate_catalog(CATALOG)
     TARGET.mkdir(parents=True, exist_ok=True)
     for item in CATALOG:
         detail(item)
