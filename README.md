@@ -1,5 +1,14 @@
 # DevStart Lab
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-1677ff?style=flat-square)](https://brunnojob.github.io/devstart-lab/)
+[![GitHub Stars](https://img.shields.io/github/stars/brunnojob/devstart-lab?style=flat-square)](https://github.com/brunnojob/devstart-lab/stargazers)
+[![GitHub License](https://img.shields.io/github/license/brunnojob/devstart-lab?style=flat-square)](LICENSE)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-16803c?style=flat-square)](CONTRIBUTING.md)
+
+**An interactive, open-source roadmap to learn programming, explore real projects, and make your first GitHub contribution.**
+
+**[Launch the app](https://brunnojob.github.io/devstart-lab/?lang=en)** · **[Browse verified demos](https://brunnojob.github.io/devstart-lab/proofs/)** · **[Contribute](CONTRIBUTING.md)** · **[Star this repository](https://github.com/brunnojob/devstart-lab)**
+
 An open learning path from programming logic to a first open source contribution. Available in English and Portuguese, with light and dark themes and progress stored in your browser.
 
 [Try in English](https://brunnojob.github.io/devstart-lab/?lang=en) · [Português](https://brunnojob.github.io/devstart-lab/?lang=pt) · [Execution evidence and demos](https://brunnojob.github.io/devstart-lab/proofs/)
