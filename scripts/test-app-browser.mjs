@@ -23,6 +23,18 @@ try {
   await page.goto(base + '?lang=en');
   await page.locator('.roadmap-item').last().waitFor();
   assert.equal(await page.locator('html').getAttribute('lang'), 'en');
+  assert.equal(await page.locator('html').getAttribute('data-theme'), 'dark');
+  assert.match(await page.locator('h1').innerText(), /Learn programming logic/);
+  await page.getByRole('link', { name: 'Try the first exercise', exact: true }).click();
+  assert.equal(new URL(page.url()).hash, '#step-logica-problemas');
+  assert.equal(await page.locator('#step-logica-problemas h4').innerText(), 'Break a problem into steps');
+  await page.locator('#language-select').selectOption('pt');
+  assert.match(await page.locator('h1').innerText(), /Aprenda lógica de programação/);
+  assert.equal(await page.locator('.learning-route li').count(), 3);
+  await page.locator('#language-select').selectOption('en');
+  await page.locator('#theme-select').selectOption('light');
+  await page.reload();
+  assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
   assert.equal(await page.locator('.roadmap-item').count(), 20);
   assert.equal(await page.locator('.project-card').count(), 25);
   await page.locator('.roadmap-item input[type=checkbox]').first().check();
