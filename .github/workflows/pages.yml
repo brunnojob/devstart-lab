@@ -49,6 +49,8 @@ jobs:
           node .qa/node_modules/playwright/cli.js install --with-deps chromium
       - name: Verify main application in Chromium
         run: node scripts/test-app-browser.mjs
+      - name: Verify language selection across pages
+        run: node scripts/test-i18n-browser.mjs
       - name: Verify executable demos in Chromium
         run: node scripts/test-proof-browser.mjs
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d

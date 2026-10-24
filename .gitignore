@@ -18,3 +18,5 @@ public/proofs/index.html
 .emsdk/
 
 **/__pycache__/
+
+public/proofs/translations.mjs

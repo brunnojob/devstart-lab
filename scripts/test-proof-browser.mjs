@@ -37,7 +37,16 @@ try {
     assert.ok((await page.locator('#result').innerText()).startsWith('Código de saída: 2'), item.name + ' rejects invalid input');
     console.log(`PASS browser WebAssembly: ${item.name}`);
   }
-  await page.goto('http://127.0.0.1:4917/proofs/eletrical-comands-and-teory/demo/');
+  const englishDemo = catalog.find(item => item.demo === 'wasm');
+  await page.goto(`http://127.0.0.1:4917/proofs/${englishDemo.name}/demo/?lang=en`);
+  await page.waitForFunction(() => document.querySelector('#input').value.length > 0);
+  await page.getByRole('button', { name: 'Run self-test', exact: true }).click();
+  await page.waitForFunction(() => document.querySelector('#result').textContent.startsWith('Exit code:'));
+  assert.ok((await page.locator('#result').innerText()).startsWith('Exit code: 0'));
+  await page.locator('#input').fill('x'.repeat(65537));
+  await page.getByRole('button', { name: 'Run C code', exact: true }).click();
+  assert.equal(await page.locator('#result').innerText(), 'Input exceeds 64 KiB.');
+  await page.goto('http://127.0.0.1:4917/proofs/eletrical-comands-and-teory/demo/?lang=pt');
   await page.waitForFunction(() => document.querySelector('#input').value.length > 0);
   await page.getByRole('button', { name: 'Executar scans', exact: true }).click();
   const circuit = await page.locator('#result').innerText();

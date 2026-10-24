@@ -39,7 +39,7 @@ def escape(value):
 
 
 def page(title, content, prefix='../'):
-    return f'''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Execução verificável, código aberto e demonstrações dos projetos de Brunno Dev."><title>{escape(title)} | Brunno Dev</title><link rel="stylesheet" href="{prefix}style.css"></head><body><header><nav class="shell"><a class="brand" href="{prefix}">Brunno<span> / </span>Projetos em execução</a><a href="https://github.com/brunnojob">GitHub ↗</a></nav></header><main class="shell">{content}</main><footer><div class="shell">Código aberto e evidências verificáveis. <a href="https://brunnodev.store">Brunno Dev</a> · <a href="https://github.com/brunnojob/devstart-lab/tree/main/proofs">Dados e fontes do catálogo</a></div></footer></body></html>'''
+    return f'''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Execução verificável, código aberto e demonstrações dos projetos de Brunno Dev."><title>{escape(title)} | Brunno Dev</title><link rel="stylesheet" href="{prefix}style.css"></head><body><header><nav class="shell"><a class="brand" href="{prefix}">Brunno<span> / </span>Projetos em execução</a><a href="{prefix}../">Voltar ao DevStart Lab</a><label>Idioma <select id="locale"><option value="pt">Português</option><option value="en">English</option></select></label><a href="https://github.com/brunnojob">GitHub ↗</a></nav></header><main class="shell">{content}</main><footer><div class="shell">Código aberto e evidências verificáveis. <a href="https://brunnodev.store">Brunno Dev</a> · <a href="https://github.com/brunnojob/devstart-lab/tree/main/proofs">Dados e fontes do catálogo</a></div></footer><script type="module" src="{prefix}i18n.mjs"></script></body></html>'''
 
 
 def links(item):
@@ -107,6 +107,17 @@ def demo(item):
     if item['demo'] == 'casino':
         for filename in ['index.html', 'styles.css', 'app.js', 'engine.mjs', 'LICENSE']:
             shutil.copyfile(source / filename, destination / filename)
+        document = destination / 'index.html'
+        document.write_text(document.read_text().replace('</body>', '<script type="module" src="../../i18n.mjs"></script></body>'))
+        application = destination / 'app.js'
+        code = application.read_text()
+        initial = 'let language = localStorage.getItem("nova-lang") || "pt";'
+        assert initial in code
+        code = "import { locale } from '../../i18n.mjs';\n" + code.replace(initial, 'let language = locale;')
+        code = code.replace('    applyLanguage();', '''    const url = new URL(location.href);
+    url.searchParams.set('lang', language);
+    location.href = url.href;''')
+        application.write_text(code)
         subprocess.run(['node', '--test', *[str(p) for p in (source / 'tests').glob('*.test.mjs')]], check=True, cwd=source)
         return
     if item['demo'] == 'circuit':
@@ -134,6 +145,11 @@ def demo(item):
 def main():
     validate_catalog(CATALOG)
     TARGET.mkdir(parents=True, exist_ok=True)
+    translations = json.loads((ROOT / 'proofs/translations.json').read_text())
+    for item in CATALOG:
+        if item['description'] not in translations and item['description'] not in translations.values():
+            raise ValueError(f'Missing catalog translation: {item["name"]}')
+    (TARGET / 'translations.mjs').write_text('export default ' + json.dumps(translations, ensure_ascii=False) + ';\n')
     for item in CATALOG:
         detail(item)
     with ThreadPoolExecutor(max_workers=3) as executor:

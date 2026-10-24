@@ -19,6 +19,7 @@ try {
 } catch {}
 const requestedLanguage = new URL(location.href).searchParams.get('lang');
 if (requestedLanguage === 'pt' || requestedLanguage === 'en') language = requestedLanguage;
+try { localStorage.setItem('devstart-language', language); } catch {}
 
 function refreshTranslations(): void {
   document.documentElement.lang = language === 'pt' ? 'pt-BR' : 'en';
@@ -27,6 +28,7 @@ function refreshTranslations(): void {
   document.querySelector('meta[name="description"]')?.setAttribute('content', language === 'pt' ? 'Aprenda lógica de programação e GitHub com exercícios, exemplos, ideias de projetos e uma trilha para o primeiro PR.' : 'Learn programming logic and GitHub with exercises, examples, project ideas and a path to your first PR.');
   translateDOM(document.body, language);
   document.querySelectorAll<HTMLAnchorElement>('a[href]').forEach(link => {
+    if (link.origin === location.origin && link.pathname.endsWith('/proofs/')) link.search = `?lang=${language}`;
     if (link.hostname === 'docs.github.com') link.pathname = link.pathname.replace(/^\/(pt|en)\//, `/${language === 'en' ? 'en' : 'pt'}/`);
   });
   document.querySelector<HTMLSelectElement>('#language-select')?.querySelectorAll('option').forEach(option => { option.selected = option.value === language; });
