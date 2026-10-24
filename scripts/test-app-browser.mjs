@@ -42,10 +42,46 @@ try {
   assert.equal(await page.locator('.roadmap-item input[type=checkbox]').first().isChecked(), true);
   await page.locator('#theme-select').selectOption('dark');
   assert.equal(await page.locator('html').getAttribute('data-theme'), 'dark');
+  const commandLocales = {
+    en: { owner: 'your-username', repo: 'my-project', branch: 'docs/first-pr', message: 'docs: describe the change', heading: 'Your first PR, step by step.' },
+    pt: { owner: 'seu-usuario', repo: 'meu-projeto', branch: 'docs/primeiro-pr', message: 'docs: descreve a mudança', heading: 'Seu primeiro PR, passo a passo.' },
+  };
+  for (const lang of ['en', 'pt', 'en']) {
+    await page.locator('#language-select').selectOption(lang);
+    const expected = commandLocales[lang];
+    assert.equal(await page.locator('#pull-request h2').innerText(), expected.heading);
+    assert.equal(await page.locator('#git-owner').inputValue(), expected.owner);
+    assert.equal(await page.locator('#git-repo').inputValue(), expected.repo);
+    assert.equal(await page.locator('#git-branch').inputValue(), expected.branch);
+    for (const flow of ['proprio', 'fork']) {
+      await page.locator('#git-flow').selectOption(flow);
+      const commands = await page.locator('#command-output').innerText();
+      assert.ok(commands.includes(`git clone https://github.com/${expected.owner}/${expected.repo}.git`));
+      assert.ok(commands.includes(`git switch -c ${expected.branch}`));
+      assert.ok(commands.includes(`git commit -m "${expected.message}"`));
+      assert.equal(commands.includes('git remote add upstream'), flow === 'fork');
+    }
+  }
+  await page.context().grantPermissions(['clipboard-read', 'clipboard-write']);
+  await page.locator('#copy-commands').click();
+  assert.equal(await page.evaluate(() => navigator.clipboard.readText()), await page.locator('#command-output').innerText());
+  await page.locator('#git-owner').fill('octocat');
+  await page.locator('#git-repo').fill('hello-world');
+  await page.locator('#git-branch').fill('docs/custom');
+  for (const lang of ['pt', 'en']) {
+    await page.locator('#language-select').selectOption(lang);
+    assert.equal(await page.locator('#git-owner').inputValue(), 'octocat');
+    assert.equal(await page.locator('#git-repo').inputValue(), 'hello-world');
+    assert.equal(await page.locator('#git-branch').inputValue(), 'docs/custom');
+    assert.ok((await page.locator('#command-output').innerText()).includes(`git commit -m "${commandLocales[lang].message}"`));
+  }
   await page.locator('#git-owner').fill('user; touch /tmp/injected');
   assert.equal(await page.locator('#copy-commands').isDisabled(), true);
   assert.equal(await page.locator('#command-output').innerText(), '');
   assert.equal(await page.locator('#command-error').innerText(), 'Enter a valid GitHub username.');
+  await page.locator('#language-select').selectOption('pt');
+  assert.equal(await page.locator('#command-error').innerText(), 'Informe um usuário GitHub válido.');
+  await page.locator('#language-select').selectOption('en');
   await page.locator('#import-progress').setInputFiles({ name: 'hostile.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify({ version: 1, completedSteps: ['<img src=x onerror=alert(1)>'], savedProjects: ['javascript:alert(1)'] })) });
   await page.waitForFunction(() => document.querySelector('#progress-bar').getAttribute('aria-valuenow') === '0');
   assert.equal(await page.locator('img[onerror]').count(), 0);
