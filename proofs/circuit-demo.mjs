@@ -1,5 +1,6 @@
 import { t } from '../../i18n.mjs';
 import { CircuitEngine } from './circuit.mjs';
+document.querySelector('#result').textContent = t('Aguardando execução.');
 const definition = await (await fetch('./circuit.json')).json();
 const input = document.querySelector('#input');
 input.value = JSON.stringify(await (await fetch('./input.json')).json(), null, 2);

@@ -47,6 +47,7 @@ function translatePage() {
     url.searchParams.set('lang', language);
     if (link.href !== url.href) link.href = url.href;
   }
+  document.documentElement.dataset.localeReady = language;
 }
 translatePage();
 const selector = document.querySelector('#locale');

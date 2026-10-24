@@ -40,6 +40,7 @@ try {
   const englishDemo = catalog.find(item => item.demo === 'wasm');
   await page.goto(`http://127.0.0.1:4917/proofs/${englishDemo.name}/demo/?lang=en`);
   await page.waitForFunction(() => document.querySelector('#input').value.length > 0);
+  assert.equal(await page.locator('#result').innerText(), 'Waiting to run.');
   await page.getByRole('button', { name: 'Run self-test', exact: true }).click();
   await page.waitForFunction(() => document.querySelector('#result').textContent.startsWith('Exit code:'));
   assert.ok((await page.locator('#result').innerText()).startsWith('Exit code: 0'));

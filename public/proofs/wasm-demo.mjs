@@ -1,6 +1,7 @@
 import { t } from '../../i18n.mjs';
 const input = document.querySelector('#input');
 const result = document.querySelector('#result');
+result.textContent = t('Aguardando execução.');
 let example = '';
 try {
   const response = await fetch('./input.txt', { signal: AbortSignal.timeout(8000) });

@@ -28,6 +28,7 @@ try {
     assert.equal(new URL(await proofsLink.getAttribute('href'), origin).searchParams.get('lang'), lang);
     assert.equal(await proofsLink.innerText(), lang === 'en' ? 'Projects in action' : 'Projetos em execução');
     await proofsLink.click();
+    await page.waitForFunction(locale => document.documentElement.dataset.localeReady === locale, lang);
     await page.waitForFunction(locale => document.documentElement.lang === locale, expected);
     assert.equal(await page.locator('.card').count(), catalog.length);
     assert.equal(await page.title(), `${lang === 'en' ? 'Projects in action' : 'Projetos em execução'} | Brunno Dev`);
@@ -39,6 +40,7 @@ try {
     assert.ok(await page.locator('.card:visible').count() > 0);
     assert.match(await page.locator('#count').innerText(), lang === 'en' ? /projects found/ : /projetos encontrados/);
     await page.goto(`${origin}/proofs/c-household-budget/`);
+    await page.waitForFunction(locale => document.documentElement.dataset.localeReady === locale, lang);
     await page.waitForFunction(locale => document.documentElement.lang === locale, expected);
     assert.equal(await page.locator('h1').innerText(), lang === 'en' ? 'Household Budget' : 'Orçamento doméstico');
     assert.equal(await page.locator('.block h2').first().innerText(), lang === 'en' ? 'What was verified' : 'O que foi verificado');
@@ -48,12 +50,14 @@ try {
     assert.match(await page.locator('#status').innerText(), lang === 'en' ? /Latest run: passed/ : /Última execução: passou/);
     assert.equal(await page.locator('details pre').first().innerText(), transcript);
     await page.reload();
+    await page.waitForFunction(locale => document.documentElement.dataset.localeReady === locale, lang);
     await page.waitForFunction(locale => document.documentElement.lang === locale, expected);
     assert.equal(await page.locator('#locale').inputValue(), lang);
   }
   for (const lang of ['en', 'pt']) {
     await page.goto(`${origin}/proofs/eletrical-comands-and-teory/demo/?lang=${lang}`);
     await page.waitForFunction(() => document.querySelector('#input').value.length > 0);
+    assert.equal(await page.locator('#result').innerText(), lang === 'en' ? 'Waiting to run.' : 'Aguardando execução.');
     await page.getByRole('button', { name: lang === 'en' ? 'Run scans' : 'Executar scans', exact: true }).click();
     assert.match(await page.locator('#result').innerText(), /"energized": true/);
     await page.locator('#input').fill('[');
@@ -67,8 +71,10 @@ try {
   await page.goto(`${origin}/proofs/?lang=en`);
   await page.locator('#locale').selectOption('pt');
   await page.waitForURL('**/proofs/?lang=pt');
+  await page.waitForFunction(() => document.documentElement.dataset.localeReady === 'pt');
   assert.equal(await page.evaluate(() => localStorage.getItem('devstart-language')), 'pt');
   await page.goto(`${origin}/proofs/?lang=en`);
+  await page.waitForFunction(() => document.documentElement.dataset.localeReady === 'en');
   assert.equal(await page.evaluate(() => localStorage.getItem('devstart-language')), 'en');
   const isolated = await browser.newContext();
   await isolated.addInitScript(() => {
