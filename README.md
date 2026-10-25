@@ -55,8 +55,3 @@ Found a confusing step or an example that does not work? [Open an issue](https:/
 
 [MIT](LICENSE). Created by **Brunno / BrunnoDev** — [brunnodev.store](https://brunnodev.store/).
 
-Existing coauthorship credit:
-
-```text
-Co-authored-by: nyctophile <33561761+ineedfoundmyway@users.noreply.github.com>
-```
