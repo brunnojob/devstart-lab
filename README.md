@@ -1,113 +1,62 @@
 # DevStart Lab
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-1677ff?style=flat-square)](https://brunnojob.github.io/devstart-lab/)
-[![GitHub Stars](https://img.shields.io/github/stars/brunnojob/devstart-lab?style=flat-square)](https://github.com/brunnojob/devstart-lab/stargazers)
-[![GitHub License](https://img.shields.io/github/license/brunnojob/devstart-lab?style=flat-square)](LICENSE)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-16803c?style=flat-square)](CONTRIBUTING.md)
+A free guide to programming basics, small projects and your first GitHub contribution. It starts with Python exercises and continues with Git, publishing a repository and opening a pull request.
 
-**An interactive, open-source roadmap to learn programming, explore real projects, and make your first GitHub contribution.**
+[Try it in English](https://brunnojob.github.io/devstart-lab/?lang=en) · [Usar em português](https://brunnojob.github.io/devstart-lab/?lang=pt) · [Watch the walkthrough](https://brunnojob.github.io/devstart-lab/media/devstartlab.mp4)
 
-**[Launch the app](https://brunnojob.github.io/devstart-lab/?lang=en)** · **[Browse verified demos](https://brunnojob.github.io/devstart-lab/proofs/)** · **[Contribute](CONTRIBUTING.md)** · **[Star this repository](https://github.com/brunnojob/devstart-lab)**
+## Using the guide
 
-An open learning path from programming logic to a first open source contribution. Available in English and Portuguese, with light and dark themes and progress stored in your browser.
+If you are starting from scratch, work through the first eight steps: break down a problem, practice Python basics and build a small terminal program. Run the examples in your own Python environment; the guide does not execute them for you.
 
-[Try in English](https://brunnojob.github.io/devstart-lab/?lang=en) · [Português](https://brunnojob.github.io/devstart-lab/?lang=pt) · [Execution evidence and demos](https://brunnojob.github.io/devstart-lab/proofs/)
+If you already code, jump to the GitHub steps. They cover creating a repository, writing a README, using branches and proposing a focused change through a pull request.
 
-## Video walkthrough
+The app includes:
 
-[Watch the 55-second demonstration](https://brunnojob.github.io/devstart-lab/media/devstartlab.mp4)
+- 20 learning steps with explanations, tasks and reference links.
+- 25 project ideas with requirements, difficulty filters and suggested extensions.
+- A Git command generator for your own repository or a fork.
+- Checklists and saved project ideas, stored in your browser.
+- JSON import and export for backing up progress.
+- English and Portuguese interfaces, with light and dark themes.
 
-See the learning path, project catalog and interface in action. [View the video file on GitHub](https://github.com/brunnojob/devstart-lab/blob/main/public/media/devstartlab.mp4).
+No account, API token or application server is needed. Clearing site data removes saved progress, so export a backup if you want to keep it or switch browsers. The longer [first-PR guide](docs/primeiro-pr.md) and [achievement guide](docs/conquistas.md) are currently in Portuguese.
 
-## What you can do
+## Project examples
 
-| Feature | Behavior |
-| --- | --- |
-| Learning path | Complete 20 steps: eight programming foundations with Python examples, followed by 12 GitHub and collaboration steps |
-| Project ideas | Filter 25 scoped ideas by area, difficulty and search; review requirements and save favorites |
-| Git command generator | Generate a local repository or fork workflow with validated account, repository and branch names |
-| Progress | Track steps locally and import or export a validated JSON backup |
-| Preferences | Switch language and theme without an account |
-| Execution catalog | Inspect 60 existing repositories, recorded test results and runnable browser demonstrations |
-
-No sign-up, API token, database or application server is required. The main learning application makes no GitHub API requests. The evidence pages query the public GitHub API only when you press the status button, with a timeout and a short per-page cache.
-
-## Start learning
-
-1. Open the [English application](https://brunnojob.github.io/devstart-lab/?lang=en).
-2. Start with programming logic, or jump to the GitHub steps if you already write code.
-3. Choose a beginner project with a manageable scope and complete its requirements.
-4. Read the target project's contribution guide before opening a focused pull request.
-
-Time estimates assume basic familiarity with the language. Python is used to explain concepts; the learning path does not require GitHub tooling for the first eight steps. The [detailed first-PR guide](docs/primeiro-pr.md) and [achievement guide](docs/conquistas.md) are currently in Portuguese. Evidence logs retain their original languages.
+The separate [project catalog](https://brunnojob.github.io/devstart-lab/proofs/) links to source repositories, recorded test runs and browser demonstrations. These records show the scenarios that were tested, rather than guaranteeing every feature or hardware integration. See [the catalog notes](proofs/README.md) for details.
 
 ## Run locally
 
-Requirements: Node.js 22.12 or newer, npm and Python 3. GitHub Actions uses Node.js 24.
+Requires Node.js 22.12+ and Python 3.
 
-```bash
+```sh
 git clone https://github.com/brunnojob/devstart-lab.git
 cd devstart-lab
 npm ci --ignore-scripts
 npm run dev
 ```
 
-Open the URL printed by Vite. Production builds use the `/devstart-lab/` base path.
+Open the address printed by Vite. To check a change:
 
-```bash
+```sh
 npm run typecheck
 npm test
 npm run test:security
-npm audit --audit-level=high
 npm run build
-npm run preview
 ```
 
-The application uses strict TypeScript, Vite and Vitest, without production package dependencies. `npm run build` adds a Content Security Policy to every generated HTML page and rejects unsafe executable markup, source maps and oversized assets. The main application assets have a 150 KiB gzip budget; the complete site has a 50 MiB budget.
+Build output uses the `/devstart-lab/` base path. For browser checks, the catalog build and security details, read [development notes](docs/development.md) and [SECURITY.md](SECURITY.md).
 
-## Execution evidence
+## Contributing
 
-The [catalog](https://brunnojob.github.io/devstart-lab/proofs/) contains snapshots for 60 repositories and 59 execution reports. Each report links to its source commit and original GitHub Actions run. Reports demonstrate the recorded scenarios, not every possible input or physical hardware operation.
-
-The full Pages workflow runs `python3 scripts/build-proofs.py`, compiles six original C programs to WebAssembly and checks their scenarios. JavaScript demonstrations use source files from recorded commits. It then verifies generated links, runs Chromium tests for the application and demos, and deploys only after the checks pass. A plain local `npm run build` builds the learning application; it does not fetch or compile all external demo sources.
-
-WebAssembly demos run in a worker with a parent-controlled eight-second timeout, a 128 MiB linear-memory cap, a 64 KiB input limit and a 128 KiB captured-output limit. These limits do not describe total browser memory. Demos do not connect to industrial equipment. The game demonstration uses fictional credits only.
-
-## Security and privacy
-
-Source code is public under the MIT license. Browser JavaScript and WebAssembly are downloadable; minification is an optimization, not encryption. Progress and exported JSON are unencrypted and must not contain sensitive information. HTTPS protects transport on the published site.
-
-The published HTML allows local scripts and the resources needed by each page. WebAssembly compilation is enabled only on WebAssembly demo pages; JavaScript string evaluation and inline scripts remain blocked. Google Fonts requests go to Google. An explicit evidence-status lookup goes to GitHub. Read [SECURITY.md](SECURITY.md) for scope, limitations and vulnerability reporting.
-
-GitHub Pages is a static host with usage limits. This architecture avoids a per-visitor backend and database bottleneck, but it does not promise unlimited traffic, zero vulnerabilities or guaranteed availability.
-
-## Repository layout
-
-```text
-src/data/             Learning steps, project ideas and translations
-src/lib/              Filtering, progress validation and Git commands
-src/main.ts           Application interface and interactions
-src/styles.css        Responsive light and dark themes
-public/proofs/        Browser demo adapters and evidence-page assets
-proofs/               Recorded catalog and execution evidence
-scripts/              Demo build, security checks and browser verification
-tests/                Unit and security regression tests
-.github/              CI, Pages deployment and contribution templates
-```
-
-## Contribute
-
-Read [CONTRIBUTING.md](CONTRIBUTING.md). Open an issue with a concrete problem, expected behavior and acceptance criteria. Accessibility fixes, translations, tests and clearer learning examples are welcome. Use reliable sources and reproducible examples for content changes.
-
-Achievements are incidental outcomes of useful work. Do not create empty pull requests, fictitious coauthorship or artificial discussions. GitHub controls badge eligibility and may change its rules.
+Found a confusing step or an example that does not work? [Open an issue](https://github.com/brunnojob/devstart-lab/issues) with the step, what you tried and what happened. Corrections to examples, accessibility improvements and translation fixes are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a pull request.
 
 ## License and credits
 
-[MIT](LICENSE). Created by **Brunno / BrunnoDev** — [brunnodev.store](https://brunnodev.store/) · [GitHub @brunnojob](https://github.com/brunnojob).
+[MIT](LICENSE). Created by **Brunno / BrunnoDev** — [brunnodev.store](https://brunnodev.store/).
 
 Existing coauthorship credit:
 
 ```text
 Co-authored-by: nyctophile <33561761+ineedfoundmyway@users.noreply.github.com>
 ```
-

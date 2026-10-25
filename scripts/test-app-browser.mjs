@@ -31,7 +31,21 @@ try {
   await page.locator('#language-select').selectOption('pt');
   assert.match(await page.locator('h1').innerText(), /Aprenda lógica de programação/);
   assert.equal(await page.locator('.learning-route li').count(), 3);
-  await page.locator('#language-select').selectOption('en');
+  const copyLocales = {
+    en: { roadmap: 'Logic, Python and GitHub.', projects: 'Ideas for coding practice.', achievements: 'How to earn Achievements.', closing: 'Found an error? Open an issue.', detail: 'Include the step, describe the problem and explain what you expected to find.' },
+    pt: { roadmap: 'Lógica, Python e GitHub.', projects: 'Ideias para praticar programação.', achievements: 'Como funcionam os Achievements.', closing: 'Encontrou um erro? Abra uma issue.', detail: 'Indique a etapa, explique a dificuldade e diga o que você esperava encontrar.' },
+  };
+  for (const lang of ['en', 'pt', 'en']) {
+    await page.locator('#language-select').selectOption(lang);
+    const expected = copyLocales[lang];
+    const heading = async selector => (await page.locator(selector).innerText()).replace(/\s+/g, ' ').trim();
+    assert.equal(await heading('#roadmap h2'), expected.roadmap);
+    assert.equal(await heading('#projetos h2'), expected.projects);
+    assert.equal(await heading('#conquistas h2'), expected.achievements);
+    assert.equal(await heading('.closing h2'), expected.closing);
+    assert.ok((await heading('.closing > p:not(.eyebrow)')).startsWith(expected.detail));
+    assert.equal(await page.locator('#language-select').inputValue(), lang);
+  }
   await page.locator('#theme-select').selectOption('light');
   await page.reload();
   assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
