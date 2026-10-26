@@ -51,6 +51,12 @@ Build output uses the `/devstart-lab/` base path. For browser checks, the catalo
 
 Found a confusing step or an example that does not work? [Open an issue](https://github.com/brunnojob/devstart-lab/issues) with the step, what you tried and what happened. Corrections to examples, accessibility improvements and translation fixes are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a pull request.
 
+## Sponsor
+
+Help keep DevStart Lab free with a [monthly sponsorship or one-time contribution](https://github.com/sponsors/brunnojob). Support includes code reviews, project guidance and collaboration opportunities.
+
+[![Sponsor](https://img.shields.io/badge/Sponsor-brunnojob-8b1538?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/brunnojob)
+
 ## License and credits
 
 [MIT](LICENSE). Created by **Brunno / BrunnoDev** — [brunnodev.store](https://brunnodev.store/).
