@@ -53,9 +53,9 @@ Found a confusing step or an example that does not work? [Open an issue](https:/
 
 ## Sponsor
 
-Help keep DevStart Lab free with a [monthly sponsorship or one-time contribution](https://github.com/sponsors/brunnojob). Support includes code reviews, project guidance and collaboration opportunities.
+Help keep DevStart Lab free with a contribution on [Buy Me a Coffee](https://buymeacoffee.com/brunnodev). Support includes code reviews, project guidance and collaboration opportunities.
 
-[![Sponsor](https://img.shields.io/badge/Sponsor-brunnojob-8b1538?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/brunnojob)
+[![Sponsor](https://img.shields.io/badge/Sponsor-brunnojob-8b1538?logo=buymeacoffee&logoColor=white)](https://buymeacoffee.com/brunnodev)
 
 ## License and credits
 
