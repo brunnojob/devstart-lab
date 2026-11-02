@@ -63,3 +63,5 @@ Help keep DevStart Lab free with a contribution on [Buy Me a Coffee](https://buy
 
 [MIT](LICENSE). Created by **Brunno / BrunnoDev** — [brunnodev.store](https://brunnodev.store/).
 
+THIS IS FREE MATERIAL TO LEARNING, DONT WASTE YOUR TIME.
+
