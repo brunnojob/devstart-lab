@@ -65,3 +65,13 @@ Help keep DevStart Lab free with a contribution on [Buy Me a Coffee](https://buy
 
 THIS IS FREE MATERIAL TO LEARNING, DONT WASTE YOUR TIME.
 
+
+## LeetCode practice: Two Sum in Python
+
+Practice arrays, hash maps and complexity through the [English challenge guide](public/challenges/two-sum/README.md), a [LeetCode-compatible Python solution](public/challenges/two-sum/solution.py) and edge-case tests. The Pages app links to a standalone English lesson with progressive hints and a worked trace.
+
+```bash
+python3 -m unittest discover -s tests -p test_two_sum.py
+```
+
+The solution uses expected O(n) time and O(n) auxiliary space. Suggested by notalkonlyxtc in [issue #211](https://github.com/brunnojob/devstart-lab/issues/211). This is independent educational material, not affiliated with LeetCode.

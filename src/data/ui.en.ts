@@ -1,4 +1,5 @@
 export const uiEnglish: Record<string, string> = {
+  'LeetCode: Two Sum em Python (guia em inglês) →': 'LeetCode: Two Sum in Python (English guide) →',
   'GUIA GRATUITO PARA INICIANTES EM PROGRAMAÇÃO':
     'A FREE GUIDE FOR PROGRAMMING BEGINNERS',
   'Aprenda lógica de programação.': 'Learn programming logic.',

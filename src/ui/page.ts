@@ -183,6 +183,7 @@ export function createPage({
         linguagem.
       </p>
     </div>
+    <p class="shell route-note"><a class="inline-link" href="./challenges/two-sum/">LeetCode: Two Sum em Python (guia em inglês) →</a></p>
     <div id="roadmap-list" class="roadmap-list"></div>
   </section>
   <section id="projetos" class="section section-tinted">
