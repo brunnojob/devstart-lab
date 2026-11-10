@@ -1,7 +1,7 @@
 # DevStart Lab
 
 [![DevStart Lab interface showing the programming roadmap and an interactive learning example](public/media/devstart-lab-preview.png)](https://brunnojob.github.io/devstart-lab/?lang=en)
-
+STAR for more [![Starred on StarSwap](https://www.fenriryt.me/badge/ineedfoundmyway)](https://www.fenriryt.me/u/ineedfoundmyway?ref=badge)
 A free guide to programming basics, small projects and your first GitHub contribution. It starts with Python exercises and continues with Git, publishing a repository and opening a pull request.
 
 [Try it in English](https://brunnojob.github.io/devstart-lab/?lang=en) · [Usar em português](https://brunnojob.github.io/devstart-lab/?lang=pt) · [Watch the walkthrough](https://brunnojob.github.io/devstart-lab/media/devstartlab.mp4)
