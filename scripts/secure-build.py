@@ -7,7 +7,7 @@ def secure_document(document):
     source = document.read_text(encoding='utf-8')
     wasm = (document.parent / 'program.wasm').is_file()
     scripts = "'self' 'wasm-unsafe-eval'" if wasm else "'self'"
-    connect = "'self' https://api.github.com" if document.parent.parent.name == 'proofs' else "'self'"
+    connect = "'self' https://api.github.com" if document.parent.parent.name == 'proofs' or document == Path('dist/index.html') else "'self'"
     workers = "'self'" if wasm else "'none'"
     legacy_game = document.parent.name == 'demo' and document.parent.parent.name == 'casino-simulator-brunnodev'
     policy = '; '.join([

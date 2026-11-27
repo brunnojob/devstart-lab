@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+import { bindCi, ciMarkup } from './ci-workspace';
 import { labs } from '../data/forge-labs';
 import type { Language } from '../lib/i18n';
 import { analyzeDiff, limits, toMarkdown } from '../vendor/patchscope/engine.js';
@@ -45,14 +46,26 @@ export function mountForgePlatform(root: HTMLElement) {
   let diff = '';
   let level = '';
   let tool = '0';
+  const ciState = { url: '' };
   let reportRequest = 0;
   let diffRequest = 0;
   const study = document.querySelector<HTMLElement>('#study-mode')!;
 
   function selectMode() {
     const hash = location.hash;
-    const mode = hash === '#automation' ? 'automation' : hash === '#practice' ? 'practice' : 'study';
-    study.hidden = mode !== 'study';
+    const toolTarget = /^#forge-tool=([0-5])$/.exec(hash);
+    const mode = hash === '#automation' || hash === '#review-diff' || toolTarget ? 'automation'
+      : hash === '#practice' ? 'practice'
+      : hash === '#ferramentas' ? 'tools'
+      : hash === '#diagnostico' || !hash ? 'diagnostic' : 'study';
+    if (toolTarget) {
+      const select = root.querySelector<HTMLSelectElement>('#forge-tool');
+      if (select && select.value !== toolTarget[1]) {
+        select.value = toolTarget[1];
+        select.dispatchEvent(new Event('change'));
+      }
+    }
+    study.hidden = mode !== 'study' && Boolean(hash);
     root.querySelectorAll<HTMLElement>('[data-mode-panel]').forEach((panel) => {
       panel.hidden = panel.dataset.modePanel !== mode;
     });
@@ -62,12 +75,9 @@ export function mountForgePlatform(root: HTMLElement) {
     });
   }
   window.addEventListener('hashchange', () => {
-    const wasStudy = !study.hidden;
     selectMode();
-    const id = location.hash.slice(1);
-    if (id === 'practice' || id === 'automation' || (!wasStudy && !study.hidden)) {
-      document.getElementById(id)?.scrollIntoView();
-    }
+    const id = location.hash.startsWith('#forge-tool=') ? 'forge-tool' : location.hash.slice(1);
+    document.getElementById(id)?.scrollIntoView();
   });
 
   return (nextLanguage: Language) => {
@@ -78,14 +88,17 @@ export function mountForgePlatform(root: HTMLElement) {
     root.innerHTML = `
       <section class="shell forge-intro" id="hub-inicio">
         <p class="forge-kicker">DevStart Lab × ForgeScope</p>
-        <h2>${t('Da primeira linha à revisão de produção.', 'From your first line to production review.')}</h2>
-        <p>${t('Aprenda programação, pratique com um projeto testável e investigue mudanças com as ferramentas que um mantenedor usa.', 'Learn programming, practice on a testable project, and investigate changes with tools maintainers use.')}</p>
+        <h2>${t('Do primeiro exercício ao diagnóstico de CI.', 'From your first exercise to CI diagnosis.')}</h2>
+        <p>${t('Localize falhas, estude a causa e valide a correção em projetos práticos. A mesma ferramenta serve para aprender e revisar código.', 'Locate failures, study the cause, and verify fixes in practical projects. Use the same tools to learn and review code.')}</p>
         <nav class="forge-modes" aria-label="${t('Modos da plataforma', 'Platform modes')}">
+          <a href="#diagnostico" data-mode-link="diagnostic">${t('Diagnóstico CI', 'CI diagnostics')}</a>
+          <a href="#ferramentas" data-mode-link="tools">${t('Ferramentas', 'Tools')}</a>
           <a href="#inicio" data-mode-link="study">${t('Estudo', 'Study')}</a>
           <a href="#practice" data-mode-link="practice">${t('Projetos e exercícios', 'Projects and exercises')}</a>
           <a href="#automation" data-mode-link="automation">${t('Automação', 'Automation')}</a>
         </nav>
       </section>
+      ${ciMarkup(language)}
       <section class="shell forge-panel" id="practice" data-mode-panel="practice">
         <h2>${t('Projetos e exercícios', 'Projects and exercises')}</h2>
         <article class="forge-project">
@@ -297,6 +310,7 @@ export function mountForgePlatform(root: HTMLElement) {
     });
     select.onchange = () => { tool = select.value; presentReport(); };
     presentReport();
+    bindCi(root, language, ciState);
     selectMode();
   };
 }

@@ -1494,3 +1494,11 @@ html[data-theme="dark"] .button.dark {
 .forge-evidence li { margin-block: .75rem; }
 .forge-evidence p { margin-block: .25rem; }
 .forge-panel[hidden], #study-mode[hidden], .forge-exercises article[hidden] { display: none; }
+
+.forge-console { padding: clamp(1rem, 3vw, 2rem); border-radius: 1rem; border: 1px solid color-mix(in srgb, currentColor 26%, transparent); }
+.forge-console h2 { margin-top: 0; }
+.forge-console input[type=url] { display: block; width: 100%; margin: .5rem 0 1rem; }
+.forge-console article { padding: 1rem; border-left: .25rem solid currentColor; overflow-wrap: anywhere; }
+.forge-console article h3 { margin-top: 0; }
+.forge-console article + article { margin-top: .75rem; }
+.forge-command { max-width: 100%; overflow-x: auto; padding: 1rem; border: 1px solid currentColor; border-radius: .65rem; }

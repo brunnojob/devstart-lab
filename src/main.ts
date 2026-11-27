@@ -38,8 +38,8 @@ function refreshTranslations(): void {
   document.documentElement.dataset.theme = theme;
   document.title =
     language === 'pt'
-      ? 'DevStart Lab — da lógica ao primeiro PR'
-      : 'DevStart Lab — from logic to your first PR';
+      ? 'DevStart Lab × ForgeScope — estudo e diagnóstico de CI'
+      : 'DevStart Lab × ForgeScope — learning and CI diagnostics';
   document
     .querySelector('meta[name="description"]')
     ?.setAttribute(

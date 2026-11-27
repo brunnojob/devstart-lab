@@ -1,0 +1,35 @@
+name: Diagnosticar CI
+
+on:
+  workflow_run:
+    workflows: ["Qualidade"]
+    types: [completed]
+
+permissions:
+  actions: read
+  checks: read
+  contents: read
+
+jobs:
+  diagnose:
+    if: github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Consultar anotações da tentativa que falhou
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+          RUN_ATTEMPT: ${{ github.event.workflow_run.run_attempt }}
+        run: node bin/devstart.mjs ci "${RUN_URL}/attempts/${RUN_ATTEMPT}" --json > ci-diagnostico.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ci-diagnostico
+          path: ci-diagnostico.json
+          retention-days: 7

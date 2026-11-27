@@ -22,3 +22,22 @@ A plataforma estática não requer conta. Relatórios e diffs importados ficam e
 ## Desenvolvimento
 
 Rode `npm ci --ignore-scripts` e `npm run dev`. A plataforma usa a base `/devstart-lab/`. Verifique com `npm test`, `npm run test:security` e `npm run build`.
+
+## Diagnóstico de CI sem logs
+
+O painel inicial usa as anotações de falha dos checks de uma execução pública de GitHub Actions. Quando o check publica arquivo e linha, o painel abre o trecho no SHA da execução. As sugestões são associadas ao texto da anotação, com orientações para dependências, asserções, sintaxe, erros de tipo e declarações não utilizadas. Checks sem anotações não fornecem uma linha confirmada.
+
+No terminal, com Node.js 22 ou mais recente:
+
+```bash
+npm run forge -- ci https://github.com/brunnojob/devstart-lab/actions/runs/38196511827
+npm run forge -- ci https://github.com/brunnojob/devstart-lab/actions/runs/38196511827/attempts/1 --json
+```
+
+A CLI não depende de instalação adicional. Para repositórios privados, forneça `GH_TOKEN` ou `GITHUB_TOKEN` com permissões de leitura de Actions e Checks. Em ambientes com proxy, use Node.js 24 com `NODE_USE_ENV_PROXY=1`. O modo `--fail-on-error` usa código 1 para falha detectada ou consulta parcial. Erros de uso ou de consulta da execução retornam código 2.
+
+## CI/CD
+
+Use o [workflow de exemplo](examples/diagnose-ci.yml) em `.github/workflows/diagnose-ci.yml` no repositório que contém a CLI. Substitua `Qualidade` pelo nome do workflow que você quer observar. O exemplo usa a revisão confiável da branch padrão fornecida pelo evento `workflow_run`, consulta a tentativa exata que falhou e publica o JSON como artefato. Ele não executa o código do PR que originou a falha.
+
+Se o compilador ou o executor de testes publicar resultados somente em stdout, configure um reporter que publique anotações de check para obter localização no diagnóstico.
