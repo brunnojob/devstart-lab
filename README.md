@@ -1,3 +1,9 @@
+# ForgeLab
+
+Bancada open source para investigar CI, revisar código e aprender engenharia de software com evidências. Exercícios, diffs e relatórios locais alimentam o mesmo caso no navegador e na CLI.
+
+[Abra a documentação do ForgeLab](docs/forge-lab.md). As instruções do material original do DevStart Lab seguem abaixo.
+
 # DevStart Lab
 
 [![DevStart Lab interface showing the programming roadmap and an interactive learning example](public/media/devstart-lab-preview.png)](https://brunnojob.github.io/devstart-lab/?lang=en)

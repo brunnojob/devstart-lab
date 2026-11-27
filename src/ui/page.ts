@@ -45,8 +45,6 @@ export function createPage({
   </div>
 </header>
 <main id="conteudo">
-  <div id="forge-platform"></div>
-  <div id="study-mode">
   <section id="inicio" class="hero shell">
     <div class="hero-copy">
       <p class="eyebrow">GUIA GRATUITO PARA INICIANTES EM PROGRAMAÇÃO</p>
@@ -382,7 +380,6 @@ export function createPage({
       >
     </div>
   </section>
-  </div>
 </main>
 <footer>
   <div class="shell footer-inner">

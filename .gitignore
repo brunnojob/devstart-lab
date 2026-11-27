@@ -20,3 +20,7 @@ public/proofs/index.html
 **/__pycache__/
 
 public/proofs/translations.mjs
+
+/engine/build/
+/engine/dotnet/**/bin/
+/engine/dotnet/**/obj/

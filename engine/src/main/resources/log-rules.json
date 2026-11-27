@@ -1,0 +1,334 @@
+{
+  "cifuse": [
+    {
+      "id": "java-compiler",
+      "pattern": "cannot find symbol|package .+ does not exist|incompatible types|Compilation failure",
+      "flags": "i",
+      "title": "Java compilation failed",
+      "action": "Use the file and line diagnostics. Check package paths, declarations and the JDK/toolchain configured in Maven or Gradle."
+    },
+    {
+      "id": "csharp-compiler",
+      "pattern": "error CS\\d{4}|error MSB\\d{4}",
+      "flags": "i",
+      "title": "C# or MSBuild diagnostic",
+      "action": "Inspect the compiler diagnostic, target framework and references. Reproduce using the same .NET SDK as CI."
+    },
+    {
+      "id": "dotnet-sdk",
+      "pattern": "error NETSDK\\d{4}|compatible .NET SDK was not found",
+      "flags": "i",
+      "title": ".NET SDK or target framework mismatch",
+      "action": "Check global.json, the installed SDK and TargetFramework. Use a compatible supported SDK."
+    },
+    {
+      "id": "nuget-restore",
+      "pattern": "error NU\\d{4}|Unable to load the service index",
+      "flags": "i",
+      "title": "NuGet restore failed",
+      "action": "Inspect the package source, version constraints, authentication and lock file. Do not disable TLS verification."
+    },
+    {
+      "id": "dependency-conflict",
+      "pattern": "ERESOLVE|unable to resolve dependency tree|ResolutionImpossible",
+      "flags": "i",
+      "title": "Dependency resolution conflict",
+      "action": "Compare the requested and peer dependency ranges. Update compatible versions together and regenerate the lockfile with the project package manager."
+    },
+    {
+      "id": "lockfile-drift",
+      "pattern": "ERR_PNPM_OUTDATED_LOCKFILE|npm ci.*(?:in sync|package-lock)|package.json and.*lock.*not in sync|frozen.lockfile.*(?:outdated|not up.to.date)",
+      "flags": "i",
+      "title": "Manifest and lockfile disagree",
+      "action": "Regenerate the lockfile locally using the same package manager version as CI, review the diff, and commit it with the manifest."
+    },
+    {
+      "id": "missing-module",
+      "pattern": "Cannot find module|Cannot find package|ModuleNotFoundError:|Module not found:|ERR_MODULE_NOT_FOUND|No module named",
+      "flags": "i",
+      "title": "Module could not be resolved",
+      "action": "Check the module name, declared dependencies, workspace install step and case-sensitive paths. Confirm the import exists on a clean checkout."
+    },
+    {
+      "id": "type-error",
+      "pattern": "(?:error )?TS\\d{4,5}:|\\b(?:mypy|pyright)\\b.*error:|error\\[E\\d{4}\\]",
+      "flags": "i",
+      "title": "Static type or compiler diagnostic",
+      "action": "Inspect the diagnostic at the reported source location. Reproduce with the same compiler version and configuration before changing types."
+    },
+    {
+      "id": "test-failure",
+      "pattern": "AssertionError\\b|\\bFAIL(?:ED)?\\s+\\S|Expected:.*Received:|\\bassert .*==",
+      "flags": "i",
+      "title": "Test assertion failed",
+      "action": "Run the named test in isolation, then with the full suite. Compare expected and actual values; a failed assertion alone does not prove flakiness."
+    },
+    {
+      "id": "permission-denied",
+      "pattern": "EACCES|Permission denied|Resource not accessible by integration",
+      "flags": "i",
+      "title": "Access was denied",
+      "action": "Check the file ownership or the token permission required by this operation. Grant only the scope the operation needs."
+    },
+    {
+      "id": "network-failure",
+      "pattern": "ECONNREFUSED|ECONNRESET|ENOTFOUND|EAI_AGAIN|ETIMEDOUT|Could not resolve host",
+      "flags": "i",
+      "title": "Network or name resolution failure",
+      "action": "Check service readiness, hostnames and runner connectivity. Retry only after checking whether the operation is safe to repeat."
+    },
+    {
+      "id": "disk-full",
+      "pattern": "ENOSPC|No space left on device",
+      "flags": "i",
+      "title": "Runner storage exhausted",
+      "action": "Inspect disk usage and retained artifacts or caches. Remove only disposable data or increase runner storage."
+    },
+    {
+      "id": "memory-limit",
+      "pattern": "JavaScript heap out of memory|OutOfMemoryError|oom-kill|Killed process .*out of memory",
+      "flags": "i",
+      "title": "Memory limit reached",
+      "action": "Inspect peak memory, worker concurrency and runner limits. Reduce parallelism or profile allocations before increasing the memory ceiling."
+    },
+    {
+      "id": "command-missing",
+      "pattern": "command not found|is not recognized as an internal or external command",
+      "flags": "i",
+      "title": "Required command is unavailable",
+      "action": "Install or set up the required tool explicitly and verify its version and PATH in this job."
+    },
+    {
+      "id": "timeout",
+      "pattern": "TimeoutError|timed out after|exceeded.*timeout|operation timed out",
+      "flags": "i",
+      "title": "Operation timed out",
+      "action": "Inspect the operation and its readiness dependencies. Measure duration before raising the timeout; this may be a slow or unavailable service."
+    },
+    {
+      "id": "generic-error",
+      "pattern": "(?:^|\\s)(?:error|fatal):|##\\[error\\]|Process completed with exit code [1-9]",
+      "flags": "i",
+      "title": "Unclassified failure signal",
+      "action": "Inspect the surrounding log. This fallback preserves evidence but cannot identify the underlying cause."
+    }
+  ],
+  "devrescue": [
+    {
+      "id": "java-compiler",
+      "pattern": "cannot find symbol|package .+ does not exist|incompatible types|Compilation failure",
+      "flags": "i",
+      "title": "Java compilation failed",
+      "action": "Use the file and line diagnostics. Check package paths, declarations and the JDK/toolchain configured in Maven or Gradle.",
+      "cause": "The diagnostic identifies an investigation lead; it does not prove the root cause.",
+      "category": "build"
+    },
+    {
+      "id": "csharp-compiler",
+      "pattern": "error CS\\d{4}|error MSB\\d{4}",
+      "flags": "i",
+      "title": "C# or MSBuild diagnostic",
+      "action": "Inspect the compiler diagnostic, target framework and references. Reproduce using the same .NET SDK as CI.",
+      "cause": "The diagnostic identifies an investigation lead; it does not prove the root cause.",
+      "category": "build"
+    },
+    {
+      "id": "dotnet-sdk",
+      "pattern": "error NETSDK\\d{4}|compatible .NET SDK was not found",
+      "flags": "i",
+      "title": ".NET SDK or target framework mismatch",
+      "action": "Check global.json, the installed SDK and TargetFramework. Use a compatible supported SDK.",
+      "cause": "The diagnostic identifies an investigation lead; it does not prove the root cause.",
+      "category": "build"
+    },
+    {
+      "id": "nuget-restore",
+      "pattern": "error NU\\d{4}|Unable to load the service index",
+      "flags": "i",
+      "title": "NuGet restore failed",
+      "action": "Inspect the package source, version constraints, authentication and lock file. Do not disable TLS verification.",
+      "cause": "The diagnostic identifies an investigation lead; it does not prove the root cause.",
+      "category": "build"
+    },
+    {
+      "id": "npm-peer",
+      "pattern": "ERESOLVE|unable to resolve dependency tree",
+      "flags": "i",
+      "title": "Dependency versions conflict",
+      "cause": "The package manager could not satisfy the dependency graph. Inspect peer ranges before changing versions.",
+      "action": "npm explain <package>; npm ls --all; Align the conflicting versions in package.json; regenerate the lockfile and run tests.",
+      "category": "dependencies"
+    },
+    {
+      "id": "npm-lock",
+      "pattern": "npm ci.*(?:lock|sync)|package.json and package-lock.json.*sync|EUSAGE.*npm ci",
+      "flags": "i",
+      "title": "Lockfile and manifest disagree",
+      "cause": "npm ci requires a synchronized package-lock.json.",
+      "action": "Run npm install with the project Node/npm versions, review both manifest and lockfile diffs, then npm ci.",
+      "category": "dependencies"
+    },
+    {
+      "id": "npm-script",
+      "pattern": "Missing script:",
+      "flags": "i",
+      "title": "Requested npm script is absent",
+      "cause": "The requested script is not defined in this package.",
+      "action": "npm run; Check the working directory and define or select the intended script.",
+      "category": "dependencies"
+    },
+    {
+      "id": "js-module",
+      "pattern": "Cannot find module|ERR_MODULE_NOT_FOUND|Module not found.*(?:resolve|find)",
+      "flags": "i",
+      "title": "Module cannot be resolved",
+      "cause": "A dependency, path, filename case or build output may be missing.",
+      "action": "Check the exact import and filename case.; Restore dependencies using the committed lockfile and correct package manager.",
+      "category": "dependencies"
+    },
+    {
+      "id": "python-module",
+      "pattern": "ModuleNotFoundError: No module named",
+      "flags": "i",
+      "title": "Python module is unavailable",
+      "cause": "The active interpreter cannot import this module. Import names can differ from distribution names.",
+      "action": "python -m pip --version; Activate the project virtual environment, then install its declared requirements.",
+      "category": "dependencies"
+    },
+    {
+      "id": "python-import",
+      "pattern": "ImportError: cannot import name",
+      "flags": "i",
+      "title": "Python import is incompatible",
+      "cause": "Possible circular import, renamed symbol or incompatible installed version.",
+      "action": "Inspect the importing file and installed version.; Compare declared requirements with the environment.",
+      "category": "dependencies"
+    },
+    {
+      "id": "typescript",
+      "pattern": "error TS\\d+:",
+      "flags": "",
+      "title": "TypeScript compilation failed",
+      "cause": "The compiler diagnostic identifies the constraint that failed.",
+      "action": "npx tsc --noEmit; Use the diagnostic and source location to update the type or implementation; rerun tests.",
+      "category": "build"
+    },
+    {
+      "id": "port",
+      "pattern": "EADDRINUSE|address already in use",
+      "flags": "i",
+      "title": "Port is already occupied",
+      "cause": "Another process is listening on the requested address.",
+      "action": "Find the port owner using your OS process tools.; Stop the known process or choose an unused port; do not kill arbitrary processes.",
+      "category": "environment"
+    },
+    {
+      "id": "disk",
+      "pattern": "ENOSPC|no space left on device",
+      "flags": "i",
+      "title": "Disk space or watcher limit exhausted",
+      "cause": "ENOSPC can mean disk capacity, inodes, or a file watcher quota.",
+      "action": "df -h; df -i; Check watcher limits and generated files before deleting anything.",
+      "category": "environment"
+    },
+    {
+      "id": "memory",
+      "pattern": "heap out of memory|JavaScript heap out of memory|OOMKilled|out of memory|exit code 137",
+      "flags": "i",
+      "title": "Process exceeded available memory",
+      "cause": "Memory pressure or an OOM kill may have terminated the process.",
+      "action": "Inspect runner/container memory limits and peak usage.; Reduce build concurrency before increasing the memory limit.",
+      "category": "environment"
+    },
+    {
+      "id": "permission",
+      "pattern": "EACCES|permission denied",
+      "flags": "i",
+      "title": "Access was denied",
+      "cause": "The process lacks access to a path or socket.",
+      "action": "Check the reported path, owner and current user.; Fix the specific permission; avoid sudo installs and chmod 777.",
+      "category": "environment"
+    },
+    {
+      "id": "docker",
+      "pattern": "Cannot connect to the Docker daemon|docker daemon is not running",
+      "flags": "i",
+      "title": "Docker daemon is unavailable",
+      "cause": "Docker is stopped or the configured context/socket is wrong.",
+      "action": "docker context show; docker info; Start Docker and check the selected context.",
+      "category": "containers"
+    },
+    {
+      "id": "docker-platform",
+      "pattern": "no matching manifest for|exec format error",
+      "flags": "i",
+      "title": "Container architecture mismatch",
+      "cause": "The image or executable may target another OS/CPU.",
+      "action": "docker version; Inspect image architecture and build for the target platform.",
+      "category": "containers"
+    },
+    {
+      "id": "db-auth",
+      "pattern": "password authentication failed|SQLSTATE\\W*28P01",
+      "flags": "i",
+      "title": "Database authentication failed",
+      "cause": "The server rejected the database identity.",
+      "action": "Check server-side secret configuration and username.; Never put database credentials in browser code or logs.",
+      "category": "database"
+    },
+    {
+      "id": "db-migration",
+      "pattern": "relation .+ does not exist|SQLSTATE\\W*42P01|P3009|P3018",
+      "flags": "i",
+      "title": "Schema or migration state mismatch",
+      "cause": "The connected database may lack a required relation or have a failed migration.",
+      "action": "Check the target database and migration status.; Back up data and review pending migrations before applying them.",
+      "category": "database"
+    },
+    {
+      "id": "db-connect",
+      "pattern": "ECONNREFUSED.*5432|could not connect to server|remaining connection slots|too many clients",
+      "flags": "i",
+      "title": "Database connection unavailable",
+      "cause": "Check database reachability, firewall, pool limits and server state.",
+      "action": "Verify the server and TLS settings from the backend host.; Inspect pool usage and network rules without opening public access.",
+      "category": "database"
+    },
+    {
+      "id": "dns",
+      "pattern": "\\bENOTFOUND\\b|\\bEAI_AGAIN\\b|Could not resolve host",
+      "flags": "i",
+      "title": "DNS lookup failed",
+      "cause": "The host is invalid or the resolver/network is unavailable.",
+      "action": "Verify the hostname and DNS from the same runner.; Retry only after checking transient network status.",
+      "category": "network"
+    },
+    {
+      "id": "tls",
+      "pattern": "CERT_HAS_EXPIRED|SELF_SIGNED_CERT|unable to verify the first certificate",
+      "flags": "i",
+      "title": "TLS certificate verification failed",
+      "cause": "The certificate chain, system time or trusted CA configuration is incorrect.",
+      "action": "Check certificate expiry and system clock.; Install the correct trusted CA; keep certificate verification enabled.",
+      "category": "network"
+    },
+    {
+      "id": "git-conflict",
+      "pattern": "CONFLICT \\(|Merge conflict in|^<{7} ",
+      "flags": "",
+      "title": "Unresolved merge conflict",
+      "cause": "Git could not reconcile overlapping changes.",
+      "action": "git status; Resolve conflict markers, review the combined behavior and rerun tests.",
+      "category": "git"
+    },
+    {
+      "id": "test-failure",
+      "pattern": "^(?:FAIL\\s|FAILED\\s|AssertionError\\b)|\\bTests:\\s+\\d+ failed",
+      "flags": "",
+      "title": "Test assertion failed",
+      "cause": "Expected and actual behavior differ; a failing test alone does not establish the root cause.",
+      "action": "Run the reported test in isolation.; Inspect the assertion diff and recent code changes.",
+      "category": "tests"
+    }
+  ]
+}

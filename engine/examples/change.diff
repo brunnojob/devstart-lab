@@ -1,0 +1,25 @@
+diff --git a/java/src/shop/Pricing.java b/java/src/shop/Pricing.java
+--- a/java/src/shop/Pricing.java
++++ b/java/src/shop/Pricing.java
+@@ -1,4 +1,5 @@
+ package shop;
+ public final class Pricing {
++    public static void launch(String input) throws Exception { Runtime.getRuntime().exec(input); }
+     public static int total(int price, int quantity) { return price * quantity; }
+ }
+diff --git a/csharp/Pricing.cs b/csharp/Pricing.cs
+--- a/csharp/Pricing.cs
++++ b/csharp/Pricing.cs
+@@ -1,5 +1,6 @@
+ namespace Shop;
+ public static class Pricing
+ {
++    public static void Launch(string input) => System.Diagnostics.Process.Start(input);
+     public static int Total(int price, int quantity) => price * quantity;
+ }
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -1 +1 @@
+-permissions: read-all
++permissions: write-all

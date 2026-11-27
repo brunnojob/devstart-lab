@@ -1,0 +1,4 @@
+java/src/shop/Legacy.java:4: error: cannot find symbol
+  symbol: method totalV1(int,int)
+csharp/Legacy.cs(5,43): error CS0117: 'Pricing' does not contain a definition for 'TotalV1'
+csharp/Legacy.cs(5,43): error CS0117: 'Pricing' does not contain a definition for 'TotalV1'

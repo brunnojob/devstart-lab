@@ -1,0 +1,1238 @@
+{
+  "Evidence before edits.": {
+    "pt-BR": "Evidências antes de editar.",
+    "es": "Evidencias antes de editar."
+  },
+  "Understand the change. Follow the evidence.": {
+    "pt-BR": "Entenda a mudança. Siga as evidências.",
+    "es": "Entiende el cambio. Sigue las evidencias."
+  },
+  "Local investigation workbench": {
+    "pt-BR": "Painel local de investigação",
+    "es": "Panel local de investigación"
+  },
+  "Source impact, diff review, CI diagnosis and maintenance.": {
+    "pt-BR": "Impacto no código, revisão de alterações, diagnóstico de CI e manutenção.",
+    "es": "Impacto en el código, revisión de cambios, diagnóstico de CI y mantenimiento."
+  },
+  "Explore potential impact, investigate diagnostics and review the evidence before editing code.": {
+    "pt-BR": "Explore impactos potenciais, investigue diagnósticos e revise as evidências antes de editar o código.",
+    "es": "Explora impactos potenciales, investiga diagnósticos y revisa las evidencias antes de editar el código."
+  },
+  "Language": {
+    "pt-BR": "Idioma",
+    "es": "Idioma"
+  },
+  "Start demonstration": {
+    "pt-BR": "Iniciar demonstração",
+    "es": "Iniciar demostración"
+  },
+  "Source modules": {
+    "pt-BR": "Módulos fonte",
+    "es": "Módulos de código"
+  },
+  "Changed / affected files": {
+    "pt-BR": "Arquivos alterados / afetados",
+    "es": "Archivos modificados / afectados"
+  },
+  "Test candidates": {
+    "pt-BR": "Testes candidatos",
+    "es": "Pruebas candidatas"
+  },
+  "Review findings": {
+    "pt-BR": "Sinais para revisão",
+    "es": "Hallazgos para revisar"
+  },
+  "What could this change affect?": {
+    "pt-BR": "O que esta mudança pode afetar?",
+    "es": "¿Qué puede afectar este cambio?"
+  },
+  "Source reachability does not prove breakage or test coverage.": {
+    "pt-BR": "Uma dependência no código não comprova falhas nem cobertura de testes.",
+    "es": "Una dependencia en el código no demuestra fallos ni cobertura de pruebas."
+  },
+  "Tests to investigate": {
+    "pt-BR": "Testes para investigar",
+    "es": "Pruebas para investigar"
+  },
+  "Analysis engines": {
+    "pt-BR": "Motores de análise",
+    "es": "Motores de análisis"
+  },
+  "Local reference review": {
+    "pt-BR": "Revisão de referências locais",
+    "es": "Revisión de referencias locales"
+  },
+  "Source-resolved call candidates": {
+    "pt-BR": "Chamadas candidatas resolvidas no código",
+    "es": "Llamadas candidatas resueltas en el código"
+  },
+  "Evidence and next steps": {
+    "pt-BR": "Evidências e próximos passos",
+    "es": "Evidencias y próximos pasos"
+  },
+  "Same file in impact set": {
+    "pt-BR": "Arquivo presente no conjunto afetado",
+    "es": "Archivo presente en el conjunto afectado"
+  },
+  "Evidence & action": {
+    "pt-BR": "Evidência e ação",
+    "es": "Evidencia y acción"
+  },
+  "Original source evidence": {
+    "pt-BR": "Evidência original do código ou log",
+    "es": "Evidencia original del código o registro"
+  },
+  "RevScope · analysis guidance": {
+    "pt-BR": "RevScope · orientação de análise",
+    "es": "RevScope · orientación de análisis"
+  },
+  "Tools are recommendations. No binaries are executed.": {
+    "pt-BR": "As ferramentas são sugestões. Nenhum binário é executado.",
+    "es": "Las herramientas son sugerencias. No se ejecuta ningún binario."
+  },
+  "No matching artifact signal was found.": {
+    "pt-BR": "Nenhum sinal de artefato compatível foi encontrado.",
+    "es": "No se encontró ninguna señal de artefacto compatible."
+  },
+  "Coverage & limitations": {
+    "pt-BR": "Cobertura e limitações",
+    "es": "Cobertura y limitaciones"
+  },
+  "Compiler diagnostics and skipped files": {
+    "pt-BR": "Diagnósticos dos compiladores e arquivos ignorados",
+    "es": "Diagnósticos de compiladores y archivos omitidos"
+  },
+  "Compiler diagnostics": {
+    "pt-BR": "Diagnósticos dos compiladores",
+    "es": "Diagnósticos de compiladores"
+  },
+  "Original compiler diagnostics": {
+    "pt-BR": "Diagnósticos originais dos compiladores",
+    "es": "Diagnósticos originales de compiladores"
+  },
+  "Skipped files": {
+    "pt-BR": "Arquivos ignorados",
+    "es": "Archivos omitidos"
+  },
+  "Source & documentation": {
+    "pt-BR": "Código e documentação",
+    "es": "Código y documentación"
+  },
+  "Local report · no analytics or remote scripts.": {
+    "pt-BR": "Relatório local · sem rastreamento nem scripts remotos.",
+    "es": "Informe local · sin seguimiento ni scripts remotos."
+  },
+  "Local Java and C# analysis": {
+    "pt-BR": "Análise local de Java e C#",
+    "es": "Análisis local de Java y C#"
+  },
+  "Open local workbench": {
+    "pt-BR": "Abrir painel local",
+    "es": "Abrir panel local"
+  },
+  "Use the C# workbench to scan your own repository and filter findings.": {
+    "pt-BR": "Use o painel C# para analisar seu repositório e filtrar resultados.",
+    "es": "Usa el panel C# para analizar tu repositorio y filtrar resultados."
+  },
+  "Overview": {
+    "pt-BR": "Visão geral",
+    "es": "Vista general"
+  },
+  "Potential impact": {
+    "pt-BR": "Impacto potencial",
+    "es": "Impacto potencial"
+  },
+  "Tests and engines": {
+    "pt-BR": "Testes e motores",
+    "es": "Pruebas y motores"
+  },
+  "References and calls": {
+    "pt-BR": "Referências e chamadas",
+    "es": "Referencias y llamadas"
+  },
+  "Review the evidence": {
+    "pt-BR": "Revise as evidências",
+    "es": "Revisa las evidencias"
+  },
+  "Know the limits": {
+    "pt-BR": "Conheça os limites",
+    "es": "Conoce los límites"
+  },
+  "Start here: these four counts summarize this report. They describe the supplied example, not a quality or security score.": {
+    "pt-BR": "Comece aqui: estes quatro números resumem o relatório. Eles descrevem o exemplo fornecido, não uma nota de qualidade ou segurança.",
+    "es": "Empieza aquí: estos cuatro números resumen el informe. Describen el ejemplo proporcionado, no una puntuación de calidad o seguridad."
+  },
+  "Follow the paths from changed Java and C# files to their dependents. A path is a lead to investigate, not proof that something broke.": {
+    "pt-BR": "Siga os caminhos dos arquivos Java e C# alterados até seus dependentes. Um caminho é uma pista para investigar, não prova de falha.",
+    "es": "Sigue las rutas de los archivos Java y C# modificados hasta sus dependientes. Una ruta es una pista para investigar, no una prueba de fallo."
+  },
+  "Check the suggested tests and the status of every analyzer. Skipped or unavailable analysis must not be mistaken for a clean result.": {
+    "pt-BR": "Confira os testes sugeridos e o estado de cada analisador. Análises ignoradas ou indisponíveis não representam um resultado sem problemas.",
+    "es": "Comprueba las pruebas sugeridas y el estado de cada analizador. Un análisis omitido o no disponible no representa un resultado sin problemas."
+  },
+  "Inspect unresolved references and source-resolved calls. File paths, method names and original compiler messages stay unchanged in every language.": {
+    "pt-BR": "Inspecione referências não resolvidas e chamadas identificadas no código. Caminhos, nomes de métodos e mensagens originais do compilador não mudam com o idioma.",
+    "es": "Inspecciona referencias no resueltas y llamadas identificadas en el código. Las rutas, los nombres de métodos y los mensajes originales del compilador no cambian con el idioma."
+  },
+  "Open Evidence & action on a finding to see its context and a suggested next step. Review prompts are not confirmed vulnerabilities.": {
+    "pt-BR": "Abra Evidência e ação em um resultado para ver o contexto e uma sugestão de próximo passo. Sinais de revisão não são vulnerabilidades confirmadas.",
+    "es": "Abre Evidencia y acción en un hallazgo para ver el contexto y una sugerencia del siguiente paso. Los avisos de revisión no son vulnerabilidades confirmadas."
+  },
+  "Read the limitations and compiler diagnostics before drawing conclusions. Export JSON, SARIF or Markdown to continue your investigation.": {
+    "pt-BR": "Leia as limitações e os diagnósticos dos compiladores antes de concluir. Exporte JSON, SARIF ou Markdown para continuar a investigação.",
+    "es": "Lee las limitaciones y los diagnósticos de compiladores antes de sacar conclusiones. Exporta JSON, SARIF o Markdown para continuar la investigación."
+  },
+  "Guided demonstration": {
+    "pt-BR": "Demonstração guiada",
+    "es": "Demostración guiada"
+  },
+  "Step": {
+    "pt-BR": "Etapa",
+    "es": "Paso"
+  },
+  "of": {
+    "pt-BR": "de",
+    "es": "de"
+  },
+  "Previous": {
+    "pt-BR": "Anterior",
+    "es": "Anterior"
+  },
+  "Next": {
+    "pt-BR": "Próximo",
+    "es": "Siguiente"
+  },
+  "Finish tour": {
+    "pt-BR": "Concluir tour",
+    "es": "Finalizar recorrido"
+  },
+  "Close tour": {
+    "pt-BR": "Fechar tour",
+    "es": "Cerrar recorrido"
+  },
+  "Search evidence": {
+    "pt-BR": "Pesquisar evidências",
+    "es": "Buscar evidencias"
+  },
+  "Engine": {
+    "pt-BR": "Motor",
+    "es": "Motor"
+  },
+  "All engines": {
+    "pt-BR": "Todos os motores",
+    "es": "Todos los motores"
+  },
+  "Start from": {
+    "pt-BR": "Começar por",
+    "es": "Empezar por"
+  },
+  "Theme": {
+    "pt-BR": "Tema",
+    "es": "Tema"
+  },
+  "Dark": {
+    "pt-BR": "Escuro",
+    "es": "Oscuro"
+  },
+  "Light": {
+    "pt-BR": "Claro",
+    "es": "Claro"
+  },
+  "Apply filters": {
+    "pt-BR": "Aplicar filtros",
+    "es": "Aplicar filtros"
+  },
+  "Analyze the configured repository": {
+    "pt-BR": "Analisar o repositório configurado",
+    "es": "Analizar el repositorio configurado"
+  },
+  "Git base": {
+    "pt-BR": "Revisão base do Git",
+    "es": "Revisión base de Git"
+  },
+  "Changed file (optional)": {
+    "pt-BR": "Arquivo alterado (opcional)",
+    "es": "Archivo modificado (opcional)"
+  },
+  "Run local analysis": {
+    "pt-BR": "Executar análise local",
+    "es": "Ejecutar análisis local"
+  },
+  "Runs the Java analyzer on the repository selected at startup. It does not run project builds or tests.": {
+    "pt-BR": "Executa o analisador Java no repositório definido ao iniciar. Não executa builds nem testes do projeto.",
+    "es": "Ejecuta el analizador Java en el repositorio definido al iniciar. No ejecuta compilaciones ni pruebas del proyecto."
+  },
+  "Dependency paths": {
+    "pt-BR": "Caminhos de dependência",
+    "es": "Rutas de dependencias"
+  },
+  "Coverage and limits": {
+    "pt-BR": "Cobertura e limites",
+    "es": "Cobertura y límites"
+  },
+  "All interactive application logic is C# server-side. No custom JavaScript.": {
+    "pt-BR": "A lógica interativa é C# no servidor local. Sem JavaScript próprio.",
+    "es": "La lógica interactiva usa C# en el servidor local. Sin JavaScript propio."
+  },
+  "high": {
+    "pt-BR": "alta",
+    "es": "alta"
+  },
+  "medium": {
+    "pt-BR": "média",
+    "es": "media"
+  },
+  "low": {
+    "pt-BR": "baixa",
+    "es": "baja"
+  },
+  "error": {
+    "pt-BR": "erro",
+    "es": "error"
+  },
+  "ok": {
+    "pt-BR": "concluído",
+    "es": "completado"
+  },
+  "skipped": {
+    "pt-BR": "ignorado",
+    "es": "omitido"
+  },
+  "unavailable": {
+    "pt-BR": "indisponível",
+    "es": "no disponible"
+  },
+  "limited": {
+    "pt-BR": "limitado",
+    "es": "limitado"
+  },
+  "new": {
+    "pt-BR": "novo",
+    "es": "nuevo"
+  },
+  "existing": {
+    "pt-BR": "existente",
+    "es": "existente"
+  },
+  "absent": {
+    "pt-BR": "ausente",
+    "es": "ausente"
+  },
+  "Comparison": {
+    "pt-BR": "Comparação",
+    "es": "Comparación"
+  },
+  "Correlations are shared source evidence, not proof of root cause.": {
+    "pt-BR": "As correlações indicam evidências no mesmo código, não comprovam a causa raiz.",
+    "es": "Las correlaciones indican evidencias en el mismo código, no demuestran la causa raíz."
+  },
+  "Java/C# source binding runs with an isolated classpath; project builds and external dependencies are not evaluated.": {
+    "pt-BR": "A resolução Java/C# usa um ambiente isolado; builds do projeto e dependências externas não são avaliados.",
+    "es": "La resolución Java/C# usa un entorno aislado; no se evalúan compilaciones del proyecto ni dependencias externas."
+  },
+  "Python compatibility is import-only and lexical; the previous Python AST implementation is retained in Git history, not in this runtime.": {
+    "pt-BR": "A compatibilidade com Python é lexical e limitada a imports; a implementação AST anterior está no histórico Git, não nesta execução.",
+    "es": "La compatibilidad con Python es léxica y se limita a imports; la implementación AST anterior está en el historial Git, no en esta ejecución."
+  },
+  "Test candidates are source-reachable, not measured coverage.": {
+    "pt-BR": "Os testes candidatos têm relações no código; isso não mede cobertura.",
+    "es": "Las pruebas candidatas tienen relaciones en el código; esto no mide cobertura."
+  },
+  "Redaction is best effort. Inspect reports before sharing.": {
+    "pt-BR": "A ocultação de dados sensíveis pode ser incompleta. Revise os relatórios antes de compartilhar.",
+    "es": "La ocultación de datos sensibles puede ser incompleta. Revisa los informes antes de compartirlos."
+  },
+  "RevScope recommends tools; no binary analysis is executed.": {
+    "pt-BR": "O RevScope sugere ferramentas; nenhuma análise binária é executada.",
+    "es": "RevScope sugiere herramientas; no se ejecuta ningún análisis binario."
+  },
+  "Invocation did not resolve against a supplied local source type; missing dependencies can affect binding.": {
+    "pt-BR": "A chamada não foi resolvida em um tipo local fornecido; dependências ausentes podem afetar a resolução.",
+    "es": "La llamada no se resolvió en un tipo local proporcionado; las dependencias ausentes pueden afectar la resolución."
+  },
+  "Call did not resolve against a supplied local C# type. Review overloads, signatures and missing references.": {
+    "pt-BR": "A chamada não foi resolvida em um tipo C# local. Revise sobrecargas, assinaturas e referências ausentes.",
+    "es": "La llamada no se resolvió en un tipo C# local. Revisa sobrecargas, firmas y referencias ausentes."
+  },
+  "Review an unresolved local reference": {
+    "pt-BR": "Revise uma referência local não resolvida",
+    "es": "Revisa una referencia local no resuelta"
+  },
+  "Inspect the declaration, signature, imports and missing dependency diagnostics. This is not a proof of root cause.": {
+    "pt-BR": "Inspecione declaração, assinatura, imports e diagnósticos de dependências ausentes. Isso não comprova a causa raiz.",
+    "es": "Inspecciona la declaración, la firma, los imports y los diagnósticos de dependencias ausentes. Esto no demuestra la causa raíz."
+  },
+  "Review private-key material": {
+    "pt-BR": "Revise o conteúdo de chave privada",
+    "es": "Revisa el contenido de clave privada"
+  },
+  "Private key header added": {
+    "pt-BR": "Cabeçalho de chave privada adicionado",
+    "es": "Cabecera de clave privada añadida"
+  },
+  "Remove real key material and rotate exposed credentials.": {
+    "pt-BR": "Remova a chave real e substitua as credenciais expostas.",
+    "es": "Elimina la clave real y sustituye las credenciales expuestas."
+  },
+  "Review a credential-like literal": {
+    "pt-BR": "Revise um literal semelhante a uma credencial",
+    "es": "Revisa un literal similar a una credencial"
+  },
+  "Credential-like assignment added": {
+    "pt-BR": "Atribuição semelhante a uma credencial adicionada",
+    "es": "Asignación similar a una credencial añadida"
+  },
+  "Verify whether it is a real secret and replace with a secret reference.": {
+    "pt-BR": "Verifique se é um segredo real e substitua por uma referência segura.",
+    "es": "Comprueba si es un secreto real y sustitúyelo por una referencia segura."
+  },
+  "Review potentially destructive SQL": {
+    "pt-BR": "Revise o SQL potencialmente destrutivo",
+    "es": "Revisa el SQL potencialmente destructivo"
+  },
+  "Destructive SQL added": {
+    "pt-BR": "SQL destrutivo adicionado",
+    "es": "SQL destructivo añadido"
+  },
+  "Confirm the environment, backups and recovery procedure.": {
+    "pt-BR": "Confirme o ambiente, os backups e o procedimento de recuperação.",
+    "es": "Confirma el entorno, las copias de seguridad y el procedimiento de recuperación."
+  },
+  "Review this workflow privilege boundary": {
+    "pt-BR": "Revise o limite de privilégios deste workflow",
+    "es": "Revisa el límite de privilegios de este flujo"
+  },
+  "Broad permissions or pull_request_target added": {
+    "pt-BR": "Permissões amplas ou pull_request_target adicionados",
+    "es": "Permisos amplios o pull_request_target añadidos"
+  },
+  "Check token scope and whether untrusted code can run.": {
+    "pt-BR": "Confira o escopo do token e se código não confiável pode ser executado.",
+    "es": "Comprueba el alcance del token y si puede ejecutarse código no confiable."
+  },
+  "Dynamic code or process execution was added": {
+    "pt-BR": "Execução dinâmica de código ou processo adicionada",
+    "es": "Ejecución dinámica de código o procesos añadida"
+  },
+  "Execution boundary changed": {
+    "pt-BR": "Limite de execução alterado",
+    "es": "Límite de ejecución modificado"
+  },
+  "Trace the input, argument boundaries and trust assumptions.": {
+    "pt-BR": "Rastreie a entrada, os limites dos argumentos e as premissas de confiança.",
+    "es": "Rastrea la entrada, los límites de los argumentos y las premisas de confianza."
+  },
+  "Review disabled TLS verification": {
+    "pt-BR": "Revise a verificação TLS desativada",
+    "es": "Revisa la verificación TLS desactivada"
+  },
+  "TLS verification bypass pattern added": {
+    "pt-BR": "Padrão que ignora a verificação TLS adicionado",
+    "es": "Patrón que omite la verificación TLS añadido"
+  },
+  "Restore verification and configure the correct trust chain.": {
+    "pt-BR": "Restaure a verificação e configure a cadeia de confiança correta.",
+    "es": "Restaura la verificación y configura la cadena de confianza correcta."
+  },
+  "Review changed test scope": {
+    "pt-BR": "Revise a alteração no escopo dos testes",
+    "es": "Revisa el cambio en el alcance de las pruebas"
+  },
+  "Skipped or exclusive test marker added": {
+    "pt-BR": "Marcador de teste ignorado ou exclusivo adicionado",
+    "es": "Marcador de prueba omitida o exclusiva añadido"
+  },
+  "Confirm which tests actually execute.": {
+    "pt-BR": "Confirme quais testes são realmente executados.",
+    "es": "Confirma qué pruebas se ejecutan realmente."
+  },
+  "Review a binary change separately": {
+    "pt-BR": "Revise a alteração binária separadamente",
+    "es": "Revisa el cambio binario por separado"
+  },
+  "Binary patch section": {
+    "pt-BR": "Seção de patch binário",
+    "es": "Sección de parche binario"
+  },
+  "Use an appropriate artifact viewer; text rules do not inspect this payload.": {
+    "pt-BR": "Use um visualizador adequado; regras de texto não inspecionam esse conteúdo.",
+    "es": "Usa un visor adecuado; las reglas de texto no inspeccionan este contenido."
+  },
+  "GitHub Actions behavior changed": {
+    "pt-BR": "Comportamento do GitHub Actions alterado",
+    "es": "Comportamiento de GitHub Actions modificado"
+  },
+  "Workflow file changed": {
+    "pt-BR": "Arquivo de workflow alterado",
+    "es": "Archivo de flujo modificado"
+  },
+  "Review triggers, permissions and action pinning.": {
+    "pt-BR": "Revise gatilhos, permissões e versões fixadas das actions.",
+    "es": "Revisa eventos, permisos y versiones fijadas de las acciones."
+  },
+  "Check dependency reproducibility": {
+    "pt-BR": "Confira a reprodutibilidade das dependências",
+    "es": "Comprueba la reproducibilidad de las dependencias"
+  },
+  "Dependency manifest changed; no lock artifact in supplied patch": {
+    "pt-BR": "Manifesto de dependências alterado; nenhum arquivo de lock no patch",
+    "es": "Manifiesto de dependencias modificado; ningún archivo de bloqueo en el parche"
+  },
+  "Review version pinning and the project's dependency policy.": {
+    "pt-BR": "Revise as versões fixadas e a política de dependências do projeto.",
+    "es": "Revisa las versiones fijadas y la política de dependencias del proyecto."
+  },
+  "Review environment configuration changes": {
+    "pt-BR": "Revise as alterações de configuração do ambiente",
+    "es": "Revisa los cambios de configuración del entorno"
+  },
+  "Environment file changed": {
+    "pt-BR": "Arquivo de ambiente alterado",
+    "es": "Archivo de entorno modificado"
+  },
+  "Check for secrets before committing.": {
+    "pt-BR": "Procure segredos antes de fazer o commit.",
+    "es": "Busca secretos antes de hacer el commit."
+  },
+  "Confirm replacement test coverage": {
+    "pt-BR": "Confirme os testes que substituem os removidos",
+    "es": "Confirma las pruebas que sustituyen a las eliminadas"
+  },
+  "Test file deleted in this patch": {
+    "pt-BR": "Arquivo de teste removido neste patch",
+    "es": "Archivo de prueba eliminado en este parche"
+  },
+  "Inspect the deletion and replacement behavior tests.": {
+    "pt-BR": "Inspecione a remoção e os testes de comportamento substitutos.",
+    "es": "Inspecciona la eliminación y las pruebas de comportamiento sustitutas."
+  },
+  "Confirm behavior is covered": {
+    "pt-BR": "Confirme os testes do comportamento",
+    "es": "Confirma las pruebas del comportamiento"
+  },
+  "Source changed without changed test files in this patch": {
+    "pt-BR": "Código alterado sem arquivos de teste alterados neste patch",
+    "es": "Código modificado sin archivos de prueba modificados en este parche"
+  },
+  "Check existing tests or add a regression case. This does not measure coverage.": {
+    "pt-BR": "Confira os testes existentes ou adicione um caso de regressão. Isso não mede cobertura.",
+    "es": "Comprueba las pruebas existentes o añade un caso de regresión. Esto no mide cobertura."
+  },
+  "Add a repository entry point": {
+    "pt-BR": "Adicione uma apresentação do repositório",
+    "es": "Añade una presentación del repositorio"
+  },
+  "No root README found": {
+    "pt-BR": "Nenhum README encontrado na raiz",
+    "es": "No se encontró un README en la raíz"
+  },
+  "Document setup, usage and testing.": {
+    "pt-BR": "Documente instalação, uso e testes.",
+    "es": "Documenta instalación, uso y pruebas."
+  },
+  "Document setup": {
+    "pt-BR": "Documente a instalação",
+    "es": "Documenta la instalación"
+  },
+  "Document usage": {
+    "pt-BR": "Documente o uso",
+    "es": "Documenta el uso"
+  },
+  "Document testing": {
+    "pt-BR": "Documente os testes",
+    "es": "Documenta las pruebas"
+  },
+  "Section keywords not found": {
+    "pt-BR": "Palavras-chave da seção não encontradas",
+    "es": "No se encontraron palabras clave de la sección"
+  },
+  "Add commands verified by a maintainer; keyword matching is heuristic.": {
+    "pt-BR": "Adicione comandos verificados por um mantenedor; a busca por palavras-chave é heurística.",
+    "es": "Añade comandos verificados por un mantenedor; la búsqueda por palabras clave es heurística."
+  },
+  "Make checks repeatable": {
+    "pt-BR": "Torne as verificações reproduzíveis",
+    "es": "Haz que las verificaciones sean reproducibles"
+  },
+  "No GitHub workflow found": {
+    "pt-BR": "Nenhum workflow do GitHub encontrado",
+    "es": "No se encontró ningún flujo de GitHub"
+  },
+  "Add a workflow for the real test/build commands.": {
+    "pt-BR": "Adicione um workflow com os comandos reais de teste e build.",
+    "es": "Añade un flujo con los comandos reales de pruebas y compilación."
+  },
+  "Clarify reuse permissions": {
+    "pt-BR": "Esclareça as permissões de reutilização",
+    "es": "Aclara los permisos de reutilización"
+  },
+  "No root license file found": {
+    "pt-BR": "Nenhum arquivo de licença encontrado na raiz",
+    "es": "No se encontró ningún archivo de licencia en la raíz"
+  },
+  "Choose and document an appropriate license.": {
+    "pt-BR": "Escolha e documente uma licença adequada.",
+    "es": "Elige y documenta una licencia adecuada."
+  },
+  "Repair a missing local Markdown target": {
+    "pt-BR": "Corrija um destino local de Markdown ausente",
+    "es": "Corrige un destino local de Markdown ausente"
+  },
+  "Restore the target or correct the relative link.": {
+    "pt-BR": "Restaure o destino ou corrija o link relativo.",
+    "es": "Restaura el destino o corrige el enlace relativo."
+  },
+  "Review a maintenance marker": {
+    "pt-BR": "Revise um marcador de manutenção",
+    "es": "Revisa un marcador de mantenimiento"
+  },
+  "TODO/FIXME marker": {
+    "pt-BR": "Marcador TODO/FIXME",
+    "es": "Marcador TODO/FIXME"
+  },
+  "Confirm whether follow-up work is still required.": {
+    "pt-BR": "Confirme se o trabalho pendente ainda é necessário.",
+    "es": "Confirma si el trabajo pendiente sigue siendo necesario."
+  },
+  "Review a large module": {
+    "pt-BR": "Revise um módulo grande",
+    "es": "Revisa un módulo grande"
+  },
+  "Add characterization tests before splitting responsibilities.": {
+    "pt-BR": "Adicione testes de caracterização antes de separar responsabilidades.",
+    "es": "Añade pruebas de caracterización antes de separar responsabilidades."
+  },
+  "Review a module without a matching test name": {
+    "pt-BR": "Revise um módulo sem teste com nome correspondente",
+    "es": "Revisa un módulo sin prueba con nombre correspondiente"
+  },
+  "No conventional test filename match": {
+    "pt-BR": "Nenhum nome de arquivo de teste convencional correspondente",
+    "es": "Ningún nombre convencional de archivo de prueba correspondiente"
+  },
+  "Find existing coverage or add a behavior test; this is not measured coverage.": {
+    "pt-BR": "Localize testes existentes ou adicione um teste de comportamento; isso não mede cobertura.",
+    "es": "Localiza pruebas existentes o añade una prueba de comportamiento; esto no mide cobertura."
+  },
+  "Generate a Java report first, then reload this page.": {
+    "pt-BR": "Gere um relatório Java primeiro e recarregue esta página.",
+    "es": "Genera primero un informe Java y recarga esta página."
+  },
+  "Invalid scan input": {
+    "pt-BR": "Entrada de análise inválida",
+    "es": "Entrada de análisis no válida"
+  },
+  "Java scan timed out": {
+    "pt-BR": "A análise Java excedeu o tempo limite",
+    "es": "El análisis Java agotó el tiempo de espera"
+  },
+  "Java scan failed. Review the local terminal and repository inputs.": {
+    "pt-BR": "A análise Java falhou. Confira o terminal local e as entradas do repositório.",
+    "es": "El análisis Java falló. Revisa el terminal local y las entradas del repositorio."
+  },
+  "Java compilation failed": {
+    "pt-BR": "Falha na compilação Java",
+    "es": "Error de compilación Java"
+  },
+  "Use the file and line diagnostics. Check package paths, declarations and the JDK/toolchain configured in Maven or Gradle.": {
+    "pt-BR": "Use os diagnósticos de arquivo e linha. Confira pacotes, declarações e o JDK configurado no Maven ou Gradle.",
+    "es": "Usa los diagnósticos de archivo y línea. Comprueba paquetes, declaraciones y el JDK configurado en Maven o Gradle."
+  },
+  "C# or MSBuild diagnostic": {
+    "pt-BR": "Diagnóstico de C# ou MSBuild",
+    "es": "Diagnóstico de C# o MSBuild"
+  },
+  "Inspect the compiler diagnostic, target framework and references. Reproduce using the same .NET SDK as CI.": {
+    "pt-BR": "Inspecione o diagnóstico, o framework de destino e as referências. Reproduza com o mesmo SDK .NET do CI.",
+    "es": "Inspecciona el diagnóstico, el framework de destino y las referencias. Reproduce con el mismo SDK .NET de CI."
+  },
+  ".NET SDK or target framework mismatch": {
+    "pt-BR": "SDK .NET ou framework de destino incompatível",
+    "es": "SDK .NET o framework de destino incompatible"
+  },
+  "Check global.json, the installed SDK and TargetFramework. Use a compatible supported SDK.": {
+    "pt-BR": "Confira global.json, o SDK instalado e TargetFramework. Use um SDK compatível e com suporte.",
+    "es": "Comprueba global.json, el SDK instalado y TargetFramework. Usa un SDK compatible y con soporte."
+  },
+  "NuGet restore failed": {
+    "pt-BR": "Falha na restauração NuGet",
+    "es": "Error en la restauración NuGet"
+  },
+  "Inspect the package source, version constraints, authentication and lock file. Do not disable TLS verification.": {
+    "pt-BR": "Inspecione a origem do pacote, as restrições de versão, a autenticação e o arquivo de lock. Mantenha a verificação TLS.",
+    "es": "Inspecciona el origen del paquete, las restricciones de versión, la autenticación y el archivo de bloqueo. Mantén la verificación TLS."
+  },
+  "Dependency resolution conflict": {
+    "pt-BR": "Conflito na resolução de dependências",
+    "es": "Conflicto en la resolución de dependencias"
+  },
+  "Compare the requested and peer dependency ranges. Update compatible versions together and regenerate the lockfile with the project package manager.": {
+    "pt-BR": "Compare os intervalos de versões solicitados e de dependências pares. Atualize versões compatíveis juntas e gere o lock com o gerenciador do projeto.",
+    "es": "Compara los intervalos de versiones solicitadas y de dependencias pares. Actualiza versiones compatibles juntas y genera el bloqueo con el gestor del proyecto."
+  },
+  "Manifest and lockfile disagree": {
+    "pt-BR": "Manifesto e arquivo de lock divergentes",
+    "es": "Manifiesto y archivo de bloqueo divergentes"
+  },
+  "Regenerate the lockfile locally using the same package manager version as CI, review the diff, and commit it with the manifest.": {
+    "pt-BR": "Gere o lock localmente com a mesma versão do gerenciador do CI, revise o diff e faça o commit junto ao manifesto.",
+    "es": "Genera el bloqueo localmente con la misma versión del gestor de CI, revisa el diff y haz el commit junto al manifiesto."
+  },
+  "Module could not be resolved": {
+    "pt-BR": "Não foi possível resolver o módulo",
+    "es": "No se pudo resolver el módulo"
+  },
+  "Check the module name, declared dependencies, workspace install step and case-sensitive paths. Confirm the import exists on a clean checkout.": {
+    "pt-BR": "Confira o nome do módulo, dependências declaradas, instalação e maiúsculas nos caminhos. Confirme o import em um checkout limpo.",
+    "es": "Comprueba el nombre del módulo, las dependencias declaradas, la instalación y las mayúsculas en las rutas. Confirma el import en un checkout limpio."
+  },
+  "Static type or compiler diagnostic": {
+    "pt-BR": "Diagnóstico de tipo estático ou compilador",
+    "es": "Diagnóstico de tipo estático o compilador"
+  },
+  "Inspect the diagnostic at the reported source location. Reproduce with the same compiler version and configuration before changing types.": {
+    "pt-BR": "Inspecione o diagnóstico no local indicado. Reproduza com a mesma versão e configuração do compilador antes de alterar tipos.",
+    "es": "Inspecciona el diagnóstico en la ubicación indicada. Reproduce con la misma versión y configuración del compilador antes de cambiar tipos."
+  },
+  "Test assertion failed": {
+    "pt-BR": "Falha em uma asserção de teste",
+    "es": "Error en una aserción de prueba"
+  },
+  "Run the named test in isolation, then with the full suite. Compare expected and actual values; a failed assertion alone does not prove flakiness.": {
+    "pt-BR": "Execute o teste isoladamente e depois com a suíte completa. Compare valores esperados e obtidos; a falha sozinha não comprova instabilidade.",
+    "es": "Ejecuta la prueba de forma aislada y después con la suite completa. Compara valores esperados y obtenidos; el fallo por sí solo no demuestra inestabilidad."
+  },
+  "Access was denied": {
+    "pt-BR": "Acesso negado",
+    "es": "Acceso denegado"
+  },
+  "Check the file ownership or the token permission required by this operation. Grant only the scope the operation needs.": {
+    "pt-BR": "Confira o proprietário do arquivo ou a permissão do token exigida. Conceda somente o escopo necessário.",
+    "es": "Comprueba el propietario del archivo o el permiso del token requerido. Concede solo el alcance necesario."
+  },
+  "Network or name resolution failure": {
+    "pt-BR": "Falha de rede ou resolução de nomes",
+    "es": "Error de red o resolución de nombres"
+  },
+  "Check service readiness, hostnames and runner connectivity. Retry only after checking whether the operation is safe to repeat.": {
+    "pt-BR": "Confira a disponibilidade do serviço, nomes de hosts e conexão do runner. Repita somente se a operação for segura.",
+    "es": "Comprueba la disponibilidad del servicio, los nombres de hosts y la conexión del runner. Repite solo si la operación es segura."
+  },
+  "Runner storage exhausted": {
+    "pt-BR": "Armazenamento do runner esgotado",
+    "es": "Almacenamiento del runner agotado"
+  },
+  "Inspect disk usage and retained artifacts or caches. Remove only disposable data or increase runner storage.": {
+    "pt-BR": "Inspecione o disco, artefatos e caches. Remova somente dados descartáveis ou aumente o armazenamento.",
+    "es": "Inspecciona el disco, los artefactos y las cachés. Elimina solo datos desechables o aumenta el almacenamiento."
+  },
+  "Memory limit reached": {
+    "pt-BR": "Limite de memória atingido",
+    "es": "Límite de memoria alcanzado"
+  },
+  "Inspect peak memory, worker concurrency and runner limits. Reduce parallelism or profile allocations before increasing the memory ceiling.": {
+    "pt-BR": "Confira o pico de memória, concorrência e limites do runner. Reduza o paralelismo ou analise alocações antes de aumentar o limite.",
+    "es": "Comprueba el pico de memoria, la concurrencia y los límites del runner. Reduce el paralelismo o analiza asignaciones antes de aumentar el límite."
+  },
+  "Required command is unavailable": {
+    "pt-BR": "Comando necessário indisponível",
+    "es": "Comando necesario no disponible"
+  },
+  "Install or set up the required tool explicitly and verify its version and PATH in this job.": {
+    "pt-BR": "Instale ou configure a ferramenta explicitamente e confira sua versão e PATH neste job.",
+    "es": "Instala o configura la herramienta explícitamente y comprueba su versión y PATH en este trabajo."
+  },
+  "Operation timed out": {
+    "pt-BR": "Tempo limite da operação excedido",
+    "es": "Tiempo de espera de la operación agotado"
+  },
+  "Inspect the operation and its readiness dependencies. Measure duration before raising the timeout; this may be a slow or unavailable service.": {
+    "pt-BR": "Inspecione a operação e suas dependências. Meça a duração antes de aumentar o limite; o serviço pode estar lento ou indisponível.",
+    "es": "Inspecciona la operación y sus dependencias. Mide la duración antes de aumentar el límite; el servicio puede estar lento o no disponible."
+  },
+  "Unclassified failure signal": {
+    "pt-BR": "Sinal de falha não classificado",
+    "es": "Señal de fallo sin clasificar"
+  },
+  "Inspect the surrounding log. This fallback preserves evidence but cannot identify the underlying cause.": {
+    "pt-BR": "Inspecione o contexto do log. Esta alternativa preserva evidências, mas não identifica a causa.",
+    "es": "Inspecciona el contexto del registro. Esta alternativa conserva evidencias, pero no identifica la causa."
+  },
+  "Dependency versions conflict": {
+    "pt-BR": "Conflito entre versões de dependências",
+    "es": "Conflicto entre versiones de dependencias"
+  },
+  "npm explain <package>; npm ls --all; Align the conflicting versions in package.json; regenerate the lockfile and run tests.": {
+    "pt-BR": "npm explain <package>; npm ls --all; Alinhe as versões conflitantes em package.json, gere o lock e execute os testes.",
+    "es": "npm explain <package>; npm ls --all; Alinea las versiones en conflicto en package.json, genera el bloqueo y ejecuta las pruebas."
+  },
+  "Lockfile and manifest disagree": {
+    "pt-BR": "Arquivo de lock e manifesto divergentes",
+    "es": "Archivo de bloqueo y manifiesto divergentes"
+  },
+  "Run npm install with the project Node/npm versions, review both manifest and lockfile diffs, then npm ci.": {
+    "pt-BR": "Execute npm install com as versões Node/npm do projeto, revise o manifesto e o lock e execute npm ci.",
+    "es": "Ejecuta npm install con las versiones Node/npm del proyecto, revisa el manifiesto y el bloqueo y ejecuta npm ci."
+  },
+  "Requested npm script is absent": {
+    "pt-BR": "Script npm solicitado ausente",
+    "es": "Script npm solicitado ausente"
+  },
+  "npm run; Check the working directory and define or select the intended script.": {
+    "pt-BR": "npm run; Confira o diretório de trabalho e defina ou selecione o script desejado.",
+    "es": "npm run; Comprueba el directorio de trabajo y define o selecciona el script deseado."
+  },
+  "Module cannot be resolved": {
+    "pt-BR": "O módulo não pode ser resolvido",
+    "es": "El módulo no se puede resolver"
+  },
+  "Check the exact import and filename case.; Restore dependencies using the committed lockfile and correct package manager.": {
+    "pt-BR": "Confira o import e as maiúsculas do nome do arquivo. Restaure dependências com o lock versionado e o gerenciador correto.",
+    "es": "Comprueba el import y las mayúsculas del nombre del archivo. Restaura dependencias con el bloqueo versionado y el gestor correcto."
+  },
+  "Python module is unavailable": {
+    "pt-BR": "Módulo Python indisponível",
+    "es": "Módulo Python no disponible"
+  },
+  "python -m pip --version; Activate the project virtual environment, then install its declared requirements.": {
+    "pt-BR": "python -m pip --version; Ative o ambiente virtual do projeto e instale os requisitos declarados.",
+    "es": "python -m pip --version; Activa el entorno virtual del proyecto e instala los requisitos declarados."
+  },
+  "Python import is incompatible": {
+    "pt-BR": "Import Python incompatível",
+    "es": "Import Python incompatible"
+  },
+  "Inspect the importing file and installed version.; Compare declared requirements with the environment.": {
+    "pt-BR": "Inspecione o arquivo importador e a versão instalada. Compare os requisitos declarados com o ambiente.",
+    "es": "Inspecciona el archivo importador y la versión instalada. Compara los requisitos declarados con el entorno."
+  },
+  "TypeScript compilation failed": {
+    "pt-BR": "Falha na compilação TypeScript",
+    "es": "Error de compilación TypeScript"
+  },
+  "npx tsc --noEmit; Use the diagnostic and source location to update the type or implementation; rerun tests.": {
+    "pt-BR": "npx tsc --noEmit; Use o diagnóstico e o local no código para corrigir o tipo ou implementação e repita os testes.",
+    "es": "npx tsc --noEmit; Usa el diagnóstico y la ubicación en el código para corregir el tipo o implementación y repite las pruebas."
+  },
+  "Port is already occupied": {
+    "pt-BR": "Porta já ocupada",
+    "es": "Puerto ya ocupado"
+  },
+  "Find the port owner using your OS process tools.; Stop the known process or choose an unused port; do not kill arbitrary processes.": {
+    "pt-BR": "Localize o proprietário da porta com as ferramentas do sistema. Pare o processo conhecido ou escolha outra porta; não encerre processos arbitrários.",
+    "es": "Localiza el propietario del puerto con las herramientas del sistema. Detén el proceso conocido o elige otro puerto; no termines procesos arbitrarios."
+  },
+  "Disk space or watcher limit exhausted": {
+    "pt-BR": "Espaço em disco ou limite de monitores esgotado",
+    "es": "Espacio en disco o límite de monitores agotado"
+  },
+  "df -h; df -i; Check watcher limits and generated files before deleting anything.": {
+    "pt-BR": "df -h; df -i; Confira limites de monitores e arquivos gerados antes de excluir algo.",
+    "es": "df -h; df -i; Comprueba límites de monitores y archivos generados antes de eliminar algo."
+  },
+  "Process exceeded available memory": {
+    "pt-BR": "Processo excedeu a memória disponível",
+    "es": "El proceso superó la memoria disponible"
+  },
+  "Inspect runner/container memory limits and peak usage.; Reduce build concurrency before increasing the memory limit.": {
+    "pt-BR": "Confira limites de memória do runner ou contêiner e o pico de uso. Reduza builds simultâneos antes de aumentar o limite.",
+    "es": "Comprueba límites de memoria del runner o contenedor y el pico de uso. Reduce compilaciones simultáneas antes de aumentar el límite."
+  },
+  "Check the reported path, owner and current user.; Fix the specific permission; avoid sudo installs and chmod 777.": {
+    "pt-BR": "Confira caminho, proprietário e usuário atual. Corrija a permissão específica; evite instalações com sudo e chmod 777.",
+    "es": "Comprueba la ruta, el propietario y el usuario actual. Corrige el permiso específico; evita instalaciones con sudo y chmod 777."
+  },
+  "Docker daemon is unavailable": {
+    "pt-BR": "Serviço Docker indisponível",
+    "es": "Servicio Docker no disponible"
+  },
+  "docker context show; docker info; Start Docker and check the selected context.": {
+    "pt-BR": "docker context show; docker info; Inicie o Docker e confira o contexto selecionado.",
+    "es": "docker context show; docker info; Inicia Docker y comprueba el contexto seleccionado."
+  },
+  "Container architecture mismatch": {
+    "pt-BR": "Arquitetura de contêiner incompatível",
+    "es": "Arquitectura de contenedor incompatible"
+  },
+  "docker version; Inspect image architecture and build for the target platform.": {
+    "pt-BR": "docker version; Inspecione a arquitetura da imagem e compile para a plataforma de destino.",
+    "es": "docker version; Inspecciona la arquitectura de la imagen y compila para la plataforma de destino."
+  },
+  "Database authentication failed": {
+    "pt-BR": "Falha na autenticação do banco de dados",
+    "es": "Error de autenticación de la base de datos"
+  },
+  "Check server-side secret configuration and username.; Never put database credentials in browser code or logs.": {
+    "pt-BR": "Confira os segredos no servidor e o usuário. Nunca coloque credenciais do banco no navegador nem em logs.",
+    "es": "Comprueba los secretos del servidor y el usuario. Nunca pongas credenciales de la base de datos en el navegador ni en registros."
+  },
+  "Schema or migration state mismatch": {
+    "pt-BR": "Esquema ou estado de migração incompatível",
+    "es": "Esquema o estado de migración incompatible"
+  },
+  "Check the target database and migration status.; Back up data and review pending migrations before applying them.": {
+    "pt-BR": "Confira o banco de destino e o estado das migrações. Faça backup e revise as migrações pendentes antes de aplicá-las.",
+    "es": "Comprueba la base de datos de destino y el estado de las migraciones. Haz una copia de seguridad y revisa las migraciones pendientes antes de aplicarlas."
+  },
+  "Database connection unavailable": {
+    "pt-BR": "Conexão com banco de dados indisponível",
+    "es": "Conexión con la base de datos no disponible"
+  },
+  "Verify the server and TLS settings from the backend host.; Inspect pool usage and network rules without opening public access.": {
+    "pt-BR": "Confira o servidor e o TLS a partir do backend. Inspecione conexões e regras de rede sem abrir acesso público.",
+    "es": "Comprueba el servidor y TLS desde el backend. Inspecciona conexiones y reglas de red sin abrir acceso público."
+  },
+  "DNS lookup failed": {
+    "pt-BR": "Falha na consulta DNS",
+    "es": "Error en la consulta DNS"
+  },
+  "Verify the hostname and DNS from the same runner.; Retry only after checking transient network status.": {
+    "pt-BR": "Confira o host e o DNS no mesmo runner. Repita somente após verificar o estado transitório da rede.",
+    "es": "Comprueba el host y DNS en el mismo runner. Repite solo después de verificar el estado transitorio de la red."
+  },
+  "TLS certificate verification failed": {
+    "pt-BR": "Falha na verificação do certificado TLS",
+    "es": "Error en la verificación del certificado TLS"
+  },
+  "Check certificate expiry and system clock.; Install the correct trusted CA; keep certificate verification enabled.": {
+    "pt-BR": "Confira a validade do certificado e o relógio do sistema. Instale a CA confiável correta e mantenha a verificação ativa.",
+    "es": "Comprueba la validez del certificado y el reloj del sistema. Instala la CA de confianza correcta y mantén activa la verificación."
+  },
+  "Unresolved merge conflict": {
+    "pt-BR": "Conflito de merge não resolvido",
+    "es": "Conflicto de merge sin resolver"
+  },
+  "git status; Resolve conflict markers, review the combined behavior and rerun tests.": {
+    "pt-BR": "git status; Resolva os marcadores de conflito, revise o comportamento combinado e repita os testes.",
+    "es": "git status; Resuelve los marcadores de conflicto, revisa el comportamiento combinado y repite las pruebas."
+  },
+  "Run the reported test in isolation.; Inspect the assertion diff and recent code changes.": {
+    "pt-BR": "Execute o teste indicado isoladamente. Inspecione a diferença da asserção e as mudanças recentes.",
+    "es": "Ejecuta la prueba indicada de forma aislada. Inspecciona la diferencia de la aserción y los cambios recientes."
+  },
+  "Disassemble, decompile, and analyze compiled code with a collaborative desktop workbench.": {
+    "pt-BR": "Desmonte, descompile e analise código compilado em um ambiente desktop colaborativo.",
+    "es": "Desensambla y descompila código compilado con un entorno de análisis colaborativo."
+  },
+  "Identify executable formats, compilers, packers, and related file properties.": {
+    "pt-BR": "Identifique formatos de executáveis, compiladores, empacotadores e outras propriedades dos arquivos.",
+    "es": "Identifica formatos ejecutables, compiladores, empaquetadores y propiedades."
+  },
+  "Search firmware images for embedded filesystems, signatures, and other structures.": {
+    "pt-BR": "Busque sistemas de arquivos embarcados, assinaturas e outras estruturas em imagens de firmware.",
+    "es": "Busca sistemas de archivos y firmas dentro de imágenes de firmware."
+  },
+  "Emulate machines and run isolated test environments across many architectures.": {
+    "pt-BR": "Emule máquinas e execute ambientes de teste isolados em diversas arquiteturas.",
+    "es": "Emula máquinas y ejecuta entornos de prueba aislados."
+  },
+  "Capture and inspect network protocols in traffic you are authorized to analyze.": {
+    "pt-BR": "Capture e inspecione protocolos de rede em tráfego que você tem autorização para analisar.",
+    "es": "Captura e inspecciona protocolos de red en tráfico autorizado."
+  },
+  "Inspect, modify, and replay HTTP(S) traffic in your own test setup.": {
+    "pt-BR": "Inspecione, modifique e reproduza tráfego HTTP(S) em seu próprio ambiente de teste.",
+    "es": "Inspecciona y reproduce tráfico HTTP(S) en un entorno propio de pruebas."
+  },
+  "Review a branch- or tag-pinned action": {
+    "pt-BR": "Revise uma Action fixada por branch ou tag",
+    "es": "Revisa una Action fijada por rama o etiqueta"
+  },
+  "Workflow action is not pinned to a full commit SHA": {
+    "pt-BR": "A Action não está fixada em um SHA completo de commit",
+    "es": "La Action no está fijada a un SHA completo de commit"
+  },
+  "Verify the publisher and pin an immutable SHA when required by project policy.": {
+    "pt-BR": "Verifique o publicador e fixe um SHA imutável quando a política do projeto exigir.",
+    "es": "Verifica al publicador y fija un SHA inmutable cuando lo exija la política del proyecto."
+  },
+  "Review a case-sensitive import path": {
+    "pt-BR": "Revise a diferenciação de maiúsculas no import",
+    "es": "Revisa mayúsculas y minúsculas en el import"
+  },
+  "Review an unresolved relative import": {
+    "pt-BR": "Revise um import relativo não resolvido",
+    "es": "Revisa un import relativo no resuelto"
+  },
+  "Review an ambiguous import path": {
+    "pt-BR": "Revise um caminho de import ambíguo",
+    "es": "Revisa una ruta de import ambigua"
+  },
+  "Confirm the relative import casing on Linux and rerun the build.": {
+    "pt-BR": "Confirme as maiúsculas e minúsculas do caminho no Linux e execute a compilação novamente.",
+    "es": "Confirma las mayúsculas y minúsculas de la ruta en Linux y vuelve a compilar."
+  },
+  "Check tsconfig aliases, generated modules, extensions and excluded paths before editing.": {
+    "pt-BR": "Verifique aliases do tsconfig, módulos gerados, extensões e caminhos excluídos antes de editar.",
+    "es": "Comprueba los alias de tsconfig, módulos generados, extensiones y rutas excluidas antes de editar."
+  },
+  "Multiple case-insensitive candidates exist. Check the intended import.": {
+    "pt-BR": "Há vários candidatos com diferenças de maiúsculas. Verifique qual import era esperado.",
+    "es": "Hay varios candidatos con diferencias de mayúsculas. Comprueba cuál era el import previsto."
+  },
+  "RevScope uses metadata and bounded header triage to recommend external tools; no binaries or captures are analyzed or executed.": {
+    "pt-BR": "O RevScope usa metadados e leitura limitada de cabeçalhos para recomendar ferramentas externas; não analisa nem executa binários ou capturas.",
+    "es": "RevScope utiliza metadatos y lectura limitada de encabezados para recomendar herramientas externas; no analiza ni ejecuta binarios o capturas."
+  },
+  "pcap header": {
+    "pt-BR": "Cabeçalho PCAP",
+    "es": "Encabezado PCAP"
+  },
+  "pcapng header": {
+    "pt-BR": "Cabeçalho PCAPNG",
+    "es": "Encabezado PCAPNG"
+  },
+  "ELF header": {
+    "pt-BR": "Cabeçalho ELF",
+    "es": "Encabezado ELF"
+  },
+  "PE/MZ header": {
+    "pt-BR": "Cabeçalho PE/MZ",
+    "es": "Encabezado PE/MZ"
+  },
+  "ZIP header": {
+    "pt-BR": "Cabeçalho ZIP",
+    "es": "Encabezado ZIP"
+  },
+  "extension only; format not confirmed": {
+    "pt-BR": "Apenas extensão; formato não confirmado",
+    "es": "Solo extensión; formato no confirmado"
+  },
+  "header unavailable": {
+    "pt-BR": "Cabeçalho indisponível",
+    "es": "Encabezado no disponible"
+  },
+  "unverified": {
+    "pt-BR": "Não verificado",
+    "es": "Sin verificar"
+  },
+  "Static analysis of native binaries": {
+    "pt-BR": "Análise estática de binários nativos",
+    "es": "Análisis estático de binarios nativos"
+  },
+  "Interactive disassembler with broad processor coverage and a familiar analysis workflow.": {
+    "pt-BR": "Desmontador interativo com suporte a diversas arquiteturas de processador e um fluxo de análise familiar.",
+    "es": "Desensamblador interactivo con soporte amplio de procesadores."
+  },
+  "Inspecting supported binary formats": {
+    "pt-BR": "Inspeção dos formatos binários compatíveis",
+    "es": "Inspección de formatos binarios compatibles"
+  },
+  "Accessible reverse-engineering GUI built around the Rizin framework.": {
+    "pt-BR": "Interface gráfica acessível para engenharia reversa, baseada no framework Rizin.",
+    "es": "Interfaz gráfica de ingeniería inversa construida con Rizin."
+  },
+  "A graphical entry point to Rizin": {
+    "pt-BR": "Um ponto de partida gráfico para o Rizin",
+    "es": "Un punto de partida visual para Rizin"
+  },
+  "Portable command-line framework for binary analysis, debugging, and data inspection.": {
+    "pt-BR": "Framework portátil de linha de comando para análise de binários, depuração e inspeção de dados.",
+    "es": "Framework portátil de línea de comandos para analizar y depurar binarios."
+  },
+  "Scriptable binary workflows": {
+    "pt-BR": "Fluxos de análise de binários automatizados por scripts",
+    "es": "Flujos programables de análisis binario"
+  },
+  "Open-source debugger for Windows applications and executables.": {
+    "pt-BR": "Depurador de código aberto para aplicativos e executáveis do Windows.",
+    "es": "Depurador de código abierto para programas y ejecutables de Windows."
+  },
+  "Runtime debugging on Windows": {
+    "pt-BR": "Depuração em tempo de execução no Windows",
+    "es": "Depuración durante la ejecución en Windows"
+  },
+  "First-pass executable triage": {
+    "pt-BR": "Triagem inicial de executáveis",
+    "es": "Clasificación inicial de ejecutables"
+  },
+  "Identify capabilities in executable files, shellcode, and sandbox reports.": {
+    "pt-BR": "Identifique funcionalidades em executáveis, shellcode e relatórios de sandbox.",
+    "es": "Identifica capacidades en ejecutables y en informes de entornos aislados."
+  },
+  "A fast behavior-oriented first look": {
+    "pt-BR": "Uma primeira avaliação rápida orientada ao comportamento",
+    "es": "Primera investigación basada en capacidades"
+  },
+  "Extract strings that are statically or stack-decoded from malware samples.": {
+    "pt-BR": "Extraia strings estáticas ou decodificadas na pilha de amostras de malware.",
+    "es": "Extrae cadenas estáticas y decodificadas de muestras de malware."
+  },
+  "Finding obfuscated strings during triage": {
+    "pt-BR": "Encontrar strings ofuscadas durante a triagem",
+    "es": "Identificación de cadenas ofuscadas"
+  },
+  "Describe and match patterns in files using readable, shareable rules.": {
+    "pt-BR": "Descreva e encontre padrões em arquivos usando regras legíveis e compartilháveis.",
+    "es": "Detecta patrones de archivos con reglas legibles y compartibles."
+  },
+  "Creating repeatable file detection rules": {
+    "pt-BR": "Criar regras reproduzíveis de detecção em arquivos",
+    "es": "Reglas reproducibles de detección de archivos"
+  },
+  "Instrument applications at runtime with a programmable toolkit for developers and researchers.": {
+    "pt-BR": "Instrumente aplicativos em tempo de execução com um conjunto programável de ferramentas para desenvolvedores e pesquisadores.",
+    "es": "Instrumenta aplicaciones durante su ejecución mediante herramientas programables."
+  },
+  "Observing runtime behavior in a test environment": {
+    "pt-BR": "Observar o comportamento em execução em um ambiente de teste",
+    "es": "Observación del comportamiento en un laboratorio"
+  },
+  "Read Java-like source and resources recovered from Android DEX and APK files.": {
+    "pt-BR": "Leia código semelhante a Java e recursos recuperados de arquivos Android DEX e APK.",
+    "es": "Recupera recursos y código semejante a Java desde DEX y APK."
+  },
+  "Static inspection of Android packages": {
+    "pt-BR": "Inspeção estática de pacotes Android",
+    "es": "Inspección estática de paquetes Android"
+  },
+  "Decode Android resources and rebuild packages for analysis and development workflows.": {
+    "pt-BR": "Decodifique recursos Android e reconstrua pacotes para análise e desenvolvimento.",
+    "es": "Decodifica recursos y reconstruye paquetes Android para investigación."
+  },
+  "Inspecting resources and manifests": {
+    "pt-BR": "Inspeção de recursos e manifestos",
+    "es": "Inspección de recursos y manifiestos"
+  },
+  "Automate mobile application security checks and organize static or dynamic analysis findings.": {
+    "pt-BR": "Automatize verificações de segurança de aplicativos móveis e organize os resultados de análises estáticas ou dinâmicas.",
+    "es": "Automatiza revisiones de seguridad móvil y reúne hallazgos."
+  },
+  "A repeatable mobile app assessment workflow": {
+    "pt-BR": "Um fluxo reproduzível de avaliação de aplicativos móveis",
+    "es": "Evaluación repetible de aplicaciones móviles"
+  },
+  "Open-source .NET assembly browser and decompiler with a desktop interface.": {
+    "pt-BR": "Navegador e descompilador de assemblies .NET de código aberto com interface desktop.",
+    "es": "Explorador y descompilador de ensamblados .NET de código abierto."
+  },
+  "Exploring managed .NET assemblies": {
+    "pt-BR": "Explorar assemblies .NET gerenciados",
+    "es": "Exploración de ensamblados .NET administrados"
+  },
+  "Community-maintained .NET debugger and assembly editor derived from dnSpy.": {
+    "pt-BR": "Depurador e editor de assemblies .NET mantido pela comunidade e derivado do dnSpy.",
+    "es": "Depurador y editor comunitario de ensamblados .NET basado en dnSpy."
+  },
+  "Debugging managed .NET applications": {
+    "pt-BR": "Depuração de aplicativos .NET gerenciados",
+    "es": "Depuración de aplicaciones .NET administradas"
+  },
+  "Understanding protocol behavior in a lab": {
+    "pt-BR": "Entender o comportamento de protocolos em laboratório",
+    "es": "Entender protocolos de red en un laboratorio"
+  },
+  "Debugging API and web traffic": {
+    "pt-BR": "Depuração de tráfego de APIs e aplicações web",
+    "es": "Depuración de API y tráfico web"
+  },
+  "A manual toolkit for testing web applications that you own or have permission to assess.": {
+    "pt-BR": "Um conjunto de ferramentas manuais para testar aplicações web próprias ou com autorização para avaliação.",
+    "es": "Herramientas manuales para evaluar aplicaciones web autorizadas."
+  },
+  "Hands-on web security testing": {
+    "pt-BR": "Testes práticos de segurança web",
+    "es": "Pruebas prácticas de seguridad web"
+  },
+  "Initial inspection of firmware images": {
+    "pt-BR": "Inspeção inicial de imagens de firmware",
+    "es": "Inspección inicial de imágenes de firmware"
+  },
+  "Debug and program microcontrollers through supported on-chip debug adapters.": {
+    "pt-BR": "Depure e programe microcontroladores por meio de adaptadores de depuração compatíveis.",
+    "es": "Depura microcontroladores mediante adaptadores de depuración compatibles."
+  },
+  "Hardware you own or are authorized to service": {
+    "pt-BR": "Hardware próprio ou com autorização para manutenção",
+    "es": "Hardware propio o autorizado"
+  },
+  "Safe, repeatable analysis labs": {
+    "pt-BR": "Laboratórios de análise seguros e reproduzíveis",
+    "es": "Laboratorios de análisis seguros y repetibles"
+  },
+  "Capture Android app traffic without root, inspect HTTP requests, and export PCAP files. HTTPS inspection requires extra TLS setup and app compatibility.": {
+    "pt-BR": "Capture o tráfego de aplicativos Android sem root, inspecione requisições HTTP e exporte arquivos PCAP. A inspeção HTTPS exige configuração TLS adicional e compatibilidade do aplicativo.",
+    "es": "Captura tráfico de apps Android sin root, inspecciona HTTP y exporta PCAP. HTTPS exige una configuración TLS adicional."
+  },
+  "Per-app Android traffic analysis and PCAP export": {
+    "pt-BR": "Análise de tráfego por aplicativo Android e exportação PCAP",
+    "es": "Tráfico por aplicación Android y exportación PCAP"
+  },
+  "Disassembly & decompilation": {
+    "pt-BR": "Desmontagem e descompilação",
+    "es": "Desensamblado y descompilación"
+  },
+  "Debugging": {
+    "pt-BR": "Depuração",
+    "es": "Depuración"
+  },
+  "Triage & identification": {
+    "pt-BR": "Triagem e identificação",
+    "es": "Clasificación e identificación"
+  },
+  "Detection & rules": {
+    "pt-BR": "Detecção e regras",
+    "es": "Detección y reglas"
+  },
+  "Dynamic instrumentation": {
+    "pt-BR": "Instrumentação dinâmica",
+    "es": "Instrumentación dinámica"
+  },
+  "Android & mobile": {
+    "pt-BR": "Android e dispositivos móveis",
+    "es": "Android y dispositivos móviles"
+  },
+  ".NET & managed code": {
+    "pt-BR": ".NET e código gerenciado",
+    "es": ".NET y código administrado"
+  },
+  "Network & protocols": {
+    "pt-BR": "Redes e protocolos",
+    "es": "Redes y protocolos"
+  },
+  "Firmware & embedded": {
+    "pt-BR": "Firmware e embarcados",
+    "es": "Firmware y sistemas integrados"
+  },
+  "Emulation & lab": {
+    "pt-BR": "Emulação e laboratório",
+    "es": "Emulación y laboratorio"
+  },
+  "Best for": {
+    "pt-BR": "Ideal para",
+    "es": "Ideal para"
+  },
+  "Platform": {
+    "pt-BR": "Plataforma",
+    "es": "Plataforma"
+  },
+  "Level": {
+    "pt-BR": "Dificuldade",
+    "es": "Dificultad"
+  },
+  "Beginner": {
+    "pt-BR": "Iniciante",
+    "es": "Principiante"
+  },
+  "Intermediate": {
+    "pt-BR": "Intermediário",
+    "es": "Intermedio"
+  },
+  "Advanced": {
+    "pt-BR": "Avançado",
+    "es": "Avanzado"
+  },
+  "Free": {
+    "pt-BR": "Gratuito",
+    "es": "Gratis"
+  },
+  "Free tier": {
+    "pt-BR": "Plano gratuito",
+    "es": "Plan gratuito"
+  },
+  "Free tier · paid extras": {
+    "pt-BR": "Plano gratuito · extras pagos",
+    "es": "Plan gratuito · extras de pago"
+  }
+}

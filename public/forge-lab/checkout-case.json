@@ -1,0 +1,253 @@
+{
+  "schema": "forgelab-case-v1",
+  "findings": [
+    {
+      "kind": "review",
+      "title": "Review this workflow privilege boundary",
+      "path": ".github/workflows/ci.yml",
+      "line": 1,
+      "endLine": null,
+      "detail": "Broad permissions or pull_request_target added",
+      "next": "Check token scope and whether untrusted code can run.",
+      "source": ""
+    },
+    {
+      "kind": "review",
+      "title": "Dynamic code or process execution was added",
+      "path": "java/src/shop/Pricing.java",
+      "line": 3,
+      "endLine": null,
+      "detail": "Execution boundary changed",
+      "next": "Trace the input, argument boundaries and trust assumptions.",
+      "source": ""
+    },
+    {
+      "kind": "review",
+      "title": "Dynamic code or process execution was added",
+      "path": "csharp/Pricing.cs",
+      "line": 4,
+      "endLine": null,
+      "detail": "Execution boundary changed",
+      "next": "Trace the input, argument boundaries and trust assumptions.",
+      "source": ""
+    },
+    {
+      "kind": "review",
+      "title": "GitHub Actions behavior changed",
+      "path": ".github/workflows/ci.yml",
+      "line": null,
+      "endLine": null,
+      "detail": "Workflow file changed",
+      "next": "Review triggers, permissions and action pinning.",
+      "source": ""
+    },
+    {
+      "kind": "review",
+      "title": "Confirm behavior is covered",
+      "path": "java/src/shop/Pricing.java",
+      "line": null,
+      "endLine": null,
+      "detail": "Source changed without changed test files in this patch",
+      "next": "Check existing tests or add a regression case. This does not measure coverage.",
+      "source": ""
+    },
+    {
+      "kind": "review",
+      "title": "Confirm behavior is covered",
+      "path": "csharp/Pricing.cs",
+      "line": null,
+      "endLine": null,
+      "detail": "Source changed without changed test files in this patch",
+      "next": "Check existing tests or add a regression case. This does not measure coverage.",
+      "source": ""
+    },
+    {
+      "kind": "maintenance",
+      "title": "Review a module without a matching test name",
+      "path": "csharp/Pricing.cs",
+      "line": null,
+      "endLine": null,
+      "detail": "No conventional test filename match",
+      "next": "Find existing coverage or add a behavior test; this is not measured coverage.",
+      "source": ""
+    },
+    {
+      "kind": "maintenance",
+      "title": "Review a module without a matching test name",
+      "path": "java/src/shop/Api.java",
+      "line": null,
+      "endLine": null,
+      "detail": "No conventional test filename match",
+      "next": "Find existing coverage or add a behavior test; this is not measured coverage.",
+      "source": ""
+    },
+    {
+      "kind": "maintenance",
+      "title": "Review a module without a matching test name",
+      "path": "java/src/shop/Legacy.java",
+      "line": null,
+      "endLine": null,
+      "detail": "No conventional test filename match",
+      "next": "Find existing coverage or add a behavior test; this is not measured coverage.",
+      "source": ""
+    },
+    {
+      "kind": "maintenance",
+      "title": "Review a module without a matching test name",
+      "path": "java/src/shop/Pricing.java",
+      "line": null,
+      "endLine": null,
+      "detail": "No conventional test filename match",
+      "next": "Find existing coverage or add a behavior test; this is not measured coverage.",
+      "source": ""
+    },
+    {
+      "kind": "impact",
+      "title": "Review an unresolved local reference",
+      "path": "java/src/shop/Legacy.java",
+      "line": 4,
+      "endLine": null,
+      "detail": "Pricing.totalV1: Invocation did not resolve against a supplied local source type; missing dependencies can affect binding.",
+      "next": "Inspect the declaration, signature, imports and missing dependency diagnostics. This is not a proof of root cause.",
+      "source": ""
+    },
+    {
+      "kind": "maintenance",
+      "title": "Make checks repeatable",
+      "path": "",
+      "line": null,
+      "endLine": null,
+      "detail": "No GitHub workflow found",
+      "next": "Add a workflow for the real test/build commands.",
+      "source": ""
+    },
+    {
+      "kind": "maintenance",
+      "title": "Document usage",
+      "path": "README.md",
+      "line": null,
+      "endLine": null,
+      "detail": "Section keywords not found",
+      "next": "Add commands verified by a maintainer; keyword matching is heuristic.",
+      "source": ""
+    },
+    {
+      "kind": "maintenance",
+      "title": "Clarify reuse permissions",
+      "path": "",
+      "line": null,
+      "endLine": null,
+      "detail": "No root license file found",
+      "next": "Choose and document an appropriate license.",
+      "source": ""
+    },
+    {
+      "kind": "maintenance",
+      "title": "Repair a missing local Markdown target",
+      "path": "README.md",
+      "line": 5,
+      "endLine": null,
+      "detail": "docs/setup.md -> docs/setup.md",
+      "next": "Restore the target or correct the relative link.",
+      "source": ""
+    },
+    {
+      "kind": "maintenance",
+      "title": "Review a module without a matching test name",
+      "path": "csharp/Legacy.cs",
+      "line": null,
+      "endLine": null,
+      "detail": "No conventional test filename match",
+      "next": "Find existing coverage or add a behavior test; this is not measured coverage.",
+      "source": ""
+    },
+    {
+      "kind": "impact",
+      "title": "Candidato a teste de regressão",
+      "path": "java/tests/shop/OrdersTest.java",
+      "line": null,
+      "endLine": null,
+      "detail": "",
+      "next": "Verifique se esse teste cobre o comportamento alterado.",
+      "source": ""
+    },
+    {
+      "kind": "impact",
+      "title": "java",
+      "path": "java/src/shop/Api.java",
+      "line": 3,
+      "endLine": null,
+      "detail": "java/src/shop/Orders.java",
+      "next": "Confirme se a referência alcança o comportamento em revisão.",
+      "source": ""
+    },
+    {
+      "kind": "impact",
+      "title": "java",
+      "path": "java/src/shop/Legacy.java",
+      "line": 4,
+      "endLine": null,
+      "detail": "java/src/shop/Pricing.java",
+      "next": "Confirme se a referência alcança o comportamento em revisão.",
+      "source": ""
+    },
+    {
+      "kind": "impact",
+      "title": "java",
+      "path": "java/src/shop/Orders.java",
+      "line": 3,
+      "endLine": null,
+      "detail": "java/src/shop/Pricing.java",
+      "next": "Confirme se a referência alcança o comportamento em revisão.",
+      "source": ""
+    },
+    {
+      "kind": "impact",
+      "title": "java",
+      "path": "java/tests/shop/OrdersTest.java",
+      "line": 4,
+      "endLine": null,
+      "detail": "java/src/shop/Orders.java",
+      "next": "Confirme se a referência alcança o comportamento em revisão.",
+      "source": ""
+    },
+    {
+      "kind": "artifact",
+      "title": "Recognized capture header",
+      "path": "traces/empty.pcap",
+      "line": null,
+      "endLine": null,
+      "detail": "pcap header",
+      "next": "Use a packet viewer only on authorized captures.",
+      "source": ""
+    },
+    {
+      "kind": "artifact",
+      "title": "Wireshark",
+      "path": "",
+      "line": null,
+      "endLine": null,
+      "detail": "Understanding protocol behavior in a lab",
+      "next": "Recognized capture header",
+      "source": ""
+    }
+  ],
+  "notes": [
+    "sample",
+    "revscope: ok",
+    "patchscope: ok",
+    "reporelief: ok",
+    "cifuse: ok",
+    "devrescue: ok",
+    "impact-java: ok",
+    "impact-python: skipped",
+    "impact-csharp: unavailable",
+    "Correlations are shared source evidence, not proof of root cause.",
+    "Java/C# source binding runs with an isolated classpath; project builds and external dependencies are not evaluated.",
+    "Python compatibility is import-only and lexical; the previous Python AST implementation is retained in Git history, not in this runtime.",
+    "Test candidates are source-reachable, not measured coverage.",
+    "Redaction is best effort. Inspect reports before sharing.",
+    "RevScope uses metadata and bounded header triage to recommend external tools; no binaries or captures are analyzed or executed."
+  ],
+  "plan": ""
+}

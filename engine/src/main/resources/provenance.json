@@ -1,0 +1,55 @@
+[
+  {
+    "name": "patchscope",
+    "url": "https://github.com/brunnojob/patchscope",
+    "commit": "175d5c1bd978e2c678d889350667bffdfda28eae",
+    "files": [
+      "src/engine.js",
+      "src/config.js"
+    ],
+    "license": "MIT",
+    "integration": "rules ported into Java; not a byte-compatible runtime copy"
+  },
+  {
+    "name": "cifuse",
+    "url": "https://github.com/brunnojob/cifuse",
+    "commit": "6a38b949f2607b472327631c15b685dff4a6b7e3",
+    "files": [
+      "src/engine.js",
+      "src/rules.js"
+    ],
+    "license": "MIT",
+    "integration": "rules ported into Java; not a byte-compatible runtime copy"
+  },
+  {
+    "name": "reporelief",
+    "url": "https://github.com/brunnojob/reporelief",
+    "commit": "b76048f9ddaf99a67e62b8c144764c5c1d0c63b0",
+    "files": [
+      "src/analyze.js",
+      "src/markdown-links.js"
+    ],
+    "license": "MIT",
+    "integration": "rules ported into Java; not a byte-compatible runtime copy"
+  },
+  {
+    "name": "devrescue",
+    "url": "https://github.com/brunnojob/devrescue",
+    "commit": "beece0e6532e9cc7bbc86bbd46406632318d2e07",
+    "files": [
+      "src/engine.js"
+    ],
+    "license": "MIT",
+    "integration": "rules ported into Java; not a byte-compatible runtime copy"
+  },
+  {
+    "name": "revscope",
+    "url": "https://github.com/brunnojob/revscope",
+    "commit": "9f691aed0a4ef7571fb3accf010e985e73840dc4",
+    "files": [
+      "data/tools.json"
+    ],
+    "license": "MIT",
+    "integration": "catalog snapshot"
+  }
+]
