@@ -1,4 +1,5 @@
 import './styles.css';
+import { mountForgePlatform } from './ui/forge-platform';
 import { createPage } from './ui/page';
 import { translateDOM, type Language } from './lib/i18n';
 import { roadmap } from './data/roadmap';
@@ -30,6 +31,8 @@ try {
   localStorage.setItem('devstart-language', language);
 } catch {}
 
+let refreshForge: ((language: Language) => void) | undefined;
+
 function refreshTranslations(): void {
   document.documentElement.lang = language === 'pt' ? 'pt-BR' : 'en';
   document.documentElement.dataset.theme = theme;
@@ -46,6 +49,7 @@ function refreshTranslations(): void {
         : 'Learn programming logic and GitHub with exercises, examples, project ideas and a path to your first PR.',
     );
   translateDOM(document.body, language);
+  refreshForge?.(language);
   document.querySelectorAll<HTMLAnchorElement>('a[href]').forEach((link) => {
     if (link.origin === location.origin && link.pathname.endsWith('/proofs/'))
       link.search = `?lang=${language}`;
@@ -683,6 +687,7 @@ themeSelect.addEventListener('change', () => {
   } catch {}
   refreshTranslations();
 });
+refreshForge = mountForgePlatform(document.querySelector<HTMLElement>('#forge-platform')!);
 renderRoadmap();
 renderProjects();
 renderAchievements();

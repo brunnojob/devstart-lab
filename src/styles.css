@@ -1473,3 +1473,24 @@ html[data-theme="dark"] .button.dark {
     font-size: 11px;
   }
 }
+
+.forge-intro { padding-block: clamp(2rem, 6vw, 5rem) 1rem; }
+.forge-kicker { font-weight: 750; letter-spacing: .05em; }
+.forge-intro h2 { max-width: 18ch; font-size: clamp(2rem, 5.5vw, 4.2rem); line-height: 1.05; margin: .35em 0; letter-spacing: -.045em; }
+.forge-intro p { max-width: 62ch; }
+.forge-modes, .forge-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.forge-modes { margin: 1.5rem 0 0; }
+.forge-modes a, .forge-actions button { border: 1px solid; border-radius: .65rem; padding: .65rem .9rem; color: inherit; }
+.forge-modes a[aria-current] { border-width: 2px; padding: calc(.65rem - 1px) calc(.9rem - 1px); font-weight: 750; }
+.forge-panel { padding-block: 1.5rem 4rem; }
+.forge-project, .forge-exercises article { border: 1px solid color-mix(in srgb, currentColor 22%, transparent); border-radius: 1rem; padding: clamp(1rem, 2.5vw, 1.6rem); min-width: 0; }
+.forge-project { margin-bottom: 1.5rem; }
+.forge-exercises { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 23rem), 1fr)); gap: 1rem; margin-top: 1rem; }
+.forge-exercises h3, .forge-project h3 { margin-top: 0; }
+.forge-panel textarea, .forge-panel input, .forge-panel select { max-width: 100%; }
+.forge-panel textarea { display: block; width: 100%; margin-block: .5rem 1rem; font-family: monospace; }
+.forge-panel input[type=file] { display: block; margin-block: .5rem 1rem; }
+.forge-evidence { padding-inline-start: 1.2rem; overflow-wrap: anywhere; }
+.forge-evidence li { margin-block: .75rem; }
+.forge-evidence p { margin-block: .25rem; }
+.forge-panel[hidden], #study-mode[hidden], .forge-exercises article[hidden] { display: none; }
